@@ -13,10 +13,11 @@ body {
 }
 /* Container */
 .container {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #52BAD5;
+    margin-bottom: 20%;
 }
 /* Header */
 header {
@@ -54,16 +55,16 @@ header {
 	color: #A3A3A3;
 }
 .gallery {
-	clear: both;
-	display: inline-block;
-	width: 100%;
-	background-color: #FFFFFF;
-	/* [disabled]min-width: 400px;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    background-color: #FFFFFF;
+    /* [disabled]min-width: 400px;
 */
-	padding-bottom: 35px;
-	padding-top: 0px;
-	margin-top: -5px;
-	margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: -5px;
+    margin-bottom: 0px;
 }
 .thumbnail {
 	width: 23%;
@@ -112,11 +113,11 @@ header {
 	color: #FFFFFF;
 }
 .cards {
-	width: 100%;
-	height: auto;
-	max-width: 400px;
-	max-height: 200px;
-	opacity: 0.8;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 306px;
+    opacity: 0.8;
 }
 .intro .column p {
     padding-left: 30px;
@@ -167,16 +168,16 @@ header {
 	border-top-width: 2px;
 }
 footer {
-	background-color: #B3B3B3;
-	padding-top: 60px;
-	padding-bottom: 60PX;
+    background-color: #B3B3B3;
+    padding-top: 90px;
+    padding-bottom: 60PX;
 }
 .intro {
-	display: inline-block;
-	background-color: #6DC7D0;
+    display: inline-block;
+    background-color: #6DC7D0;
 }
 .profile {
-	width: 50%;
+    width: 39%;
 }
 .gallery .thumbnail .tag {
 	color: #5D5E5D;
