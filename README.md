@@ -1,2 +1,1 @@
-# clarknavidad_com
-beta website
+# cloudhopr_net
