@@ -61,7 +61,7 @@ header {
     background-color: #FFFFFF;
     /* [disabled]min-width: 400px;
 */
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     padding-top: 0px;
     margin-top: -5px;
     margin-bottom: 0px;
@@ -116,7 +116,7 @@ header {
     width: 100%;
     height: auto;
     max-width: 400px;
-    max-height: 306px;
+    max-height: 400px;
     opacity: 0.8;
 }
 .intro .column p {
