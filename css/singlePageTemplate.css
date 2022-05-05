@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Body */
 body {
-    font-family: source-sans-pro;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
     background-color: #f2f2f2;
     margin-top: 0px;
     margin-right: 0px;
@@ -145,26 +145,33 @@ ul li:hover a {
 }
 /* Stats Gallery */
 .stats {
-	color: #717070;
-	margin-bottom: 5px;
+    color: #717070;
+    margin-bottom: 5px;
+    margin-left: auto;
 }
+.stats2 {
+    color: #717070;
+    margin-bottom: 5px;
+    margin-left: auto;
+    font-size-adjust: .5;
+}
+
 .gallery {
-	clear: both;
-	display: inline-block;
-	width: 100%;
-	background-color: #FFFFFF;
-	/* [disabled]min-width: 400px;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    background-color: #FFFFFF;
+    /* [disabled]min-width: 400px;
 */
-	padding-bottom: 35px;
-	padding-top: 0px;
-	margin-top: -30px;
-	margin-bottom: 0px;
+    padding-bottom: 35px;
+    padding-top: 0px;
+    margin-top: 11px;
+    margin-bottom: 0px;
 }
 .thumbnail {
-	width: 25%;
-	text-align: center;
-	float: left;
-	margin-top: 35px;
+    width: 25%;
+    text-align: center;
+    float: left;
 }
 .gallery .thumbnail h4 {
 	margin-top: 5px;
@@ -183,7 +190,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
     background-color: #9F9F9F;
-    background-image: url("../images/BMW_Welt.jpg");
+    background-image: url("../images/inside_shop.jpg");
     height: 50%;
     background-attachment: fixed;
     background-size: cover;
