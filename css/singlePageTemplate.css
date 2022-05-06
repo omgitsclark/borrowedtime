@@ -3,7 +3,7 @@
 body {
     font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
     background-color: #f2f2f2;
-	background-image: url("/images/horror_background.jpg");
+	background-image: url("../images/horror_background.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -23,10 +23,17 @@ body {
     background-color: #717070;
     background-attachment: fixed;
 }
+.container2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+	
+}
 /* Navigation */
 header {
     width: 100%;
-    height: 5%;
+    height: 11%;
     background-color: #9F9F9F;
 }
 .logo {
@@ -180,11 +187,11 @@ ul li:hover a {
     float: left;
 }
 .gallery .thumbnail h4 {
-	margin-top: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #52BAD5;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    color: #414242;
 }
 .gallery .thumbnail p {
 	margin-top: 0px;
@@ -196,7 +203,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
     background-color: #9F9F9F;
-    background-image: url("../images/inside_shop.JPG");
+    background-image: url("../images/inside_shop_2.JPG");
     height: 50%;
     background-attachment: fixed;
     background-size: cover;
@@ -409,6 +416,7 @@ nav ul li {
     margin-bottom: 0px;
     margin-left: 0px;
     color: #043745;
+    font-size: 24px;
 }
 .container header nav {
     margin-top: 0px;
