@@ -203,7 +203,7 @@ ul li:hover a {
 /* Parallax Section */
 .banner {
     background-color: #9F9F9F;
-    background-image: url("../images/inside_shop_2.JPG");
+    background-image: url("../images/inside_shop_2.jpg");
     height: 50%;
     background-attachment: fixed;
     background-size: cover;
