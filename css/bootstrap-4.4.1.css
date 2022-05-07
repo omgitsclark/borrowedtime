@@ -6417,7 +6417,8 @@ a.close.disabled {
 }
 
 .carousel {
-  position: relative;
+    position: relative;
+    background-color: #00000;
 }
 
 .carousel.pointer-event {
@@ -6459,7 +6460,8 @@ a.close.disabled {
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-  display: block;
+    display: block;
+    background-color: transparent;
 }
 
 .carousel-item-next:not(.carousel-item-left),
