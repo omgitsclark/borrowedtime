@@ -259,6 +259,9 @@ ul li:hover a {
 	margin-left: 0px;
 }
 /* More info */
+.map{
+	margin-right: 10px;
+}
 footer {
     background-color: #717070;
     padding-bottom: 35px;
