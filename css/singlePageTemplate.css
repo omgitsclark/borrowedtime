@@ -267,14 +267,14 @@ footer {
     padding-bottom: 35px;
 }
 .footer_column {
-	width: 50%;
-	text-align: center;
-	padding-top: 30px;
-	float: left;
+    width: 50%;
+    text-align: center;
+    padding-top: 60px;
+    float: left;
 }
 footer .footer_column h3 {
-	color: #B3B3B3;
-	text-align: center;
+    color: #000000;
+    text-align: center;
 }
 footer .footer_column p {
     color: #717070;
