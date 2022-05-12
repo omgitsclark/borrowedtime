@@ -43,16 +43,16 @@ div.transbox p {
 <div class="container"> 
   <!-- Header -->
   <header class="header">
-    <h4 class="logo">Dexter</h4>
+    <h4 class="logo">Tomb Raider</h4>
 	<nav><ul>
 		<li>
 		  <div class="btn-group d-flex" role="group" aria-label="Justified button group with nested dropdown">
 		    <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com'">Main Page</button>
-<!--			<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='#dexter-appointment'">Book Appointment</button>-->
+<!--			<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='#tombraider-appointment'">Book Appointment</button>-->
 		    <div class="btn-group w-100" role="group">
 		      <button type="button" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Artists </button>
 		      <ul class="dropdown-menu">
-		  		<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/tombraider'">Tomb Raider</button>
+		        <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/dexter'">Dexter</button>
 				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/chris'">Chris</button>
 	          </ul>
 	        </div>
@@ -63,12 +63,12 @@ div.transbox p {
   <!-- Hero Section -->
   <section class="container">
     <div class="column">
-      <img src="images/dexter/dexterprofile.jpg" alt="" width="auto" height="auto" class="profile">
+      <img src="images/tombraider/tombraiderprofile.JPG" alt="" width="auto" height="auto" class="profile">
     </div>
     <div class="column">
 	  <div class="transbox">
       		<p>&nbsp;</p>
-		  	<p>Background: Graduated from the school of winning awards to just straight being number 1. Found that he was a wonderful artist and wanted to share his gift and bring joy to people by stabbing them with a needle hundreds of times in one sitting. </p>
+		  	<p>Background: Graduated from the school of destroying her enemies with a single punch. Found that she was a wonderful artist and wanted to share her gift and bring joy to people by stabbing them with a needle hundreds of times in one sitting. </p>
 		  	<p>Interested in: Horror, Portraits, Pin-Ups&nbsp; &nbsp;&nbsp; </p>
    			<p>Specializes in: Realistic Shading, Good Tattoos, Not Bad Tattoos, Character Faces</p>
    		<p>&nbsp;</p>
@@ -87,7 +87,7 @@ div.transbox p {
 		</ol>
 -->
 		  <div class="carousel-inner" role="listbox">
-			<div class="carousel-item active"> <img class="d-block mx-auto" src="images/dexter/dexter_bulldog-3.jpg" alt="First slide">
+			<div class="carousel-item active"> <img class="d-block mx-auto" src="images/tombraider/crystal skull.jpg" alt="First slide">
 			  <div class="carousel-caption">
 <!--
 				<h5>Lotus Flower</h5>
@@ -95,7 +95,7 @@ div.transbox p {
 -->
 			  </div>
 			</div>
-			<div class="carousel-item"> <img class="d-block mx-auto" src="images/dexter/spider_sleeve.jpg" alt="Third slide">
+			<div class="carousel-item"> <img class="d-block mx-auto" src="images/tombraider/flowercompass.jpg" alt="Third slide">
 			  <div class="carousel-caption">
 <!--
 				<h5>Heartbeat</h5>
@@ -103,7 +103,7 @@ div.transbox p {
 -->
 			  </div>
 			</div>
-			<div class="carousel-item"> <img class="d-block mx-auto" src="images/dexter/chuckie.jpg" alt="Second slide">
+			<div class="carousel-item"> <img class="d-block mx-auto" src="images/tombraider/crystal skull.jpg" alt="Second slide">
 				<div class="carousel-caption">
 <!--
 					<h5>Knuckles</h5>
@@ -111,7 +111,7 @@ div.transbox p {
 -->
 				</div>
 			</div>
-			<div class="carousel-item"> <img class="d-block mx-auto" src="images/dexter/religious.jpg" alt="Third slide">
+			<div class="carousel-item"> <img class="d-block mx-auto" src="images/tombraider/flowers-2.jpg" alt="Third slide">
 			  <div class="carousel-caption">
 <!--
 				<h5>New York Tribal</h5>
@@ -128,25 +128,25 @@ div.transbox p {
 
   <!-- Stats Gallery Section -->
   <div class="gallery">
-    <div class="thumbnail"> <img src="images/dexter/bluebonnet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    <div class="thumbnail"> <img src="images/tombraider/crystal skull.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
 <!--
       <h4>Plus Size Racing Pin-up</h4>
       <p class="tag">Amazing shading on the face for clear definition.</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/bulgarian_flag_rose.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/flowercompass.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>Plus Size Celebration Pin-Up</h4>
       <p class="tag">Realistic shading giving life to the model and bottle.</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/chuckie.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/flowers-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>Snake Dagger</h4>
       <p class="tag">Incredibly crisp lines that you could use to cut diamonds.</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/color_portrait.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/flowers.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>Irish Texan</h4>
       <p class="tag">Solid color work with defined sections.</p>
@@ -154,97 +154,49 @@ div.transbox p {
     </div>
   </div>
   <div class="gallery">
-    <div class="thumbnail"> <img src="images/dexter/compass.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/flowerslines.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/dexter_bulldog-3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/fox.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/face.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/laura_compilation-3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-    <div class="thumbnail"> <img src="images/dexter/family_anchor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    <div class="thumbnail"> <img src="images/tombraider/mandala.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/dexter/family_tree.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/tombraider/seahorse.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/dexter/nebula.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/tombraider/skull tattoo.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/dexter/no_rain_no_flowers.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/tombraider/spearhead.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/dexter/traditional_sailor_jerry.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/tiger_claw.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/religious.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/polynesian_turtle.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/samurai_frog.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/shoulder_flower.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/spider_sleeve.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/sun_moon.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/sunflower.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/tombraider/tombraider.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
@@ -252,23 +204,23 @@ div.transbox p {
     </div>
   </div>
 <!--
-	<section id="dexter-appointment">
+	<section id="tombraider-appointment">
 		<script src="//widget.simplybook.me/v2/widget/widget.js"></script>
-<script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/cloudhopr.simplybook.me","theme":"minimal","theme_settings":{"timeline_show_end_time":"1","timeline_modern_display":"as_slots","hide_company_label":"0","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#e49092","btn_color_1":"#f5a778,#e6938f,#e28c96","link_color":"#e49092","display_item_mode":"block","body_bg_color":"#ffffff","sb_review_image":"","dark_font_color":"#2b212b","light_font_color":"#ffffff","sb_company_label_color":"#e49092","hide_img_mode":"0","sb_busy":"#aaa6aa","sb_available":"#2b212b"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"allow_switch_to_ada":0,"predefined":{"provider":"1"}}});</script>
+<script>var widget = new SimplybookWidget({"widget_type":"iframe","url":"https:\/\/cloudhopr.simplybook.me","theme":"minimal","theme_settings":{"timeline_show_end_time":"1","timeline_modern_display":"as_slots","hide_company_label":"0","timeline_hide_unavailable":"1","hide_past_days":"0","sb_base_color":"#e49092","btn_color_1":"#f5a778,#e6938f,#e28c96","link_color":"#e49092","display_item_mode":"block","body_bg_color":"#ffffff","sb_review_image":"","dark_font_color":"#2b212b","light_font_color":"#ffffff","sb_company_label_color":"#e49092","hide_img_mode":"0","sb_busy":"#aaa6aa","sb_available":"#2b212b"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"allow_switch_to_ada":0,"predefined":{"provider":"2"}}});</script>
 	</section>
 -->
 	  <section>
 	  <div class="column">
 <div class="jumbotron offset-xl-2 col-xl-10">
       <h1 class="display-4">Contact Us</h1>
-      <p class="lead">Tattoo Artist - Dexter</p>
+      <p class="lead">Tattoo Artist - Tomb Raider</p>
       <p class="lead">Borrowed Time Fine Art Gallery Tattoo Shop</p>
       <p class="lead">1406 N McDonald St, McKinney, TX 75071</p>
       <p class="lead">Call or Text - (940) 206-7843&nbsp;</p>
 		
 <hr class="my-4">
       <p>Please reach out if you would like to schedule some time!&nbsp;</p>
-      <p class="lead"> <a class="btn btn-primary btn-lg" href="https://www.facebook.com/tattoosbydexter13" role="button">Follow Me on Facebook!</a> </p>
+      <p class="lead"> <a class="btn btn-primary btn-lg" href="https://www.instagram.com/laura_tomb_raider/" role="button">Follow Me on Instagram!</a> </p>
     </div>
 	 </div>
 	  <container>
@@ -283,7 +235,7 @@ div.transbox p {
     <p class="hero_header">GET IN TOUCH WITH ME</p>
   </footer>
   <!-- Copyrights Section -->
-  <div class="copyright">&copy;2022 - <strong>CloudHopr</strong><!-- Main Container Ends --></div>
+  <div class="copyright">&copy;2022 - <strong>Cloudhopr</strong><!-- Main Container Ends --></div>
 </div>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/popper.min.js"></script>
