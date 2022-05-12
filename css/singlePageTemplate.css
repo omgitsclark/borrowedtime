@@ -168,13 +168,13 @@ ul li:hover a {
 }
 /* About Section */
 .text_column {
-    width: 33%;
-    text-align: center;
+    width: 50%;
+    text-align: left;
     font-weight: lighter;
     line-height: 25px;
     float: left;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
     color: #000000;
     background-color: inherit;
 }
