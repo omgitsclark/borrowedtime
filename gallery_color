@@ -48,7 +48,7 @@ div.transbox p {
 	<nav><ul>
 		<li>
 		  <div class="btn-group d-flex" role="group" aria-label="Justified button group with nested dropdown">
-		    <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com'">Main Page</button>
+		    <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/v2'">Main Page</button>
 <!--			<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='#chris-appointment'">Book Appointment</button>-->
 		    <div class="btn-group w-100" role="group">
 		      <button type="button" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Artists </button>
