@@ -71,169 +71,169 @@ div.transbox p {
 
   <!-- Stats Gallery Section -->
   <div class="gallery">
-    <div class="thumbnail"> <img src="images/dexter/bluebonnet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-	  	<p class="tag">Reference ID:FL-001</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-002</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_blackandgray.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-003</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_blackandgray2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-004</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_bold.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-005</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_bracelet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-006</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-007</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_guitar.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-008</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_shoulder.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-009</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_spine.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-010</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_sunflower.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-011</p>
-    </div>
-	<div class="thumbnail"> <img src="images/dexter/dexter_floral_sunflower2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-012</p>
-    </div>
-    <div class="thumbnail"> <img src="images/dexter/bulgarian_flag_rose.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:FL-013</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-014</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_butterfly5.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-015</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_rose.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-016</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_rose2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-017</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_rose3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-018</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_rose4.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
-		<p class="tag">Reference ID:FL-019</p>
-    </div>
-	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_arm.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-020</p>
-    </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_arm2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-021</p>
+		<p class="tag">Reference ID:FL-T01</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_arm3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-022</p>
+		<p class="tag">Reference ID:FL-T02</p>
+    </div>
+    <div class="thumbnail"> <img src="images/dexter/bluebonnet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+	  	<p class="tag">Reference ID:FL-D01</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D02</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_blackandgray.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D03</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_blackandgray2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D04</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_bold.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D05</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_bracelet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D06</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D07</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_guitar.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D08</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_shoulder.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D09</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_spine.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D10</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_sunflower.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D11</p>
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_floral_sunflower2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D12</p>
+    </div>
+    <div class="thumbnail"> <img src="images/dexter/bulgarian_flag_rose.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
+		<p class="tag">Reference ID:FL-D13</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C01</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_butterfly5.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C02</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_rose.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C03</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_rose2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C04</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_rose3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C05</p>
+    </div>
+    <div class="thumbnail"> <img src="images/chris/chris_rose4.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:FL-C06</p>
+    </div>
+	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_arm.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
+		<p class="tag">Reference ID:FL-T03</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_arrow.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-023</p>
+		<p class="tag">Reference ID:FL-T04</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_bird.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-024</p>
+		<p class="tag">Reference ID:FL-T05</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-025</p>
+		<p class="tag">Reference ID:FL-T06</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_compass.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-026</p>
+		<p class="tag">Reference ID:FL-T07</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_cow.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-027</p>
+		<p class="tag">Reference ID:FL-T08</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_crystal.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-028</p>
+		<p class="tag">Reference ID:FL-T09</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_face_knife.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-029</p>
+		<p class="tag">Reference ID:FL-T10</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_forearm.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-030</p>
+		<p class="tag">Reference ID:FL-T11</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_horsehoe.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-031</p>
+		<p class="tag">Reference ID:FL-T12</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_mandala.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-032</p>
+		<p class="tag">Reference ID:FL-T13</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_mandala2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-033</p>
+		<p class="tag">Reference ID:FL-T14</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_scenic.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-034</p>
+		<p class="tag">Reference ID:FL-T15</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_shoulder.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-035</p>
+		<p class="tag">Reference ID:FL-T16</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_sleeve.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-036</p>
+		<p class="tag">Reference ID:FL-T17</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_sleeve2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-037</p>
+		<p class="tag">Reference ID:FL-T18</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_snake.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-038</p>
+		<p class="tag">Reference ID:FL-T19</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_snake2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-039</p>
+		<p class="tag">Reference ID:FL-T20</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_taurus.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-040</p>
+		<p class="tag">Reference ID:FL-T21</p>
     </div>
 	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_wolf.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:FL-041</p>
+		<p class="tag">Reference ID:FL-T22</p>
     </div>
   </div>
 	<section id="dexter-appointment">
