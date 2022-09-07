@@ -40,6 +40,16 @@ header {
     line-height: 2em;
     font-size: 57px;
 }
+.tattoogallery{
+	color: #fff;
+    font-weight: bold;
+    margin-left: auto;
+    letter-spacing: 4px;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 32px;
+}
 .hero_header {
 	color: #FFFFFF;
 	text-align: center;
