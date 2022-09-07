@@ -9,6 +9,11 @@
 	
 }
 /* Body */
+a:link {
+  color: lightgray;
+  background-color: transparent;
+  text-decoration: none;
+}
 body {
     font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #FFFFFF;
