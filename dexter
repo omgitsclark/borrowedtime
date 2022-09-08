@@ -52,8 +52,8 @@ div.transbox p {
 		    <div class="btn-group w-100" role="group">
 		      <button type="button" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Artists </button>
 		      <ul class="dropdown-menu">
-		        <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/dexter'">Dexter</button>
 		  		<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/tombraider'">Tomb Raider</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/chris'">Chris</button>
 	          </ul>
 	        </div>
 	      </div>
@@ -140,7 +140,49 @@ div.transbox p {
 
   <!-- Stats Gallery Section -->
   <div class="gallery">
-    <div class="thumbnail"> <img src="images/dexter/bluebonnet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+	<div class="thumbnail"> <img src="images/dexter/boogie.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_anchor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_clover.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_devil.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_frog.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_dog.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+	<div class="thumbnail"> <img src="images/dexter/dexter_color_hana.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+<!--
+      <h4>Plus Size Racing Pin-up</h4>
+      <p class="tag">Amazing shading on the face for clear definition.</p>
+-->
+    </div>
+    <div class="thumbnail"> <img src="images/dexter/dexter_color_starwars.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
 <!--
       <h4>Plus Size Racing Pin-up</h4>
       <p class="tag">Amazing shading on the face for clear definition.</p>
@@ -164,8 +206,6 @@ div.transbox p {
       <p class="tag">Solid color work with defined sections.</p>
 -->
     </div>
-  </div>
-  <div class="gallery">
     <div class="thumbnail"> <img src="images/dexter/compass.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
