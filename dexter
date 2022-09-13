@@ -61,6 +61,21 @@ div.transbox p {
 		  <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='#dexter-appointment'">Book Appointment with Dexter</button>
 		  <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='https://www.instagram.com/tattoosbydexter/'">Dexter's Instagram</button>
 	  </div>
+			<div class="btn-group d-flex" role="group" aria-label="Justified button group with nested dropdown">
+		  <div class="btn-group w-100" role="group">
+		    <button type="button" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Studio Porfolio </button>
+		    <ul class="dropdown-menu">
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_animals'">Animal Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_characters'">Character Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_color'">Color Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_floral'">Floral Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_japanese'">Japanese Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_memorial'">Memorial Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_realism'">Realism Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_religious'">Religious Designs</button>
+	        </ul>
+	    </div>
+	  </div>
 		</li>
       </ul></nav>
   </header>
@@ -71,19 +86,16 @@ div.transbox p {
     </div>
     <div class="column">
 	  <div class="transbox">
-      		<p>&nbsp;</p>
-		  	<p>Background: Graduated from the school of winning awards to just straight being number 1. Found that he was a wonderful artist and wanted to share his gift and bring joy to people by stabbing them with a needle hundreds of times in one sitting. </p>
-		  	<p>Interested in: Horror, Portraits, Pin-Ups</p>
-	    <p>Awards:&nbsp;</p><p>InkMasters - First Place - Chest/Back - Kileen, TX</p>
+		<p>Background: After years of tattooing in the DFW area, Dexter set up his own shop creating his ideal environment of surrounding himself with high quality work and artistry. No style is out of reach for Dexter so whether you're looking for a full color back piece or a small technical memorial piece, reach out and he's got you covered. Don't get stuck anywhere else.</p>
+	    <p>Awards:</p>
         <p>Paris Body Art Expo - First Place - Best Coverup - Paris, TX</p>
+        <p>Texoma Body Art Expo - Second Place - Best Back - Denison, TX</p>
+		<p>InkMasters - First Place - Chest/Back - Kileen, TX</p>
         <p>InkMasters - First Place - Coverup - Cleburne, TX</p>
         <p>InkMasters - Second Place - Traditional- Cleburne, TX</p>
-        <p>Texoma Body Art Expo - Second Place - Best Back - Denison, TX</p>
         <p>InkMasters - Third Place - Unusual - Cleburne, TX</p>
         <p>InkMasters - Third Place - Lettering - Killeen, TX</p>
-        <p>InkMasters - Third Place - Chest Back</p>
-		<p>InkMasters - Third Place - Small Color</p>
-		<p>InkMasters - Third Place - Coverup</p>
+        <p>InkMasters - Third Place - Chest Back/Small Color/Cover Up</p>
       </div>
     </div>
   </section>
@@ -272,12 +284,7 @@ div.transbox p {
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/dexter/samurai_frog.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>TITLE</h4>
-      <p class="tag">HTML, CSS, JS, WordPress</p>
--->
-    </div>
+
 	<div class="thumbnail"> <img src="images/dexter/shoulder_flower.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>

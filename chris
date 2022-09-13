@@ -61,6 +61,21 @@ div.transbox p {
 		  <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='#chris-appointment'">Book Appointment with Chris</button>
 		  <button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='https://www.facebook.com/profile.php?id=100044300386018'">Chris's Facebook</button>
 	  </div>
+			<div class="btn-group d-flex" role="group" aria-label="Justified button group with nested dropdown">
+		  <div class="btn-group w-100" role="group">
+		    <button type="button" class="btn btn-secondary dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Studio Porfolio </button>
+		    <ul class="dropdown-menu">
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_animals'">Animal Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_characters'">Character Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_color'">Color Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_floral'">Floral Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_japanese'">Japanese Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_memorial'">Memorial Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_realism'">Realism Designs</button>
+				<button type="button" class="btn btn-secondary w-100" role="button" onclick="location.href='http://www.borrowedtimetattoomckinney.com/gallery_religious'">Religious Designs</button>
+	        </ul>
+	    </div>
+	  </div>
 		</li>
       </ul></nav>
   </header>
@@ -72,9 +87,8 @@ div.transbox p {
     <div class="column">
 	  <div class="transbox">
       		<p>&nbsp;</p>
-		  	<p>Background: Graduated from Xavier's school for gifted younger and sated his thirst for blood. Found that he was a wonderful artist and wanted to share his gift and bring joy to people by stabbing them with a needle hundreds of times in one sitting. </p>
-		  	<p>Interested in: Horror, Portraits, Pin-Ups&nbsp; &nbsp;&nbsp; </p>
-   			<p>Specializes in: Realistic Shading, Good Tattoos, Not Bad Tattoos, Character Faces</p>
+		  	<p>Background: Chris is McKinney's up and coming hottest tattoo artist. After attending art school, Chris decided to apply his knowledge and passion into tattoo artistry. Pouring 110% of his attention into your tattoo, he'll be sure to make sure each line is expertly placed, every color is packed and blended to perfection, and every detail is exactly how you want it.</p>
+		  	<p>Interested in: Horror, Realism</p>
    		<p>&nbsp;</p>
       </div>
     </div>
@@ -132,18 +146,48 @@ div.transbox p {
 
   <!-- Stats Gallery Section -->
   <div class="gallery">
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_skullraven.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_shark.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_skeletondrink.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_skull.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_barber.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	  
     <div class="thumbnail"> <img src="images/chris/chris-america-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-<!--
-      <h4>Plus Size Racing Pin-up</h4>
-      <p class="tag">Amazing shading on the face for clear definition.</p>
--->
     </div>
-    <div class="thumbnail"> <img src="images/chris/chris-butterfly-skull-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-<!--
-      <h4>Plus Size Celebration Pin-Up</h4>
-      <p class="tag">Realistic shading giving life to the model and bottle.</p>
--->
+	  
+    <div class="thumbnail"> <img src="images/chris/chris_anchor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
     </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_pikachu.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_penguin.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_myneighbor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_myneighbor2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_mouthbullet.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_spiritedaway.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+    </div>
+	  
+	  
     <div class="thumbnail"> <img src="images/chris/chris-feather-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>Snake Dagger</h4>
@@ -156,8 +200,6 @@ div.transbox p {
       <p class="tag">Solid color work with defined sections.</p>
 -->
     </div>
-  </div>
-  <div class="gallery">
     <div class="thumbnail"> <img src="images/chris/chris-line-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
@@ -188,7 +230,7 @@ div.transbox p {
       <p class="tag">HTML, CSS, JS, WordPress</p>
 -->
     </div>
-	<div class="thumbnail"> <img src="images/chris/chris-skull-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/chris/chris_eye.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
       <h4>TITLE</h4>
       <p class="tag">HTML, CSS, JS, WordPress</p>
