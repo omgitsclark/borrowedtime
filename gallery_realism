@@ -86,23 +86,15 @@ div.transbox p {
 
   <!-- Stats Gallery Section -->
   <div class="gallery">
-	<div class="thumbnail"> <img src="images/chris/chris_batman.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
+	<div class="thumbnail"> <img src="images/dexter/spider_sleeve.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
 		<p class="tag">Reference ID:RE-D01</p>
     </div>
-	<div class="thumbnail"> <img src="images/chris/chris_batman.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/dexter">Dexter</a></h4>
-		<p class="tag">Reference ID:RE-D02</p>
-    </div>
-    <div class="thumbnail"> <img src="images/chris/chris_batman.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+	<div class="thumbnail"> <img src="images/tombraider/tombraider_floral_cow.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-	  	<p class="tag">Reference ID:RE-T01</p>
+		<p class="tag">Reference ID:RE-T01</p>
     </div>
-	<div class="thumbnail"> <img src="images/chris/chris_batman.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
-      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
-		<p class="tag">Reference ID:RE-T02</p>
-    </div>
-	<div class="thumbnail"> <img src="images/chris/chris_batman.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+	<div class="thumbnail"> <img src="images/chris/chris_underwater.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
 		<p class="tag">Reference ID:RE-C01</p>
 	</div>

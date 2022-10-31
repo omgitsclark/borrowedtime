@@ -106,6 +106,10 @@ div.transbox p {
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/tombraider">TombRaider</a></h4>
 		<p class="tag">Reference ID:RE-T02</p>
     </div>
+	<div class="thumbnail"> <img src="images/chris/chris_religious.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+      <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
+		<p class="tag">Reference ID:RE-C01</p>
+    </div>
 <!--
 	<div class="thumbnail"> <img src="images/chris/chris_anchor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
       <h4>Artist Link: <a href="http://www.borrowedtimetattoomckinney.com/chris">Chris</a></h4>
