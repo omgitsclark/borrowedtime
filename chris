@@ -162,7 +162,6 @@ div.transbox p {
 	<div class="thumbnail"> <img src="images/chris/chris_barber.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
     </div>
 	  
-	  
     <div class="thumbnail"> <img src="images/chris/chris-america-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
     </div>
 	  
@@ -187,6 +186,82 @@ div.transbox p {
 	<div class="thumbnail"> <img src="images/chris/chris_spiritedaway.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
     </div>
 	  
+	<div class="thumbnail"> <img src="images/chris/chris_butterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	
+	<div class="thumbnail"> <img src="images/chris/chris_butterfly2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_butterfly3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_butterfly4.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_butterfly5.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_dove.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
+	  
+	<div class="thumbnail"> <img src="images/chris/chris_firenation.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_fishinghunting.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_flowersmoon.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_hand_lotus.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_heartbeat.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_icecream.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_irishtexan.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_lineart.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_lotus.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_lucky7.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_moon.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_rose2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_rose3.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_skullbutterfly.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_skullmoon.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_smiley.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_snake.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_snorlax.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_sunandmoon.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_sunandmoon-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_texas2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_touch.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_traditionaldagger.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_watercolorpuzzle.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_windmill.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_wolfinsheephide.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_yinyang.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/chris_yinyang-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>  
+	<div class="thumbnail"> <img src="images/chris/watercolor.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)" />
+    </div>
 	  
     <div class="thumbnail"> <img src="images/chris/chris-feather-2.jpg" alt="" width="2000" class="cards" onclick = "enlargeImg(this)"/>
 <!--
