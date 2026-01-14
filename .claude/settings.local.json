@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(while read img)",
+      "Bash(do [ ! -f \"images/tombraider/$img\" ])",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(curl:*)",
+      "Bash(while read path)",
+      "Bash(do [ ! -f \"$path\" ])"
     ]
   }
 }
