@@ -8,7 +8,10 @@
       "Bash(done)",
       "Bash(curl:*)",
       "Bash(while read path)",
-      "Bash(do [ ! -f \"$path\" ])"
+      "Bash(do [ ! -f \"$path\" ])",
+      "Bash(ping:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
     ]
   }
 }
