@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Tomb Raider - Floral tattoo specialist at Borrowed Time Fine Art Gallery">
-<title>Tomb Raider | Borrowed Time Fine Art Gallery</title>
+<meta name="description" content="Billy tha Kidd - Versatile tattoo artist at Borrowed Time Fine Art Gallery">
+<title>Billy tha Kidd | Borrowed Time Fine Art Gallery</title>
 <link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
@@ -22,11 +22,11 @@
     </button>
     <div class="nav-links">
       <a href="index.html" class="nav-link">Home</a>
+      <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="chris.html" class="nav-link">Chris</a>
-      <a href="billythakidd.html" class="nav-link">Billy tha Kidd</a>
-      <a href="https://www.instagram.com/tattoos_by_tomb_raider/" class="nav-link" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Tomb Raider</a>
+      <a href="https://www.instagram.com/billythakiddtattoos/" class="nav-link" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Billy</a>
     </div>
   </div>
 </nav>
@@ -34,8 +34,8 @@
 <!-- Artist Header -->
 <section class="artist-header">
   <div class="content-container">
-    <h1 class="artist-name">Tomb Raider</h1>
-    <p class="artist-title">Floral Specialist</p>
+    <h1 class="artist-name">Billy tha Kidd</h1>
+    <p class="artist-title">Versatile Artist</p>
   </div>
 </section>
 
@@ -44,18 +44,11 @@
   <div class="content-container">
     <div class="bio-grid">
       <div class="bio-image">
-        <img src="images/tombraider/tombraider_profile.JPG" alt="Tomb Raider" loading="lazy">
+        <img src="images/billythakidd/billythakidd_profile.png" alt="Billy tha Kidd" loading="lazy">
       </div>
       <div class="bio-content">
-        <h2>About Tomb Raider</h2>
-        <p>With over 4 years of experience, Tomb Raider has become well known for her floral tattoos. This is due to her impeccable attention to detail, dead steady hand, and perfect technique. Combining crisp lines and masterful shading, Tomb Raider is sure to provide designs that will make you feel like you can almost reach out and grab or even feel on the skin.</p>
-
-        <h3>Specializes In</h3>
-        <ul class="awards-list">
-          <li><strong>Floral Designs</strong> - Intricate and lifelike botanical artwork</li>
-          <li><strong>Fine Line Work</strong> - Crisp, clean linework with precision</li>
-          <li><strong>Shading Mastery</strong> - Expert dimensional shading techniques</li>
-        </ul>
+        <h2>About Billy tha Kidd</h2>
+        <p>Billy tha Kidd brings exceptional versatility and artistic skill to Borrowed Time Fine Art Gallery. With expertise spanning from bold traditional designs to intricate black and grey work, from vibrant anime characters to delicate florals, Billy's diverse portfolio showcases a mastery of multiple tattoo styles. Whether you're seeking a meaningful memorial piece, eye-catching Japanese-inspired work, or detailed character art, Billy has the technical skill and creative vision to bring your ideas to life.</p>
       </div>
     </div>
   </div>
@@ -70,12 +63,13 @@
     <div class="category-filter">
       <button class="filter-btn active" data-category="all">All</button>
       <button class="filter-btn" data-category="animals">Animals</button>
+      <button class="filter-btn" data-category="anime">Anime</button>
       <button class="filter-btn" data-category="characters">Characters</button>
       <button class="filter-btn" data-category="floral">Floral</button>
-      <button class="filter-btn" data-category="japanese">Japanese</button>
+      <button class="filter-btn" data-category="lettering">Lettering</button>
       <button class="filter-btn" data-category="memorial">Memorial</button>
       <button class="filter-btn" data-category="religious">Religious</button>
-      <button class="filter-btn" data-category="skulls">Skulls</button>
+      <button class="filter-btn" data-category="traditional">Traditional</button>
     </div>
 
     <div class="gallery-grid" id="gallery-container">
@@ -98,7 +92,7 @@
 <section class="cta-section">
   <div class="content-container">
     <h2>Ready to Get Inked?</h2>
-    <p>Book an appointment with Tomb Raider today</p>
+    <p>Book an appointment with Billy tha Kidd today</p>
     <div class="cta-buttons-center">
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="cta-button" target="_blank" rel="noopener">Book Appointment</a>
       <a href="https://forms.gle/xyntAzkp4yjKuN2X7" class="cta-button secondary" target="_blank" rel="noopener">Get Consultation</a>
@@ -137,67 +131,62 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
 // Gallery images list with categories (multi-category support)
 const galleryImages = [
-  { img: 'tombraider_crystal_skull.jpg', categories: ['skulls'] },
-  { img: 'tombraider_flower_compass.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_lineart.jpg', categories: ['floral'] },
-  { img: 'tombraider_fox_blackandgrey.jpg', categories: ['animals'] },
-  { img: 'laura_compilation-3.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala.jpg', categories: ['floral'] },
-  { img: 'tombraider_seahorse_lineart.jpg', categories: ['animals'] },
-  { img: 'tombraider_skull_blackandgrey.jpg', categories: ['skulls'] },
-  { img: 'tombraider_stone_spearhead_color.jpg', categories: ['floral'] },
-  { img: 'tombraider_animal_jellyfish.jpg', categories: ['animals'] },
-  { img: 'tombraider_animal_snake.jpg', categories: ['animals'] },
-  { img: 'tombraider_animal_wolf.jpg', categories: ['animals'] },
-  { img: 'tombraider_character_antipriest.jpg', categories: ['characters', 'religious'] },
-  { img: 'tombraider_compilation_sleeve.jpg', categories: ['floral'] },
-  { img: 'tombraider_coverup_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_face.jpg', categories: ['floral'] },
-  { img: 'tombraider_face_snake.jpg', categories: ['animals'] },
-  { img: 'tombraider_floral_arm.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arm2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arm3.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arrow.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_bird.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_butterfly.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_compass.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_cow.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_crystal.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_face_knife.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_forearm.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_horsehoe.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_mandala.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_mandala2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_scenic.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_shoulder.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_skull.jpg', categories: ['floral', 'skulls'] },
-  { img: 'tombraider_floral_sleeve.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_sleeve2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_snake.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_snake2.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_taurus.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_wolf.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_fullcolor_arrowhead.jpg', categories: ['floral'] },
-  { img: 'tombraider_fullcolor_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_head_norse.jpg', categories: ['characters'] },
-  { img: 'tombraider_japanese_sleeve.jpg', categories: ['japanese', 'floral'] },
-  { img: 'tombraider_knife.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala_hip.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala_seahorse.jpg', categories: ['animals', 'floral'] },
-  { img: 'tombraider_mayan.jpg', categories: ['characters'] },
-  { img: 'tombraider_memorial.jpg', categories: ['memorial', 'floral'] },
-  { img: 'tombraider_memorial_hourglass.jpg', categories: ['memorial'] },
-  { img: 'tombraider_mermaidscales.jpg', categories: ['floral'] },
-  { img: 'tombraider_religious_lion.jpg', categories: ['religious', 'animals'] },
-  { img: 'tombraider_religious_text.jpg', categories: ['religious'] },
-  { img: 'tombraider_skull.jpg', categories: ['skulls'] },
-  { img: 'tombraider_skull2.jpg', categories: ['skulls'] },
-  { img: 'tombraider_space.jpg', categories: ['floral'] },
-  { img: 'tombraider_tree.jpg', categories: ['memorial', 'floral'] },
-  { img: 'tombraider_warrior.jpg', categories: ['characters'] },
-  { img: 'tombraider_undead_face.jpg', categories: ['skulls', 'characters'] },
-  { img: 'tombraider_flower_snake.jpg', categories: ['floral', 'animals'] }
+  { img: 'billythakidd_angel.png', categories: ['religious'] },
+  { img: 'billythakidd_angel_religious_sleeve_blackandgrey.png', categories: ['religious'] },
+  { img: 'billythakidd_anime_naruto_itachi.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_anime_naruto_itachi2.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_anime_naruto_itachi3.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_bear.png', categories: ['animals'] },
+  { img: 'billythakidd_bird_knife.png', categories: ['animals'] },
+  { img: 'billythakidd_butterfly_skull.png', categories: ['animals'] },
+  { img: 'billythakidd_compass.png', categories: ['traditional'] },
+  { img: 'billythakidd_crystal.png', categories: ['traditional'] },
+  { img: 'billythakidd_eagle.png', categories: ['animals'] },
+  { img: 'billythakidd_eye.png', categories: ['characters'] },
+  { img: 'billythakidd_fish_blackandgrey.png', categories: ['animals'] },
+  { img: 'billythakidd_floral.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_blackandgrey.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_butterfly.png', categories: ['floral', 'animals'] },
+  { img: 'billythakidd_floral_color.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_lettering.png', categories: ['floral', 'lettering'] },
+  { img: 'billythakidd_floral2.png', categories: ['floral'] },
+  { img: 'billythakidd_floral3.png', categories: ['floral'] },
+  { img: 'billythakidd_floral4.png', categories: ['floral'] },
+  { img: 'billythakidd_floral5.png', categories: ['floral'] },
+  { img: 'billythakidd_floral6.png', categories: ['floral'] },
+  { img: 'billythakidd_floral7.png', categories: ['floral'] },
+  { img: 'billythakidd_floral8.png', categories: ['floral'] },
+  { img: 'billythakidd_gem_color.png', categories: ['traditional'] },
+  { img: 'billythakidd_halloween_character_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey2.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey3.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey4.png', categories: ['characters'] },
+  { img: 'billythakidd_hands_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_hummingbird_skeleton.png', categories: ['animals'] },
+  { img: 'billythakidd_icarus.png', categories: ['characters'] },
+  { img: 'billythakidd_knight_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_koi.png', categories: ['animals'] },
+  { img: 'billythakidd_lettering.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering_skull.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering2.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering3.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering4.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering5.png', categories: ['lettering'] },
+  { img: 'billythakidd_longhorn_skull_blackandgrey.png', categories: ['animals'] },
+  { img: 'billythakidd_memorial.png', categories: ['memorial', 'lettering'] },
+  { img: 'billythakidd_mermaid_floral.png', categories: ['characters', 'floral'] },
+  { img: 'billythakidd_moth_floral_blackandgrey.png', categories: ['animals', 'floral'] },
+  { img: 'billythakidd_moth_skull.png', categories: ['animals'] },
+  { img: 'billythakidd_moth_skull_eye_color.png', categories: ['animals'] },
+  { img: 'billythakidd_pheonix_yingyang_blackandgrey.png', categories: ['animals', 'traditional'] },
+  { img: 'billythakidd_religious_cross.png', categories: ['religious'] },
+  { img: 'billythakidd_skellington.png', categories: ['characters'] },
+  { img: 'billythakidd_spider.png', categories: ['animals'] },
+  { img: 'billythakidd_spider2.png', categories: ['animals'] },
+  { img: 'billythakidd_stitch_color.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_sun_moon_lineart.png', categories: ['traditional'] },
+  { img: 'billythakidd_sword.png', categories: ['traditional'] },
+  { img: 'billythakidd_wheel_wing_traditional.png', categories: ['traditional'] }
 ];
 
 // Populate gallery
@@ -213,7 +202,7 @@ function populateGallery(filter = 'all') {
   filteredImages.forEach((item, index) => {
     const div = document.createElement('div');
     div.className = 'gallery-item';
-    div.innerHTML = `<img src="images/tombraider/${item.img}" alt="Tomb Raider's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
+    div.innerHTML = `<img src="images/billythakidd/${item.img}" alt="Billy tha Kidd's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
     galleryContainer.appendChild(div);
   });
 }
@@ -241,7 +230,7 @@ let currentImageIndex = 0;
 
 function openLightbox(index) {
   currentImageIndex = index;
-  lightboxImage.src = `images/tombraider/${galleryImages[index].img}`;
+  lightboxImage.src = `images/billythakidd/${galleryImages[index].img}`;
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -253,12 +242,12 @@ function closeLightbox() {
 
 function showPrevImage() {
   currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-  lightboxImage.src = `images/tombraider/${galleryImages[currentImageIndex].img}`;
+  lightboxImage.src = `images/billythakidd/${galleryImages[currentImageIndex].img}`;
 }
 
 function showNextImage() {
   currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-  lightboxImage.src = `images/tombraider/${galleryImages[currentImageIndex].img}`;
+  lightboxImage.src = `images/billythakidd/${galleryImages[currentImageIndex].img}`;
 }
 
 // Event listeners
@@ -272,14 +261,17 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightboxPrev.addEventListener('click', showPrevImage);
 lightboxNext.addEventListener('click', showNextImage);
 
+// Close lightbox on background click
 lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) {
     closeLightbox();
   }
 });
 
+// Keyboard navigation
 document.addEventListener('keydown', (e) => {
   if (!lightbox.classList.contains('active')) return;
+
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') showPrevImage();
   if (e.key === 'ArrowRight') showNextImage();
