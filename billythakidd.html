@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Billy tha Kidd - Versatile tattoo artist at Borrowed Time Fine Art Gallery">
+<title>Billy tha Kidd | Borrowed Time Fine Art Gallery</title>
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+<meta name="theme-color" content="#000000">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="tombraider.html" class="nav-link">Tomb Raider</a>
+      <a href="dexter.html" class="nav-link">Dexter</a>
+      <a href="chris.html" class="nav-link">Chris</a>
+      <a href="https://www.instagram.com/billythakiddtattoos/" class="nav-link" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Billy</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Artist Header -->
+<section class="artist-header">
+  <div class="content-container">
+    <h1 class="artist-name">Billy tha Kidd</h1>
+    <p class="artist-title">Versatile Artist</p>
+  </div>
+</section>
+
+<!-- Artist Bio Section -->
+<section class="artist-bio-section">
+  <div class="content-container">
+    <div class="bio-grid">
+      <div class="bio-image">
+        <img src="images/billythakidd/billythakidd_profile.png" alt="Billy tha Kidd" loading="lazy">
+      </div>
+      <div class="bio-content">
+        <h2>About Billy tha Kidd</h2>
+        <p>Billy tha Kidd brings exceptional versatility and artistic skill to Borrowed Time Fine Art Gallery. With expertise spanning from bold traditional designs to intricate black and grey work, from vibrant anime characters to delicate florals, Billy's diverse portfolio showcases a mastery of multiple tattoo styles. Whether you're seeking a meaningful memorial piece, eye-catching Japanese-inspired work, or detailed character art, Billy has the technical skill and creative vision to bring your ideas to life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="artist-gallery-section">
+  <div class="content-container">
+    <h2 class="section-title">Portfolio</h2>
+
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="animals">Animals</button>
+      <button class="filter-btn" data-category="anime">Anime</button>
+      <button class="filter-btn" data-category="characters">Characters</button>
+      <button class="filter-btn" data-category="floral">Floral</button>
+      <button class="filter-btn" data-category="lettering">Lettering</button>
+      <button class="filter-btn" data-category="memorial">Memorial</button>
+      <button class="filter-btn" data-category="religious">Religious</button>
+      <button class="filter-btn" data-category="traditional">Traditional</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-container">
+      <!-- Gallery will be populated by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <span class="lightbox-nav lightbox-prev" id="lightbox-prev"></span>
+  <div class="lightbox-content">
+    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+  </div>
+  <span class="lightbox-nav lightbox-next" id="lightbox-next"></span>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="content-container">
+    <h2>Ready to Get Inked?</h2>
+    <p>Book an appointment with Billy tha Kidd today</p>
+    <div class="cta-buttons-center">
+      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="cta-button" target="_blank" rel="noopener">Book Appointment</a>
+      <a href="https://forms.gle/xyntAzkp4yjKuN2X7" class="cta-button secondary" target="_blank" rel="noopener">Get Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Borrowed Time Fine Art Gallery | McKinney, TX</p>
+    <p>Website by <strong>cloudhopr</strong></p>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.querySelector('.mobile-menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
+});
+
+// Gallery images list with categories (multi-category support)
+const galleryImages = [
+  { img: 'billythakidd_angel.png', categories: ['religious'] },
+  { img: 'billythakidd_angel_religious_sleeve_blackandgrey.png', categories: ['religious'] },
+  { img: 'billythakidd_anime_naruto_itachi.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_anime_naruto_itachi2.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_anime_naruto_itachi3.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_bear.png', categories: ['animals'] },
+  { img: 'billythakidd_bird_knife.png', categories: ['animals'] },
+  { img: 'billythakidd_butterfly_skull.png', categories: ['animals'] },
+  { img: 'billythakidd_compass.png', categories: ['traditional'] },
+  { img: 'billythakidd_crystal.png', categories: ['traditional'] },
+  { img: 'billythakidd_eagle.png', categories: ['animals'] },
+  { img: 'billythakidd_eye.png', categories: ['characters'] },
+  { img: 'billythakidd_fish_blackandgrey.png', categories: ['animals'] },
+  { img: 'billythakidd_floral.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_blackandgrey.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_butterfly.png', categories: ['floral', 'animals'] },
+  { img: 'billythakidd_floral_color.png', categories: ['floral'] },
+  { img: 'billythakidd_floral_lettering.png', categories: ['floral', 'lettering'] },
+  { img: 'billythakidd_floral2.png', categories: ['floral'] },
+  { img: 'billythakidd_floral3.png', categories: ['floral'] },
+  { img: 'billythakidd_floral4.png', categories: ['floral'] },
+  { img: 'billythakidd_floral5.png', categories: ['floral'] },
+  { img: 'billythakidd_floral6.png', categories: ['floral'] },
+  { img: 'billythakidd_floral7.png', categories: ['floral'] },
+  { img: 'billythakidd_floral8.png', categories: ['floral'] },
+  { img: 'billythakidd_gem_color.png', categories: ['traditional'] },
+  { img: 'billythakidd_halloween_character_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey2.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey3.png', categories: ['characters'] },
+  { img: 'billythakidd_halloween_character_blackandgrey4.png', categories: ['characters'] },
+  { img: 'billythakidd_hands_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_hummingbird_skeleton.png', categories: ['animals'] },
+  { img: 'billythakidd_icarus.png', categories: ['characters'] },
+  { img: 'billythakidd_knight_blackandgrey.png', categories: ['characters'] },
+  { img: 'billythakidd_koi.png', categories: ['animals'] },
+  { img: 'billythakidd_lettering.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering_skull.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering2.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering3.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering4.png', categories: ['lettering'] },
+  { img: 'billythakidd_lettering5.png', categories: ['lettering'] },
+  { img: 'billythakidd_longhorn_skull_blackandgrey.png', categories: ['animals'] },
+  { img: 'billythakidd_memorial.png', categories: ['memorial', 'lettering'] },
+  { img: 'billythakidd_mermaid_floral.png', categories: ['characters', 'floral'] },
+  { img: 'billythakidd_moth_floral_blackandgrey.png', categories: ['animals', 'floral'] },
+  { img: 'billythakidd_moth_skull.png', categories: ['animals'] },
+  { img: 'billythakidd_moth_skull_eye_color.png', categories: ['animals'] },
+  { img: 'billythakidd_pheonix_yingyang_blackandgrey.png', categories: ['animals', 'traditional'] },
+  { img: 'billythakidd_religious_cross.png', categories: ['religious'] },
+  { img: 'billythakidd_skellington.png', categories: ['characters'] },
+  { img: 'billythakidd_spider.png', categories: ['animals'] },
+  { img: 'billythakidd_spider2.png', categories: ['animals'] },
+  { img: 'billythakidd_stitch_color.png', categories: ['anime', 'characters'] },
+  { img: 'billythakidd_sun_moon_lineart.png', categories: ['traditional'] },
+  { img: 'billythakidd_sword.png', categories: ['traditional'] },
+  { img: 'billythakidd_wheel_wing_traditional.png', categories: ['traditional'] }
+];
+
+// Populate gallery
+const galleryContainer = document.getElementById('gallery-container');
+let currentFilter = 'all';
+
+function populateGallery(filter = 'all') {
+  galleryContainer.innerHTML = '';
+  const filteredImages = filter === 'all'
+    ? galleryImages
+    : galleryImages.filter(item => item.categories.includes(filter));
+
+  filteredImages.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.className = 'gallery-item';
+    div.innerHTML = `<img src="images/billythakidd/${item.img}" alt="Billy tha Kidd's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
+    galleryContainer.appendChild(div);
+  });
+}
+
+// Category filter functionality
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.category;
+    populateGallery(currentFilter);
+  });
+});
+
+populateGallery();
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+let currentImageIndex = 0;
+
+function openLightbox(index) {
+  currentImageIndex = index;
+  lightboxImage.src = `images/billythakidd/${galleryImages[index].img}`;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function showPrevImage() {
+  currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+  lightboxImage.src = `images/billythakidd/${galleryImages[currentImageIndex].img}`;
+}
+
+function showNextImage() {
+  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+  lightboxImage.src = `images/billythakidd/${galleryImages[currentImageIndex].img}`;
+}
+
+// Event listeners
+galleryContainer.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    openLightbox(parseInt(e.target.dataset.index));
+  }
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxPrev.addEventListener('click', showPrevImage);
+lightboxNext.addEventListener('click', showNextImage);
+
+// Close lightbox on background click
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('active')) return;
+
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showPrevImage();
+  if (e.key === 'ArrowRight') showNextImage();
+});
+
+// Scroll to top functionality
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+</body>
+</html>
