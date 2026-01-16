@@ -80,6 +80,7 @@
       <button class="filter-btn" data-category="animals">Animals</button>
       <button class="filter-btn" data-category="characters">Characters</button>
       <button class="filter-btn" data-category="color">Color</button>
+      <button class="filter-btn" data-category="coverups">Coverups</button>
       <button class="filter-btn" data-category="floral">Floral</button>
       <button class="filter-btn" data-category="memorial">Memorial</button>
       <button class="filter-btn" data-category="religious">Religious</button>
@@ -99,6 +100,7 @@
   <span class="lightbox-nav lightbox-prev" id="lightbox-prev"></span>
   <div class="lightbox-content">
     <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    <button class="before-after-toggle" id="beforeAfterToggle" style="display: none;">Show Before</button>
   </div>
   <span class="lightbox-nav lightbox-next" id="lightbox-next"></span>
 </div>
@@ -175,7 +177,23 @@ const galleryImages = [
   { img: 'dexter_color_peace.jpg', categories: ['color'] },
   { img: 'dexter_color_skull.jpg', categories: ['skulls', 'color'] },
   { img: 'dexter_color_starwars.jpg', categories: ['characters', 'color'] },
-  { img: 'dexter_coverup_snake_skull.jpg', categories: ['skulls', 'animals'] },
+  { img: 'dexter_coverup.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_1B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_1A.jpeg' },
+  { img: 'dexter_coverup_2.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_2B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_2A.jpeg' },
+  { img: 'dexter_coverup_3.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_3B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_3A.jpeg' },
+  { img: 'dexter_coverup_4.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_4B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_4A.jpeg' },
+  { img: 'dexter_coverup_5.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_5B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_5A.jpeg' },
+  { img: 'dexter_coverup_6.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_6B.jpeg', categories: ['coverups'], beforeImg: 'dexter_coverup_6A.jpeg' },
+  { img: 'dexter_coverup_7.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_8.jpeg', categories: ['coverups'] },
+  { img: 'dexter_coverup_french_bulldog.jpeg', categories: ['coverups', 'animals'] },
+  { img: 'dexter_coverup_snake_skull.jpg', categories: ['coverups', 'skulls', 'animals'] },
+  { img: 'dexter_coverup_treblecleff.jpeg', categories: ['coverups'] },
   { img: 'dexter_dog.jpg', categories: ['animals'] },
   { img: 'dexter_dragon.jpg', categories: ['characters'] },
   { img: 'dexter_eye.jpg', categories: ['color'] },
@@ -294,29 +312,60 @@ const lightboxImage = document.getElementById('lightbox-image');
 const lightboxClose = document.getElementById('lightbox-close');
 const lightboxPrev = document.getElementById('lightbox-prev');
 const lightboxNext = document.getElementById('lightbox-next');
+const beforeAfterToggle = document.getElementById('beforeAfterToggle');
 let currentImageIndex = 0;
+let showingBefore = false;
 
 function openLightbox(index) {
   currentImageIndex = index;
-  lightboxImage.src = `images/dexter/${galleryImages[index].img}`;
+  showingBefore = false;
+  updateLightboxImage();
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxImage() {
+  const currentImage = galleryImages[currentImageIndex];
+
+  if (showingBefore && currentImage.beforeImg) {
+    lightboxImage.src = `images/dexter/${currentImage.beforeImg}`;
+    beforeAfterToggle.textContent = 'Show After';
+  } else {
+    lightboxImage.src = `images/dexter/${currentImage.img}`;
+    beforeAfterToggle.textContent = 'Show Before';
+  }
+
+  // Show/hide before/after toggle button
+  if (currentImage.beforeImg) {
+    beforeAfterToggle.style.display = 'block';
+  } else {
+    beforeAfterToggle.style.display = 'none';
+  }
 }
 
 function closeLightbox() {
   lightbox.classList.remove('active');
   document.body.style.overflow = '';
+  showingBefore = false;
 }
 
 function showPrevImage() {
   currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-  lightboxImage.src = `images/dexter/${galleryImages[currentImageIndex].img}`;
+  showingBefore = false;
+  updateLightboxImage();
 }
 
 function showNextImage() {
   currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-  lightboxImage.src = `images/dexter/${galleryImages[currentImageIndex].img}`;
+  showingBefore = false;
+  updateLightboxImage();
 }
+
+// Toggle before/after
+beforeAfterToggle.addEventListener('click', () => {
+  showingBefore = !showingBefore;
+  updateLightboxImage();
+});
 
 // Event listeners
 galleryContainer.addEventListener('click', (e) => {
