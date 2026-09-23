@@ -11,7 +11,7 @@ cd "c:\Users\CloudHopR\Documents\Projects\borrowedtime\borrowedtime" && python -
 ### File Synchronization
 After editing any `.html` files, run this command to sync with extensionless versions:
 ```bash
-cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider && cp billythakidd.html billythakidd && cp gallery_animals.html gallery_animals && cp gallery_characters.html gallery_characters && cp gallery_color.html gallery_color && cp gallery_floral.html gallery_floral && cp gallery_japanese.html gallery_japanese && cp gallery_memorial.html gallery_memorial && cp gallery_realism.html gallery_realism && cp gallery_religious.html gallery_religious
+cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider && cp gallery_animals.html gallery_animals && cp gallery_characters.html gallery_characters && cp gallery_color.html gallery_color && cp gallery_floral.html gallery_floral && cp gallery_japanese.html gallery_japanese && cp gallery_memorial.html gallery_memorial && cp gallery_realism.html gallery_realism && cp gallery_religious.html gallery_religious
 ```
 
 **Why:** The live site serves both `/chris` and `/chris.html` URLs. The extensionless files need to stay in sync with the `.html` files.
@@ -22,7 +22,6 @@ cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider &&
 - **Dexter** - Award-winning artist
 - **Tomb Raider** - Floral specialist
 - **Chris** - Detail perfectionist
-- **Billy tha Kidd** - Versatile artist (newest addition)
 
 ### Studio Portfolio Galleries
 All galleries include work from all artists with reference codes:
