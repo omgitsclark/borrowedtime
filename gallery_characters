@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Character Designs - Borrowed Time Fine Art Gallery">
 <title>Character Designs | Borrowed Time Fine Art Gallery</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Borrowed Time Fine Art Gallery">
+<meta property="og:title" content="Character Designs | Borrowed Time Fine Art Gallery">
+<meta property="og:description" content="Character Designs - Borrowed Time Fine Art Gallery">
+<meta property="og:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<meta property="og:url" content="https://www.borrowedtimetattoomckinney.com/gallery_characters.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Character Designs | Borrowed Time Fine Art Gallery">
+<meta name="twitter:description" content="Character Designs - Borrowed Time Fine Art Gallery">
+<meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<link href="css/singlePageTemplate.css?v=5" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -25,6 +35,8 @@
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="chris.html" class="nav-link">Chris</a>
+      <a href="caseyleal.html" class="nav-link">Casey Leal</a>
+      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
     </div>
   </div>
@@ -89,6 +101,9 @@
   </div>
 </section>
 
+<!-- Sticky Mobile Booking Bar -->
+<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Now →</a>
+
 <!-- Scroll to Top Button -->
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
@@ -117,6 +132,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
     menuToggle.classList.remove('active');
   });
 });
+
+// Glass nav on scroll
+const mainNav = document.querySelector('.main-nav');
+const handleNavScroll = () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 40);
+};
+handleNavScroll();
+window.addEventListener('scroll', handleNavScroll);
 
 // Gallery images with artist and reference ID
 const galleryImages = [
@@ -162,7 +185,19 @@ const galleryImages = [
   { src: 'images/chris/chris-hellokitty-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'CH-C15' },
   { src: 'images/chris/chris-mushroom-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'CH-C16' },
   { src: 'images/chris/chris-pinup-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'CH-C17' },
-  { src: 'images/chris/chris-supernatural-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'CH-C18' }
+  { src: 'images/chris/chris-supernatural-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'CH-C18' },
+  { src: 'images/casey/casey_monster_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL01' },
+  { src: 'images/casey/casey_aztec_serpent_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL02' },
+  { src: 'images/casey/casey_cactus_snake_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL03' },
+  { src: 'images/casey/casey_dagger_pinup_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL04' },
+  { src: 'images/casey/casey_floral_portrait_blackandgrey.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL05' },
+  { src: 'images/casey/casey_frida_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL06' },
+  { src: 'images/casey/casey_ghost_halloween_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'CH-CL07' },
+  { src: 'images/hector/hector_trejo_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H01' },
+  { src: 'images/hector/hector_battleaxe_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H02' },
+  { src: 'images/hector/hector_firefighter_pinup_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H03' },
+  { src: 'images/hector/hector_vintage_woman_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H04' },
+  { src: 'images/hector/hector_twoface_portrait_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H05' }
 ];
 
 // Populate gallery

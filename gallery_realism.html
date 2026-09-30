@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Realism Designs - Borrowed Time Fine Art Gallery">
 <title>Realism Designs | Borrowed Time Fine Art Gallery</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Borrowed Time Fine Art Gallery">
+<meta property="og:title" content="Realism Designs | Borrowed Time Fine Art Gallery">
+<meta property="og:description" content="Realism Designs - Borrowed Time Fine Art Gallery">
+<meta property="og:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<meta property="og:url" content="https://www.borrowedtimetattoomckinney.com/gallery_realism.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Realism Designs | Borrowed Time Fine Art Gallery">
+<meta name="twitter:description" content="Realism Designs - Borrowed Time Fine Art Gallery">
+<meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<link href="css/singlePageTemplate.css?v=5" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -25,6 +35,8 @@
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="chris.html" class="nav-link">Chris</a>
+      <a href="caseyleal.html" class="nav-link">Casey Leal</a>
+      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
     </div>
   </div>
@@ -89,6 +101,9 @@
   </div>
 </section>
 
+<!-- Sticky Mobile Booking Bar -->
+<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Now →</a>
+
 <!-- Scroll to Top Button -->
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
@@ -118,6 +133,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+// Glass nav on scroll
+const mainNav = document.querySelector('.main-nav');
+const handleNavScroll = () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 40);
+};
+handleNavScroll();
+window.addEventListener('scroll', handleNavScroll);
+
 // Gallery images with artist and reference ID
 const galleryImages = [
   { src: 'images/dexter/spider_sleeve.jpg', artist: 'Dexter', artistLink: 'dexter.html', ref: 'RE-D01' },
@@ -127,7 +150,9 @@ const galleryImages = [
   { src: 'images/tombraider/tombraider_skull.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RE-T03' },
   { src: 'images/tombraider/tombraider_skull2.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RE-T04' },
   { src: 'images/tombraider/tombraider_skull_blackandgrey.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RE-T05' },
-  { src: 'images/tombraider/tombraider_undead_face.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RE-T06' }
+  { src: 'images/tombraider/tombraider_undead_face.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RE-T06' },
+  { src: 'images/hector/hector_trejo_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'RE-H01' },
+  { src: 'images/hector/hector_twoface_portrait_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'RE-H02' }
 ];
 
 // Populate gallery

@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Borrowed Time Fine Art Gallery - McKinney's premier upscale tattoo gallery with award-winning artists">
 <title>Borrowed Time Fine Art Gallery | McKinney Tattoo Shop</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Borrowed Time Fine Art Gallery">
+<meta property="og:title" content="Borrowed Time Fine Art Gallery | McKinney Tattoo Shop">
+<meta property="og:description" content="Borrowed Time Fine Art Gallery - McKinney's premier upscale tattoo gallery with award-winning artists">
+<meta property="og:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<meta property="og:url" content="https://www.borrowedtimetattoomckinney.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Borrowed Time Fine Art Gallery | McKinney Tattoo Shop">
+<meta name="twitter:description" content="Borrowed Time Fine Art Gallery - McKinney's premier upscale tattoo gallery with award-winning artists">
+<meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<link href="css/singlePageTemplate.css?v=5" rel="stylesheet" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-152x152.png" />
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
@@ -99,6 +109,51 @@
           <a href="chris.html" class="artist-link">View Gallery →</a>
         </div>
       </div>
+      <div class="artist-card">
+        <div class="artist-image">
+          <img src="images/casey/casey_profile.jpg" alt="Casey Leal" loading="lazy">
+        </div>
+        <div class="artist-info">
+          <h3>Casey Leal</h3>
+          <p class="artist-tag">Bold Traditional &amp; Color</p>
+          <a href="caseyleal.html" class="artist-link">View Gallery →</a>
+        </div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-image">
+          <img src="images/hector/hector_profile.jpg" alt="Hector Ortega" loading="lazy">
+        </div>
+        <div class="artist-info">
+          <h3>Hector Ortega</h3>
+          <p class="artist-tag">Black &amp; Grey Realism</p>
+          <a href="hectorortega.html" class="artist-link">View Gallery →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="reviews-section" id="reviews">
+  <div class="content-container">
+    <h2 class="section-title">What Clients Say</h2>
+    <!-- TODO: replace with real Google/Facebook reviews -->
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Booked a consult, walked out with a piece I'll love forever. Cleanest shop I've been to."</p>
+        <p class="review-name">— sample Google review</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Dexter's attention to detail is unreal. Already planning the next session."</p>
+        <p class="review-name">— sample Google review</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Upscale, clean, and the whole team makes you feel comfortable from the first consult."</p>
+        <p class="review-name">— sample Google review</p>
+      </div>
     </div>
   </div>
 </section>
@@ -168,6 +223,9 @@
   </div>
 </section>
 
+<!-- Sticky Mobile Booking Bar -->
+<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Now →</a>
+
 <!-- Scroll to Top Button -->
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
@@ -196,6 +254,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
     menuToggle.classList.remove('active');
   });
 });
+
+// Glass nav on scroll
+const mainNav = document.querySelector('.main-nav');
+const handleNavScroll = () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 40);
+};
+handleNavScroll();
+window.addEventListener('scroll', handleNavScroll);
 
 // Scroll to top functionality
 const scrollToTopBtn = document.getElementById('scrollToTop');

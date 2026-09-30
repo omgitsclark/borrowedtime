@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Animal Designs - Borrowed Time Fine Art Gallery">
 <title>Animal Designs | Borrowed Time Fine Art Gallery</title>
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Borrowed Time Fine Art Gallery">
+<meta property="og:title" content="Animal Designs | Borrowed Time Fine Art Gallery">
+<meta property="og:description" content="Animal Designs - Borrowed Time Fine Art Gallery">
+<meta property="og:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<meta property="og:url" content="https://www.borrowedtimetattoomckinney.com/gallery_animals.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Animal Designs | Borrowed Time Fine Art Gallery">
+<meta name="twitter:description" content="Animal Designs - Borrowed Time Fine Art Gallery">
+<meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
+<link href="css/singlePageTemplate.css?v=5" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -25,6 +35,8 @@
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="chris.html" class="nav-link">Chris</a>
+      <a href="caseyleal.html" class="nav-link">Casey Leal</a>
+      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
     </div>
   </div>
@@ -89,6 +101,9 @@
   </div>
 </section>
 
+<!-- Sticky Mobile Booking Bar -->
+<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Now →</a>
+
 <!-- Scroll to Top Button -->
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
 
@@ -117,6 +132,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
     menuToggle.classList.remove('active');
   });
 });
+
+// Glass nav on scroll
+const mainNav = document.querySelector('.main-nav');
+const handleNavScroll = () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 40);
+};
+handleNavScroll();
+window.addEventListener('scroll', handleNavScroll);
 
 // Gallery images with artist and reference ID
 const galleryImages = [
@@ -183,7 +206,17 @@ const galleryImages = [
   { src: 'images/chris/chris_traditional_tiger.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'AN-C21' },
   { src: 'images/chris/chris_underwater.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'AN-C22' },
   { src: 'images/chris/chris_wolfinsheephide.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'AN-C23' },
-  { src: 'images/chris/chris-butterfly-skull-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'AN-C24' }
+  { src: 'images/chris/chris-butterfly-skull-2.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'AN-C24' },
+  { src: 'images/casey/casey_skull_eagle_floral.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL01' },
+  { src: 'images/casey/casey_cat_lockets_blackandgrey.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL02' },
+  { src: 'images/casey/casey_gorilla_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL03' },
+  { src: 'images/casey/casey_eagle_skull_dagger.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL04' },
+  { src: 'images/casey/casey_bear_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL05' },
+  { src: 'images/casey/casey_dinosaur_linework.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL06' },
+  { src: 'images/casey/casey_panther_traditional.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL07' },
+  { src: 'images/casey/casey_shark_anchor_blackandgrey.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'AN-CL08' },
+  { src: 'images/hector/hector_sun_eye_serpent_color.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'AN-H01' },
+  { src: 'images/hector/hector_snake_floral_color.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'AN-H02' }
 ];
 
 // Populate gallery
