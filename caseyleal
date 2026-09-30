@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Casey Leal | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Casey Leal - tattoo artist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=5" rel="stylesheet" type="text/css">
+<link href="css/singlePageTemplate.css?v=7" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -111,6 +111,13 @@
 <!-- CTA Section -->
 <section class="cta-section">
   <div class="content-container">
+    <div class="review-grid single">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Casey is the best! He did a big touch-up and color-add to a large tattoo of mine from another artist. He had so much knowledge and experience to give good insight on what would help the tattoo pop more without ruining it. He helped me make an informed decision without pressuring me. He is such a positive and compassionate person. 100% recommend!"</p>
+        <p class="review-name">— Autumn, Google review</p>
+      </div>
+    </div>
     <h2>Ready to Get Inked?</h2>
     <p>Book an appointment with Casey today</p>
     <div class="cta-buttons-center">

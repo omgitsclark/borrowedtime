@@ -356,6 +356,28 @@ body::after {
     background: rgba(26, 26, 26, 0.8);
 }
 
+.reviews-section .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.reviews-rating {
+    text-align: center;
+    color: var(--accent-bright);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+}
+
+.cta-section .review-grid {
+    margin-bottom: 3rem;
+}
+
+.review-grid.single {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .review-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
