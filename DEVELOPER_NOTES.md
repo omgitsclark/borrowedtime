@@ -37,6 +37,14 @@ So pushing to `main` is the whole deploy; it's live within ~2 minutes (no restar
 
 Apache config: the site's vhosts are in `/etc/httpd/conf/httpd.conf` (port 80, redirects to https) and `/etc/httpd/conf/httpd-le-ssl.conf` (443). Folder listings are off for every site via `/etc/httpd/conf.d/zz-no-indexes.conf` (`Options -Indexes` on `/var/www/html`, added 2026-10-15), so a folder URL like `/images/dexter/` returns 403; `.git/` and other dot-folders are blocked by `conf.d/deny-hidden.conf`.
 
+### Traffic Guard (bandwidth cap)
+`/etc/cron.d/traffic-guard` runs `/usr/local/bin/traffic-guard.sh` as root every 5 minutes. It adds up the server's network traffic (in + out) for the month in `/var/lib/traffic-guard/YYYY-MM` (bytes) and **stops Apache once the month passes 800 GB**, to stay under the Lightsail transfer allowance. Stopping Apache takes down every site on the box (borrowedtime, clarknavidad, ...), and nothing starts it again on its own, not even when the new month begins.
+- Usage so far this month: `sudo awk '{printf "%.1f GB\n", $1/1024^3}' /var/lib/traffic-guard/$(date +%Y-%m)`
+- Did it fire? `sudo journalctl -t traffic-guard` (it logs "stopped httpd")
+- Bring the sites back: `sudo systemctl start httpd` (if it's still the same month, it'll stop again within 5 minutes unless `LIMIT_GB` in the script is raised)
+
+This is why big images matter: serve thumbnails and `images/web/` copies, never multi-MB originals on page load.
+
 ### CSS Cache Busting
 The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
 
