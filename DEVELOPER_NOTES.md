@@ -18,6 +18,13 @@ cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider &&
 
 **Note:** `index.html` has no extensionless twin — don't create one; the server serves `index.html` directly as the directory index.
 
+### Gallery Thumbnails
+Gallery grids and homepage artist cards load small square thumbnails from `images/thumbs/` (mirrors `images/<artist>/`); the lightbox still opens the full-size photo. After adding or changing any artist photos, run from the repo root:
+```bash
+python tools/make_thumbnails.py
+```
+It only processes new/changed photos (needs Pillow). If a thumbnail is ever missing, the page falls back to the full-size image automatically, so nothing breaks; it's just heavier until the script is run.
+
 ### CSS Cache Busting
 The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
 

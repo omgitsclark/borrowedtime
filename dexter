@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Dexter | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Dexter - Award-winning tattoo artist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=9" rel="stylesheet" type="text/css">
+<link href="css/singlePageTemplate.css?v=10" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -76,6 +76,35 @@
           <li><strong>InkMasters</strong> - Third Place - Small Color</li>
           <li><strong>InkMasters</strong> - Third Place - Cover Up</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Work -->
+<section class="recent-work-section">
+  <div class="content-container">
+    <h2 class="section-title">Recent Work</h2>
+    <div class="recent-heading">
+      <span class="recent-tag">Cover-Up</span>
+      <h3>Octopus &amp; Sea Turtle Half Sleeve</h3>
+      <p>A faded black &amp; grey piece reworked into a full-color ocean half sleeve.</p>
+    </div>
+    <div class="recent-grid">
+      <button type="button" class="recent-panel" data-recent="before" aria-label="View the before photo larger">
+        <span class="recent-badge">Before</span>
+        <img src="images/dexter/recent_dexter/dexter_octopus_coverup_before.jpg" alt="Faded black and grey octopus and sea turtle tattoo before the cover-up" loading="lazy">
+      </button>
+      <div class="recent-arrow" aria-hidden="true">→</div>
+      <button type="button" class="recent-panel is-after" data-recent="after" aria-label="View the after photo larger">
+        <span class="recent-badge">After</span>
+        <img src="images/dexter/recent_dexter/dexter_octopus_coverup_after.jpg" alt="Full-color octopus, sea turtle, and shark half sleeve cover-up by Dexter" loading="lazy">
+      </button>
+      <div class="recent-panel is-video">
+        <span class="recent-badge">Video</span>
+        <video id="recentVideo" muted loop playsinline preload="none" poster="images/dexter/recent_dexter/dexter_octopus_coverup_poster.jpg" aria-label="Video walkaround of the finished octopus and sea turtle cover-up">
+          <source src="images/dexter/recent_dexter/dexter_octopus_coverup.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
@@ -171,6 +200,7 @@ window.addEventListener('scroll', handleNavScroll);
 
 // Gallery images list with categories (multi-category support)
 const galleryImages = [
+  { img: 'recent_dexter/dexter_octopus_coverup_after.jpg', categories: ['coverups', 'animals', 'color'], beforeImg: 'recent_dexter/dexter_octopus_coverup_before.jpg' },
   { img: 'bluebonnet.jpg', categories: ['floral'] },
   { img: 'boogie.jpg', categories: ['characters'] },
   { img: 'bulgarian_flag_rose.jpg', categories: ['floral', 'color'] },
@@ -304,7 +334,6 @@ const galleryImages = [
   { img: 'sunflower_lettering.jpg', categories: ['floral', 'memorial'] },
   { img: 'texas_luck.jpg', categories: ['color'] },
   { img: 'tiger_claw.jpg', categories: ['animals'] },
-  { img: 'traditional_sailor_jerry.jpg', categories: ['traditional'] },
   { img: 'Untitled_Artwork.jpeg', categories: ['color'] }
 ];
 
@@ -321,7 +350,7 @@ function populateGallery(filter = 'all') {
   filteredImages.forEach((item, index) => {
     const div = document.createElement('div');
     div.className = 'gallery-item';
-    div.innerHTML = `<img src="images/dexter/${item.img}" alt="Dexter's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
+    div.innerHTML = `<img src="images/thumbs/dexter/${item.img}" onerror="this.onerror=null;this.src='images/dexter/${item.img}'" alt="Dexter's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
     galleryContainer.appendChild(div);
   });
 }
@@ -426,6 +455,34 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') showPrevImage();
   if (e.key === 'ArrowRight') showNextImage();
 });
+
+// Recent work: before/after panels open the lightbox on that piece
+const recentIndex = galleryImages.findIndex(item => item.img === 'recent_dexter/dexter_octopus_coverup_after.jpg');
+document.querySelectorAll('[data-recent]').forEach(panel => {
+  panel.addEventListener('click', () => {
+    openLightbox(recentIndex);
+    if (panel.dataset.recent === 'before') {
+      showingBefore = true;
+      updateLightboxImage();
+    }
+  });
+});
+
+// Recent work video: only plays (and downloads) while on screen
+const recentVideo = document.getElementById('recentVideo');
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  recentVideo.controls = true;
+} else if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      recentVideo.play().catch(() => {});
+    } else {
+      recentVideo.pause();
+    }
+  }, { threshold: 0.25 }).observe(recentVideo);
+} else {
+  recentVideo.play().catch(() => {});
+}
 
 // Scroll to top functionality
 const scrollToTopBtn = document.getElementById('scrollToTop');

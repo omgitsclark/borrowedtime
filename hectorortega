@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Hector Ortega | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Hector Ortega - tattoo artist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=9" rel="stylesheet" type="text/css">
+<link href="css/singlePageTemplate.css?v=10" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -185,7 +185,7 @@ function populateGallery(filter = 'all') {
   filteredImages.forEach((item) => {
     const div = document.createElement('div');
     div.className = 'gallery-item';
-    div.innerHTML = `<img src="images/hector/${item.img}" alt="Hector Ortega's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
+    div.innerHTML = `<img src="images/thumbs/hector/${item.img}" onerror="this.onerror=null;this.src='images/hector/${item.img}'" alt="Hector Ortega's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
     galleryContainer.appendChild(div);
   });
 }
