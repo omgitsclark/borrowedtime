@@ -1,2 +1,9 @@
 tmpclaude*
 nul
+
+# Customer data never belongs in this public repo: submitted quote/consultation
+# forms and exports.
+*.pdf
+*.zip
+*.csv
+*.xlsx

@@ -126,10 +126,11 @@
 <!-- Footer -->
 <footer class="site-footer">
   <div class="footer-content">
-    <p>&copy; 2024 Borrowed Time Fine Art Gallery | McKinney, TX</p>
+    <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery | McKinney, TX</p>
     <p>Website by <strong>cloudhopr</strong></p>
   </div>
 </footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 <script>
 // Mobile menu toggle
