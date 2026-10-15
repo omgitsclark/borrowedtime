@@ -1063,6 +1063,26 @@ body::after {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+/* Laptops - tighten nav so it stays on one row with the full artist list */
+@media (min-width: 969px) and (max-width: 1240px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.65rem;
+    }
+
+    .nav-link.nav-cta {
+        padding: 0.65rem 1.1rem;
+    }
+}
+
 /* Tablets */
 @media (max-width: 968px) {
     .nav-links {

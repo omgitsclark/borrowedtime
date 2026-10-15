@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Character Designs | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Character Designs - Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=7" rel="stylesheet" type="text/css">
+<link href="css/singlePageTemplate.css?v=9" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 <meta name="theme-color" content="#000000">
 </head>
@@ -37,6 +37,7 @@
       <a href="chris.html" class="nav-link">Chris</a>
       <a href="caseyleal.html" class="nav-link">Casey Leal</a>
       <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
+      <a href="masondorow.html" class="nav-link">Mason Dorow</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
     </div>
   </div>
@@ -197,7 +198,16 @@ const galleryImages = [
   { src: 'images/hector/hector_battleaxe_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H02' },
   { src: 'images/hector/hector_firefighter_pinup_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H03' },
   { src: 'images/hector/hector_vintage_woman_blackandgrey.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H04' },
-  { src: 'images/hector/hector_twoface_portrait_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H05' }
+  { src: 'images/hector/hector_twoface_portrait_realism.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'CH-H05' },
+  { src: 'images/mason/mason_weeping_woman_realism.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD01' },
+  { src: 'images/mason/mason_mad_hatter_portrait.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD02' },
+  { src: 'images/mason/mason_trust_none_leg_sleeve.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD03' },
+  { src: 'images/mason/mason_samurai_hannya_color.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD04' },
+  { src: 'images/mason/mason_gas_mask_alexis.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD05' },
+  { src: 'images/mason/mason_slumerica_sleeve_a.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD06' },
+  { src: 'images/mason/mason_grim_reaper_sleeve.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD07' },
+  { src: 'images/mason/mason_bomb_character.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD08' },
+  { src: 'images/mason/mason_alice_script.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'CH-MD09' }
 ];
 
 // Populate gallery

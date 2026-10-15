@@ -11,7 +11,7 @@ cd "c:\Users\CloudHopR\Documents\Projects\borrowedtime\borrowedtime" && python -
 ### File Synchronization
 After editing any `.html` files, run this command to sync with extensionless versions:
 ```bash
-cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider && cp caseyleal.html caseyleal && cp hectorortega.html hectorortega && cp gallery_animals.html gallery_animals && cp gallery_characters.html gallery_characters && cp gallery_color.html gallery_color && cp gallery_floral.html gallery_floral && cp gallery_japanese.html gallery_japanese && cp gallery_memorial.html gallery_memorial && cp gallery_realism.html gallery_realism && cp gallery_religious.html gallery_religious
+cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider && cp caseyleal.html caseyleal && cp hectorortega.html hectorortega && cp masondorow.html masondorow && cp gallery_animals.html gallery_animals && cp gallery_characters.html gallery_characters && cp gallery_color.html gallery_color && cp gallery_floral.html gallery_floral && cp gallery_japanese.html gallery_japanese && cp gallery_memorial.html gallery_memorial && cp gallery_realism.html gallery_realism && cp gallery_religious.html gallery_religious
 ```
 
 **Why:** The live site serves both `/chris` and `/chris.html` URLs. The extensionless files need to stay in sync with the `.html` files.
@@ -19,7 +19,7 @@ cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider &&
 **Note:** `index.html` has no extensionless twin — don't create one; the server serves `index.html` directly as the directory index.
 
 ### CSS Cache Busting
-The stylesheet is linked as `css/singlePageTemplate.css?v=2`. Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
+The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
 
 ## Website Structure
 
@@ -29,6 +29,7 @@ The stylesheet is linked as `css/singlePageTemplate.css?v=2`. Whenever `singlePa
 - **Chris** - Detail perfectionist
 - **Casey Leal** - Bold traditional & color specialist
 - **Hector Ortega** - Black & grey realism specialist
+- **Mason Dorow** - Black & gray, custom script & cover-ups specialist
 
 ### Studio Portfolio Galleries
 All galleries include work from all artists with reference codes:
