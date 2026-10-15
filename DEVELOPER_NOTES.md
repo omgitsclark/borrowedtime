@@ -29,7 +29,13 @@ It only processes new/changed photos (needs Pillow). If a thumbnail is ever miss
 Large photos shown outside the galleries (the homepage lobby banner, Dexter's bio portrait) are served from `images/web/`: resized copies (2000px banner, 1200px portrait, ~200–400 KB) of the camera originals, which stay where they are (`images/store/`, `images/dexter/`). The thumbnail script skips `web/` and `store/`. When adding or replacing a big non-gallery photo, save a resized copy into `images/web/` and link that, never the multi-MB original.
 
 ### Deploying
-The server pulls `main` on its own via a cron job (same setup as clarknavidad_com), so pushing to `main` is the deploy.
+The Lightsail server (Amazon Linux 2023, Apache) serves the git checkout at `/var/www/html/borrowedtime` directly and pulls it on its own: `/etc/cron.d/borrowedtime-pull` is one line,
+```
+*/2 * * * * ec2-user /usr/bin/flock -n /tmp/borrowedtime-pull.lock /usr/bin/git -C /var/www/html/borrowedtime pull -q >> /home/ec2-user/borrowedtime-pull.log 2>&1
+```
+So pushing to `main` is the whole deploy; it's live within ~2 minutes (no restart, static files only). Pull errors land in `/home/ec2-user/borrowedtime-pull.log`. To deploy by hand anyway: `git -C /var/www/html/borrowedtime pull`.
+
+Apache config: the site's vhosts are in `/etc/httpd/conf/httpd.conf` (port 80, redirects to https) and `/etc/httpd/conf/httpd-le-ssl.conf` (443). Folder listings are off for every site via `/etc/httpd/conf.d/zz-no-indexes.conf` (`Options -Indexes` on `/var/www/html`, added 2026-10-15), so a folder URL like `/images/dexter/` returns 403; `.git/` and other dot-folders are blocked by `conf.d/deny-hidden.conf`.
 
 ### CSS Cache Busting
 The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
