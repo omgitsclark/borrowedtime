@@ -25,6 +25,12 @@ python tools/make_thumbnails.py
 ```
 It only processes new/changed photos (needs Pillow). If a thumbnail is ever missing, the page falls back to the full-size image automatically, so nothing breaks; it's just heavier until the script is run.
 
+### Web-Sized Copies of Big Photos
+Large photos shown outside the galleries (the homepage lobby banner, Dexter's bio portrait) are served from `images/web/`: resized copies (2000px banner, 1200px portrait, ~200–400 KB) of the camera originals, which stay where they are (`images/store/`, `images/dexter/`). The thumbnail script skips `web/` and `store/`. When adding or replacing a big non-gallery photo, save a resized copy into `images/web/` and link that, never the multi-MB original.
+
+### Deploying
+The server pulls `main` on its own via a cron job (same setup as clarknavidad_com), so pushing to `main` is the deploy.
+
 ### CSS Cache Busting
 The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
 

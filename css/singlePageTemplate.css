@@ -232,7 +232,7 @@ body::after {
 /* ===== PARALLAX BANNER ===== */
 .parallax-banner {
     height: 60vh;
-    background-image: url("../images/store/borrowed_time_lobby.jpg");
+    background-image: url("../images/web/borrowed_time_lobby.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

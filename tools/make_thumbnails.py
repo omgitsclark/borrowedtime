@@ -12,7 +12,7 @@ from PIL import Image, ImageOps
 ROOT = Path(__file__).resolve().parent.parent
 IMAGES = ROOT / "images"
 THUMBS = IMAGES / "thumbs"
-SKIP_DIRS = {"thumbs", "store"}
+SKIP_DIRS = {"thumbs", "store", "web"}
 EXTENSIONS = {".jpg", ".jpeg"}
 SIZE = 720
 QUALITY = 75
