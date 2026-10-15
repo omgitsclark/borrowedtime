@@ -43,6 +43,8 @@ Apache config: the site's vhosts are in `/etc/httpd/conf/httpd.conf` (port 80, r
 - Did it fire? `sudo journalctl -t traffic-guard` (it logs "stopped httpd")
 - Bring the sites back: `sudo systemctl start httpd` (if it's still the same month, it'll stop again within 5 minutes unless `LIMIT_GB` in the script is raised)
 
+The script must set `PATH=/usr/sbin:/usr/bin:/sbin:/bin` on line 2: cron's default PATH lacks `/usr/sbin`, where `ip` lives, and without it the script crashed every run and counted nothing (broken from setup on 2026-09-30 until fixed 2026-10-15; the pre-fix copy is `traffic-guard.sh.bak`). Check a run is clean with `sudo journalctl -u crond --since "10 min ago" | grep -i traffic` (no `CMDOUT` error lines). For scale: the whole box used ~12.5 GB from Sep 30 to Oct 15.
+
 This is why big images matter: serve thumbnails and `images/web/` copies, never multi-MB originals on page load.
 
 ### CSS Cache Busting
