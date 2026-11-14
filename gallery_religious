@@ -35,7 +35,6 @@
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="chris.html" class="nav-link">Chris</a>
-      <a href="caseyleal.html" class="nav-link">Casey Leal</a>
       <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
       <a href="masondorow.html" class="nav-link">Mason Dorow</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
@@ -155,7 +154,6 @@ const galleryImages = [
   { src: 'images/chris/chris_religious3.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'RL-C03' },
   { src: 'images/chris/chris_religious4.jpg', artist: 'Chris', artistLink: 'chris.html', ref: 'RL-C04' },
   { src: 'images/tombraider/tombraider_character_antipriest.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'RL-T03' },
-  { src: 'images/casey/casey_aztec_serpent_color.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'RL-CL01' },
   { src: 'images/hector/hector_sun_eye_serpent_color.jpg', artist: 'Hector Ortega', artistLink: 'hectorortega.html', ref: 'RL-H01' },
   { src: 'images/mason/mason_christ_portrait.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'RL-MD01' },
   { src: 'images/mason/mason_brush_script_cross.jpg', artist: 'Mason Dorow', artistLink: 'masondorow.html', ref: 'RL-MD02' }

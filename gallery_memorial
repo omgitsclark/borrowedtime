@@ -35,7 +35,6 @@
       <a href="dexter.html" class="nav-link">Dexter</a>
       <a href="tombraider.html" class="nav-link">Tomb Raider</a>
       <a href="chris.html" class="nav-link">Chris</a>
-      <a href="caseyleal.html" class="nav-link">Casey Leal</a>
       <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
       <a href="masondorow.html" class="nav-link">Mason Dorow</a>
       <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Now</a>
@@ -159,8 +158,6 @@ const galleryImages = [
   { src: 'images/dexter/no_rain_no_flowers.jpg', artist: 'Dexter', artistLink: 'dexter.html', ref: 'MM-D09' },
   { src: 'images/dexter/sunflower_lettering.jpg', artist: 'Dexter', artistLink: 'dexter.html', ref: 'MM-D10' },
   { src: 'images/tombraider/tombraider_tree.jpg', artist: 'Tomb Raider', artistLink: 'tombraider.html', ref: 'MM-T03' },
-  { src: 'images/casey/casey_cat_lockets_blackandgrey.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'MM-CL01' },
-  { src: 'images/casey/casey_floral_lettering_linework.jpg', artist: 'Casey Leal', artistLink: 'caseyleal.html', ref: 'MM-CL02' }
 ];
 
 // Populate gallery
