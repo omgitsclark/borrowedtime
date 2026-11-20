@@ -57,11 +57,13 @@ Large photos shown outside the galleries (the homepage lobby banner, Dexter's bi
 ### Deploying
 The Lightsail server (Amazon Linux 2023, Apache) serves the git checkout at `/var/www/html/borrowedtime` directly and pulls it on its own: `/etc/cron.d/borrowedtime-pull` is one line,
 ```
-*/2 * * * * ec2-user /usr/bin/flock -n /tmp/borrowedtime-pull.lock /usr/bin/git -C /var/www/html/borrowedtime pull -q >> /home/ec2-user/borrowedtime-pull.log 2>&1
+*/2 * * * * root /usr/bin/flock -n /run/borrowedtime-pull.lock /bin/bash /var/www/html/borrowedtime/server/auto-pull.sh >> /var/log/borrowedtime-pull.log 2>&1
 ```
-So pushing to `main` is the whole deploy; it's live within ~2 minutes (no restart, static files only). Pull errors land in `/home/ec2-user/borrowedtime-pull.log`. To deploy by hand anyway: `git -C /var/www/html/borrowedtime pull`.
+So pushing to `main` is the whole deploy; it's live within ~2 minutes. `server/auto-pull.sh` pulls as ec2-user (who owns the checkout) and restarts the artist portal (`borrowedtime-portal`) only when `server/` changed, running `npm ci` first if its dependencies changed, so page-only pushes never interrupt an upload. Errors land in `/var/log/borrowedtime-pull.log`. To deploy by hand anyway: `sudo -u ec2-user git -C /var/www/html/borrowedtime pull`.
 
-Once the artist portal is installed, the cron line runs `server/auto-pull.sh` as root instead (`*/2 * * * * root /usr/bin/flock -n /run/borrowedtime-pull.lock /bin/bash /var/www/html/borrowedtime/server/auto-pull.sh >> /var/log/borrowedtime-pull.log 2>&1`). The lock file must be in `/run`, not `/tmp`: Linux won't let root open a file another user created in `/tmp`, and the old ec2-user job left one there (this stopped deploys on 2026-11-20 until moved). The script still pulls as ec2-user, and restarts `borrowedtime-portal` only when `server/` changed (running `npm ci` first if its dependencies changed), so page-only pushes never interrupt an upload. Changes to `server/apache-portal.conf` still need `sudo apachectl configtest && sudo systemctl reload httpd` by hand, and changes to `server/borrowedtime-portal.service` need it copied to `/etc/systemd/system/` plus `sudo systemctl daemon-reload && sudo systemctl restart borrowedtime-portal`.
+Not automatic: changes to `server/apache-portal.conf` need `sudo apachectl configtest && sudo systemctl reload httpd`, and changes to `server/borrowedtime-portal.service` need it copied to `/etc/systemd/system/` plus `sudo systemctl daemon-reload && sudo systemctl restart borrowedtime-portal`.
+
+History: until 2026-11-20 the cron line ran a bare `git pull` as ec2-user with its lock in `/tmp`. The lock file must now be in `/run`: Linux won't let root open a file another user created in `/tmp`, and the leftover one stopped deploys for a few minutes until it was moved.
 
 Apache config: the site's vhosts are in `/etc/httpd/conf/httpd.conf` (port 80, redirects to https) and `/etc/httpd/conf/httpd-le-ssl.conf` (443). Folder listings are off for every site via `/etc/httpd/conf.d/zz-no-indexes.conf` (`Options -Indexes` on `/var/www/html`, added 2026-10-15), so a folder URL like `/images/dexter/` returns 403; `.git/` and other dot-folders are blocked by `conf.d/deny-hidden.conf`.
 
