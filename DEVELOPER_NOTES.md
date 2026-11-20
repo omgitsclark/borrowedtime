@@ -27,7 +27,7 @@ Every gallery photo is listed once, in `data/gallery.json`; the artist pages and
 
 Created 2026-11-20 from the hand-written lists (phase 1 of the artist upload portal). That merge added a tag wherever a photo was already in that studio gallery, and added already-tagged photos to galleries they weren't listed in (41 photos), so nothing disappeared from any gallery. The upload portal will edit this file; until then, add photos by editing it by hand.
 
-### Artist Portal (in progress)
+### Artist Portal
 Artists will log in with their name and a 6-digit PIN to upload and manage their own gallery photos. The portal is `server/portal.js`, a small Node service (no dependencies yet) run by systemd as `borrowedtime-portal` on 127.0.0.1:8800, as user `borrowedtime`. (Other sites' Node services on the same box already use 8787, 8788, 8790 and 8791: eat-live, photos, cnavidad-live; check `sudo ss -ltnp | grep node` before picking a port.) Apache passes `/studio/api/` to it (`server/apache-portal.conf`, included from the borrowedtime `<VirtualHost *:443>` in `/etc/httpd/conf/httpd-le-ssl.conf`).
 
 **Its data lives outside the git checkout**, in `/var/lib/borrowedtime/`, so `git pull` never touches it:
@@ -36,6 +36,11 @@ Artists will log in with their name and a 6-digit PIN to upload and manage their
 - `private/` (PIN hashes, lockouts) and `backups/`: never served.
 
 Check it: `systemctl status borrowedtime-portal`, `journalctl -u borrowedtime-portal -n 50`, `curl -s https://borrowedtimetattoomckinney.com/studio/api/health`.
+
+**Logging in** (`/studio/`, built by `studio/studio.js`): artists tap their name and type their 6-digit PIN; the admin (Clark) uses "Admin login" and a password of 12+ characters. The admin page sets or replaces each artist's PIN (random, or chosen; easy ones like 123456 or 121212 are refused), unlocks a locked-out artist, signs them out, or removes their login. A new PIN is shown once, and signs that artist out everywhere. Logins last 30 days on an artist's device and 12 hours for the admin; "Sign out on all devices" ends every login for that account.
+- **First-time setup / forgotten admin password:** until an admin password exists, the portal writes a one-time code to `/var/lib/borrowedtime/private/setup-code`; read it with `sudo cat` and enter it on `/studio/` with the new password. To reset a forgotten admin password: `sudo systemctl stop borrowedtime-portal`, remove the `"admin"` entry from `/var/lib/borrowedtime/private/accounts.json` (set it to `null`), `sudo systemctl start borrowedtime-portal`, then use the new setup code.
+- `private/accounts.json` holds only scrypt hashes of PINs and the admin password; `private/sessions.json` holds only SHA-256 hashes of login tokens (the token itself is an HttpOnly, Secure, SameSite=Strict cookie limited to `/studio`). Every change request must come from the portal page itself (Origin check) as JSON.
+- Adding or removing an artist from the site is still a code change (their page, nav link and homepage card live in the repo); the portal only manages logins for the artists in `gallery.json`.
 
 PIN guessing is limited by `server/lib/lockout.js`:
 - 5 wrong PINs lock that artist's login for 15 minutes; each further lockout doubles (30 min, 1 h, ... up to 24 h); a lockout-free day starts the doubling over.

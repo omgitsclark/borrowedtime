@@ -8,7 +8,7 @@
 'use strict';
 
 const fs = require('fs');
-const path = require('path');
+const { writeJSON } = require('./store');
 
 const MINUTE = 60 * 1000;
 const HOUR = 60 * MINUTE;
@@ -89,6 +89,12 @@ class Lockout {
     }
   }
 
+  // Wrong PINs left before this account locks.
+  triesLeft(account) {
+    const acc = this.state.accounts[account];
+    return this.limits.accountTries - (acc ? acc.fails : 0);
+  }
+
   // Admin: lift an account's lockout and forget its history.
   unlock(account) {
     delete this.state.accounts[account];
@@ -109,11 +115,7 @@ class Lockout {
   }
 
   save() {
-    if (!this.file) return;
-    const tmp = `${this.file}.tmp`;
-    fs.mkdirSync(path.dirname(this.file), { recursive: true });
-    fs.writeFileSync(tmp, JSON.stringify(this.state));
-    fs.renameSync(tmp, this.file);
+    if (this.file) writeJSON(this.file, this.state);
   }
 }
 
