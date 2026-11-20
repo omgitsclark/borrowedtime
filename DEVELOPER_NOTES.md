@@ -28,7 +28,16 @@ Every gallery photo is listed once, in `data/gallery.json`; the artist pages and
 Created 2026-11-20 from the hand-written lists (phase 1 of the artist upload portal). That merge added a tag wherever a photo was already in that studio gallery, and added already-tagged photos to galleries they weren't listed in (41 photos), so nothing disappeared from any gallery. The upload portal will edit this file; until then, add photos by editing it by hand.
 
 ### Artist Portal (in progress)
-Artists will log in with their name and a 6-digit PIN to upload and manage their own gallery photos (`server/`, a small Node service; not deployed yet). PIN guessing is limited by `server/lib/lockout.js`:
+Artists will log in with their name and a 6-digit PIN to upload and manage their own gallery photos. The portal is `server/portal.js`, a small Node service (no dependencies yet) run by systemd as `borrowedtime-portal` on 127.0.0.1:8788, as user `borrowedtime`. Apache passes `/studio/api/` to it (`server/apache-portal.conf`, included from the borrowedtime `<VirtualHost *:443>` in `/etc/httpd/conf/httpd-le-ssl.conf`).
+
+**Its data lives outside the git checkout**, in `/var/lib/borrowedtime/`, so `git pull` never touches it:
+- `gallery.json`: **the live gallery list**, served as `/data/gallery.json`. The service copied it from the repo's `data/gallery.json` on its first start; from then on the repo copy is only that starting point, and editing it changes nothing on the site.
+- `uploads/<artist>/` and `thumbs/<artist>/`: uploaded photos, served as `/images/uploads/...` and `/images/thumbs/uploads/...` (so a photo's `file` is `uploads/<artist>/<name>.jpg`). Photos already in the repo stay in `images/`.
+- `private/` (PIN hashes, lockouts) and `backups/`: never served.
+
+Check it: `systemctl status borrowedtime-portal`, `journalctl -u borrowedtime-portal -n 50`, `curl -s https://borrowedtimetattoomckinney.com/studio/api/health`.
+
+PIN guessing is limited by `server/lib/lockout.js`:
 - 5 wrong PINs lock that artist's login for 15 minutes; each further lockout doubles (30 min, 1 h, ... up to 24 h); a lockout-free day starts the doubling over.
 - 10 wrong PINs from one IP within 15 minutes, across any artists, block that IP for an hour.
 - While locked, the PIN isn't checked at all. Lock state is saved to disk, so a restart doesn't clear it. The admin can unlock an artist.
@@ -51,6 +60,8 @@ The Lightsail server (Amazon Linux 2023, Apache) serves the git checkout at `/va
 */2 * * * * ec2-user /usr/bin/flock -n /tmp/borrowedtime-pull.lock /usr/bin/git -C /var/www/html/borrowedtime pull -q >> /home/ec2-user/borrowedtime-pull.log 2>&1
 ```
 So pushing to `main` is the whole deploy; it's live within ~2 minutes (no restart, static files only). Pull errors land in `/home/ec2-user/borrowedtime-pull.log`. To deploy by hand anyway: `git -C /var/www/html/borrowedtime pull`.
+
+Once the artist portal is installed, the cron line runs `server/auto-pull.sh` as root instead (`*/2 * * * * root /usr/bin/flock -n /tmp/borrowedtime-pull.lock /bin/bash /var/www/html/borrowedtime/server/auto-pull.sh >> /var/log/borrowedtime-pull.log 2>&1`). The script still pulls as ec2-user, and restarts `borrowedtime-portal` only when `server/` changed (running `npm ci` first if its dependencies changed), so page-only pushes never interrupt an upload. Changes to `server/apache-portal.conf` still need `sudo apachectl configtest && sudo systemctl reload httpd` by hand, and changes to `server/borrowedtime-portal.service` need it copied to `/etc/systemd/system/` plus `sudo systemctl daemon-reload && sudo systemctl restart borrowedtime-portal`.
 
 Apache config: the site's vhosts are in `/etc/httpd/conf/httpd.conf` (port 80, redirects to https) and `/etc/httpd/conf/httpd-le-ssl.conf` (443). Folder listings are off for every site via `/etc/httpd/conf.d/zz-no-indexes.conf` (`Options -Indexes` on `/var/www/html`, added 2026-10-15), so a folder URL like `/images/dexter/` returns 403; `.git/` and other dot-folders are blocked by `conf.d/deny-hidden.conf`.
 

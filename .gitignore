@@ -7,3 +7,6 @@ nul
 *.zip
 *.csv
 *.xlsx
+
+# Portal dependencies are installed on the server by server/auto-pull.sh
+server/node_modules/

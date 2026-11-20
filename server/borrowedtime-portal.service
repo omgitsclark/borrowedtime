@@ -1,0 +1,36 @@
+# Artist portal service. Install (one time, see DEVELOPER_NOTES.md "Artist Portal"):
+#   sudo cp server/borrowedtime-portal.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now borrowedtime-portal
+[Unit]
+Description=Borrowed Time artist portal (PIN login and photo uploads)
+After=network.target
+
+[Service]
+User=borrowedtime
+Group=borrowedtime
+Environment=PORT=8788
+Environment=PORTAL_DATA_DIR=/var/lib/borrowedtime
+Environment=PORTAL_SITE_DIR=/var/www/html/borrowedtime
+ExecStart=/usr/bin/node /var/www/html/borrowedtime/server/portal.js
+Restart=on-failure
+RestartSec=5
+
+# Creates /var/lib/borrowedtime owned by the borrowedtime user; Apache reads the public parts.
+StateDirectory=borrowedtime
+StateDirectoryMode=0755
+UMask=0022
+
+# The service can write only its own data folder.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/borrowedtime
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target
