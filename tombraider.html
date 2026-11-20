@@ -78,16 +78,7 @@
     <h2 class="section-title">Portfolio</h2>
 
     <!-- Category Filter -->
-    <div class="category-filter">
-      <button class="filter-btn active" data-category="all">All</button>
-      <button class="filter-btn" data-category="animals">Animals</button>
-      <button class="filter-btn" data-category="characters">Characters</button>
-      <button class="filter-btn" data-category="floral">Floral</button>
-      <button class="filter-btn" data-category="japanese">Japanese</button>
-      <button class="filter-btn" data-category="memorial">Memorial</button>
-      <button class="filter-btn" data-category="religious">Religious</button>
-      <button class="filter-btn" data-category="skulls">Skulls</button>
-    </div>
+    <div class="category-filter" id="category-filter"></div>
 
     <div class="gallery-grid" id="gallery-container">
       <!-- Gallery will be populated by JavaScript -->
@@ -144,6 +135,7 @@
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
+<script src="js/gallery.js?v=1"></script>
 <script>
 // Mobile menu toggle
 const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -170,155 +162,7 @@ const handleNavScroll = () => {
 handleNavScroll();
 window.addEventListener('scroll', handleNavScroll);
 
-// Gallery images list with categories (multi-category support)
-const galleryImages = [
-  { img: 'tombraider_crystal_skull.jpg', categories: ['skulls'] },
-  { img: 'tombraider_flower_compass.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_lineart.jpg', categories: ['floral'] },
-  { img: 'tombraider_fox_blackandgrey.jpg', categories: ['animals'] },
-  { img: 'laura_compilation-3.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala.jpg', categories: ['floral'] },
-  { img: 'tombraider_seahorse_lineart.jpg', categories: ['animals'] },
-  { img: 'tombraider_skull_blackandgrey.jpg', categories: ['skulls'] },
-  { img: 'tombraider_stone_spearhead_color.jpg', categories: ['floral'] },
-  { img: 'tombraider_animal_jellyfish.jpg', categories: ['animals'] },
-  { img: 'tombraider_animal_snake.jpg', categories: ['animals'] },
-  { img: 'tombraider_animal_wolf.jpg', categories: ['animals'] },
-  { img: 'tombraider_character_antipriest.jpg', categories: ['characters', 'religious'] },
-  { img: 'tombraider_compilation_sleeve.jpg', categories: ['floral'] },
-  { img: 'tombraider_coverup_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_face.jpg', categories: ['floral'] },
-  { img: 'tombraider_face_snake.jpg', categories: ['animals'] },
-  { img: 'tombraider_floral_arm.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arm2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arm3.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_arrow.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_bird.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_butterfly.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_compass.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_cow.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_crystal.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_face_knife.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_forearm.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_horsehoe.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_mandala.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_mandala2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_scenic.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_shoulder.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_skull.jpg', categories: ['floral', 'skulls'] },
-  { img: 'tombraider_floral_sleeve.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_sleeve2.jpg', categories: ['floral'] },
-  { img: 'tombraider_floral_snake.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_snake2.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_taurus.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_floral_wolf.jpg', categories: ['floral', 'animals'] },
-  { img: 'tombraider_fullcolor_arrowhead.jpg', categories: ['floral'] },
-  { img: 'tombraider_fullcolor_floral.jpg', categories: ['floral'] },
-  { img: 'tombraider_head_norse.jpg', categories: ['characters'] },
-  { img: 'tombraider_japanese_sleeve.jpg', categories: ['japanese', 'floral'] },
-  { img: 'tombraider_knife.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala_hip.jpg', categories: ['floral'] },
-  { img: 'tombraider_mandala_seahorse.jpg', categories: ['animals', 'floral'] },
-  { img: 'tombraider_mayan.jpg', categories: ['characters'] },
-  { img: 'tombraider_memorial.jpg', categories: ['memorial', 'floral'] },
-  { img: 'tombraider_memorial_hourglass.jpg', categories: ['memorial'] },
-  { img: 'tombraider_mermaidscales.jpg', categories: ['floral'] },
-  { img: 'tombraider_religious_lion.jpg', categories: ['religious', 'animals'] },
-  { img: 'tombraider_religious_text.jpg', categories: ['religious'] },
-  { img: 'tombraider_skull.jpg', categories: ['skulls'] },
-  { img: 'tombraider_skull2.jpg', categories: ['skulls'] },
-  { img: 'tombraider_space.jpg', categories: ['floral'] },
-  { img: 'tombraider_tree.jpg', categories: ['memorial', 'floral'] },
-  { img: 'tombraider_warrior.jpg', categories: ['characters'] },
-  { img: 'tombraider_undead_face.jpg', categories: ['skulls', 'characters'] },
-  { img: 'tombraider_flower_snake.jpg', categories: ['floral', 'animals'] }
-];
-
-// Populate gallery
-const galleryContainer = document.getElementById('gallery-container');
-let currentFilter = 'all';
-
-function populateGallery(filter = 'all') {
-  galleryContainer.innerHTML = '';
-  const filteredImages = filter === 'all'
-    ? galleryImages
-    : galleryImages.filter(item => item.categories.includes(filter));
-
-  filteredImages.forEach((item, index) => {
-    const div = document.createElement('div');
-    div.className = 'gallery-item';
-    div.innerHTML = `<img src="images/thumbs/tombraider/${item.img}" onerror="this.onerror=null;this.src='images/tombraider/${item.img}'" alt="Tomb Raider's tattoo work" loading="lazy" data-index="${galleryImages.indexOf(item)}">`;
-    galleryContainer.appendChild(div);
-  });
-}
-
-// Category filter functionality
-const filterBtns = document.querySelectorAll('.filter-btn');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentFilter = btn.dataset.category;
-    populateGallery(currentFilter);
-  });
-});
-
-populateGallery();
-
-// Lightbox functionality
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightbox-image');
-const lightboxClose = document.getElementById('lightbox-close');
-const lightboxPrev = document.getElementById('lightbox-prev');
-const lightboxNext = document.getElementById('lightbox-next');
-let currentImageIndex = 0;
-
-function openLightbox(index) {
-  currentImageIndex = index;
-  lightboxImage.src = `images/tombraider/${galleryImages[index].img}`;
-  lightbox.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  lightbox.classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function showPrevImage() {
-  currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-  lightboxImage.src = `images/tombraider/${galleryImages[currentImageIndex].img}`;
-}
-
-function showNextImage() {
-  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-  lightboxImage.src = `images/tombraider/${galleryImages[currentImageIndex].img}`;
-}
-
-// Event listeners
-galleryContainer.addEventListener('click', (e) => {
-  if (e.target.tagName === 'IMG') {
-    openLightbox(parseInt(e.target.dataset.index));
-  }
-});
-
-lightboxClose.addEventListener('click', closeLightbox);
-lightboxPrev.addEventListener('click', showPrevImage);
-lightboxNext.addEventListener('click', showNextImage);
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (!lightbox.classList.contains('active')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') showPrevImage();
-  if (e.key === 'ArrowRight') showNextImage();
-});
+BTGallery.artist('tombraider');
 
 // Scroll to top functionality
 const scrollToTopBtn = document.getElementById('scrollToTop');

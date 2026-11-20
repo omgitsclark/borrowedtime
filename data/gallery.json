@@ -1,0 +1,4339 @@
+{
+ "version": 1,
+ "artists": [
+  {
+   "id": "dexter",
+   "name": "Dexter",
+   "page": "dexter.html",
+   "code": "D"
+  },
+  {
+   "id": "tombraider",
+   "name": "Tomb Raider",
+   "page": "tombraider.html",
+   "code": "T"
+  },
+  {
+   "id": "chris",
+   "name": "Chris",
+   "page": "chris.html",
+   "code": "C"
+  },
+  {
+   "id": "hector",
+   "name": "Hector Ortega",
+   "page": "hectorortega.html",
+   "code": "H"
+  },
+  {
+   "id": "mason",
+   "name": "Mason Dorow",
+   "page": "masondorow.html",
+   "code": "MD"
+  }
+ ],
+ "tags": [
+  {
+   "id": "animals",
+   "label": "Animals"
+  },
+  {
+   "id": "characters",
+   "label": "Characters"
+  },
+  {
+   "id": "color",
+   "label": "Color"
+  },
+  {
+   "id": "coverups",
+   "label": "Coverups"
+  },
+  {
+   "id": "floral",
+   "label": "Floral"
+  },
+  {
+   "id": "japanese",
+   "label": "Japanese"
+  },
+  {
+   "id": "linework",
+   "label": "Linework"
+  },
+  {
+   "id": "memorial",
+   "label": "Memorial"
+  },
+  {
+   "id": "realism",
+   "label": "Realism"
+  },
+  {
+   "id": "religious",
+   "label": "Religious"
+  },
+  {
+   "id": "script",
+   "label": "Script"
+  },
+  {
+   "id": "skulls",
+   "label": "Skulls"
+  },
+  {
+   "id": "traditional",
+   "label": "Traditional"
+  }
+ ],
+ "studio": {
+  "animals": {
+   "label": "Animal Designs",
+   "prefix": "AN",
+   "order": [
+    "dexter/dexter_animal_greatwhite.jpg",
+    "dexter/dexter_animal_hammerhead.jpg",
+    "dexter/dexter_animal_spider.jpg",
+    "dexter/dexter_color_dog.jpg",
+    "dexter/dexter_color_frenchbulldog.jpg",
+    "dexter/dexter_skull_vulture.jpg",
+    "dexter/polynesian_turtle.jpg",
+    "tombraider/tombraider_religious_lion.jpg",
+    "tombraider/tombraider_animal_jellyfish.jpg",
+    "tombraider/tombraider_animal_snake.jpg",
+    "tombraider/tombraider_animal_wolf.jpg",
+    "tombraider/tombraider_floral_butterfly.jpg",
+    "tombraider/tombraider_floral_bird.jpg",
+    "tombraider/tombraider_floral_cow.jpg",
+    "tombraider/tombraider_floral_snake.jpg",
+    "tombraider/tombraider_floral_wolf.jpg",
+    "tombraider/tombraider_mandala_seahorse.jpg",
+    "chris/chris_butterfly.jpg",
+    "chris/chris_butterfly2.jpg",
+    "chris/chris_butterfly3.jpg",
+    "chris/chris_butterfly4.jpg",
+    "chris/chris_butterfly5.jpg",
+    "chris/chris_dove.jpg",
+    "chris/chris_penguin.jpg",
+    "chris/chris_shark.jpg",
+    "chris/watercolor.jpg",
+    "dexter/dexter_bulldog-3.jpg",
+    "dexter/dexter_butterfly.jpg",
+    "dexter/dexter_character_fox.jpg",
+    "dexter/dexter_color_frog.jpg",
+    "dexter/dexter_coverup_snake_skull.jpg",
+    "dexter/dexter_dog.jpg",
+    "dexter/dexter_floral_butterfly.jpg",
+    "dexter/dexter_octopus.jpg",
+    "dexter/dexter_oriental_snapping_turtle.jpg",
+    "dexter/dexter_turtle.jpg",
+    "dexter/dexter_watercolor.jpg",
+    "dexter/samurai_frog.jpg",
+    "dexter/serious_fox.jpg",
+    "dexter/shark.jpg",
+    "dexter/skull_snake.jpg",
+    "dexter/spider_sleeve.jpg",
+    "dexter/tiger_claw.jpg",
+    "tombraider/tombraider_fox_blackandgrey.jpg",
+    "tombraider/tombraider_seahorse_lineart.jpg",
+    "tombraider/tombraider_face_snake.jpg",
+    "tombraider/tombraider_floral_snake2.jpg",
+    "tombraider/tombraider_floral_taurus.jpg",
+    "tombraider/tombraider_flower_snake.jpg",
+    "chris/chis_owl.jpg",
+    "chris/chris_cat.jpg",
+    "chris/chris_deer.jpg",
+    "chris/chris_elephant.jpg",
+    "chris/chris_frog_mushroom.jpg",
+    "chris/chris_lion.jpg",
+    "chris/chris_raccoon.jpg",
+    "chris/chris_skullbutterfly.jpg",
+    "chris/chris_skullraven.jpg",
+    "chris/chris_snake.jpg",
+    "chris/chris_snake2.jpg",
+    "chris/chris_traditional_tiger.jpg",
+    "chris/chris_underwater.jpg",
+    "chris/chris_wolfinsheephide.jpg",
+    "chris/chris-butterfly-skull-2.jpg",
+    "hector/hector_sun_eye_serpent_color.jpg",
+    "hector/hector_snake_floral_color.jpg",
+    "mason/mason_white_rabbit_script.jpg",
+    "mason/mason_raccoon_trashcan.jpg",
+    "mason/mason_horse_sleeve.jpg",
+    "dexter/recent_dexter/dexter_octopus_coverup_after.jpg",
+    "dexter/dexter_butterfly_rework.jpeg",
+    "dexter/dexter_coverup_french_bulldog.jpeg",
+    "dexter/dexter_traditional_hand_snake.jpeg"
+   ]
+  },
+  "characters": {
+   "label": "Character Designs",
+   "prefix": "CH",
+   "order": [
+    "chris/chris_pikachu.jpg",
+    "dexter/boogie.jpg",
+    "dexter/chuckie.jpg",
+    "tombraider/tombraider_character_antipriest.jpg",
+    "dexter/dexter_character_fox.jpg",
+    "dexter/dexter_character_mouse.jpg",
+    "dexter/dexter_color_starwars.jpg",
+    "tombraider/tombraider_warrior.jpg",
+    "chris/chris_hellokitty.jpg",
+    "chris/chris_knuckles.jpg",
+    "chris/chris_mushroom.jpg",
+    "chris/chris_myneighbor.jpg",
+    "chris/chris_myneighbor2.jpg",
+    "chris/chris_penguin.jpg",
+    "chris/chris_snorlax.jpg",
+    "chris/chris_spiritedaway.jpg",
+    "dexter/dexter_character_mouse.jpg",
+    "dexter/dexter_color_devil.jpg",
+    "dexter/dexter_dragon.jpg",
+    "dexter/dexter_funny.jpg",
+    "dexter/dexter_funny2.jpg",
+    "dexter/dexter_funny3.jpg",
+    "dexter/dexter_funny4.jpg",
+    "dexter/dexter_funny5.jpg",
+    "dexter/dexter_grim_reaper.jpg",
+    "dexter/dexter_halloween2.jpg",
+    "dexter/dexter_horror_chuckie.jpg",
+    "dexter/dexter_link_zelda.jpg",
+    "dexter/dexter_mermaid_skeleton.jpg",
+    "dexter/hand_tat_samurai.jpg",
+    "dexter/sloth_savior.jpg",
+    "tombraider/tombraider_head_norse.jpg",
+    "tombraider/tombraider_mayan.jpg",
+    "tombraider/tombraider_undead_face.jpg",
+    "chris/chris_batman.jpg",
+    "chris/chris_frog_mushroom.jpg",
+    "chris/chris_smiley.jpg",
+    "chris/chris_stitch.jpg",
+    "chris/chris_superman.jpg",
+    "chris/chris-hellokitty-2.jpg",
+    "chris/chris-mushroom-2.jpg",
+    "chris/chris-pinup-2.jpg",
+    "chris/chris-supernatural-2.jpg",
+    "hector/hector_trejo_realism.jpg",
+    "hector/hector_battleaxe_blackandgrey.jpg",
+    "hector/hector_firefighter_pinup_blackandgrey.jpg",
+    "hector/hector_vintage_woman_blackandgrey.jpg",
+    "hector/hector_twoface_portrait_realism.jpg",
+    "mason/mason_weeping_woman_realism.jpg",
+    "mason/mason_mad_hatter_portrait.jpg",
+    "mason/mason_trust_none_leg_sleeve.jpg",
+    "mason/mason_samurai_hannya_color.jpg",
+    "mason/mason_gas_mask_alexis.jpg",
+    "mason/mason_slumerica_sleeve_a.jpg",
+    "mason/mason_grim_reaper_sleeve.jpg",
+    "mason/mason_bomb_character.jpg",
+    "mason/mason_alice_script.jpg",
+    "dexter/dexter_goku.jpg",
+    "dexter/dexter_halloween.jpg",
+    "dexter/dexter_traditional_funny.jpeg",
+    "dexter/samurai_frog.jpg",
+    "chris/chris_firenation.jpg",
+    "chris/chris_skeletondrink.jpg",
+    "chris/chris_skull_indian.jpg",
+    "chris/chris_supernatural.jpg",
+    "mason/mason_raccoon_trashcan.jpg",
+    "mason/mason_trust_none_leg_alt.jpg",
+    "mason/mason_slumerica_sleeve_b.jpg"
+   ]
+  },
+  "color": {
+   "label": "Color Designs",
+   "prefix": "CO",
+   "order": [
+    "dexter/dexter_bulldog-3.jpg",
+    "dexter/dexter_color_anchor.jpg",
+    "dexter/dexter_color_clover.jpg",
+    "dexter/dexter_color_devil.jpg",
+    "dexter/dexter_color_dog.jpg",
+    "dexter/dexter_color_eye.jpg",
+    "dexter/dexter_color_flower.jpg",
+    "dexter/dexter_color_flower2.jpg",
+    "tombraider/tombraider_fullcolor_arrowhead.jpg",
+    "tombraider/tombraider_fullcolor_floral.jpg",
+    "tombraider/tombraider_floral_cow.jpg",
+    "tombraider/tombraider_floral_forearm.jpg",
+    "chris/chris_firenation.jpg",
+    "chris/chris_batman.jpg",
+    "chris/chris_hellokitty.jpg",
+    "chris/chris_irishtexan.jpg",
+    "chris/chris_lucky7.jpg",
+    "chris/chris_mouthbullet.jpg",
+    "chris/chris_mushroom.jpg",
+    "chris/chris_myneighbor.jpg",
+    "chris/chris_myneighbor2.jpg",
+    "chris/chris_pikachu.jpg",
+    "chris/chris_rose.jpg",
+    "chris/chris_rose2.jpg",
+    "chris/chris_snorlax.jpg",
+    "chris/chris_supernatural.jpg",
+    "chris/chris_texas.jpg",
+    "chris/chris_texas2.jpg",
+    "chris/chris_watercolorpuzzle.jpg",
+    "dexter/dexter_aircraft.jpg",
+    "dexter/dexter_butterfly.jpg",
+    "dexter/dexter_color_flower2.jpg",
+    "dexter/dexter_color_frenchbulldog.jpg",
+    "dexter/dexter_color_frog.jpg",
+    "dexter/dexter_color_hana.jpg",
+    "dexter/dexter_color_ornate_face.jpg",
+    "dexter/dexter_color_ornate_face2.jpg",
+    "dexter/dexter_color_peace.jpg",
+    "dexter/dexter_color_skull.jpg",
+    "dexter/dexter_color_starwars.jpg",
+    "dexter/dexter_eye.jpg",
+    "dexter/dexter_face.jpg",
+    "dexter/dexter_goku.jpg",
+    "dexter/dexter_heart.jpg",
+    "dexter/dexter_link_zelda.jpg",
+    "dexter/dexter_moon_sun.jpg",
+    "dexter/dexter_mountains.jpg",
+    "dexter/dexter_newschool.jpg",
+    "dexter/dexter_octopus.jpg",
+    "dexter/dexter_palm.jpg",
+    "dexter/dexter_pepper_sparkplug.jpg",
+    "dexter/dexter_pocket_watch.jpg",
+    "dexter/dexter_rabbitsfoot.jpg",
+    "dexter/dexter_skull_cherries.jpg",
+    "dexter/dexter_sleeve_turbo.jpg",
+    "dexter/dexter_trash_polka.jpg",
+    "dexter/dexter_watercolor.jpg",
+    "dexter/bulgarian_flag_rose.jpg",
+    "dexter/color_portrait.jpg",
+    "dexter/compass.jpg",
+    "dexter/face.jpg",
+    "dexter/nebula.jpg",
+    "dexter/space-skull.jpg",
+    "dexter/sun_moon.jpg",
+    "dexter/texas_luck.jpg",
+    "chris/chris_americanflag.jpg",
+    "chris/chris_arrowhead.jpg",
+    "chris/chris_awards.jpg",
+    "chris/chris_awards2.jpg",
+    "chris/chris_color.jpg",
+    "chris/chris_eye.jpg",
+    "chris/chris_eye2.jpg",
+    "chris/chris_fishinghunting.jpg",
+    "chris/chris_icecream.jpg",
+    "chris/chris_japanese.jpg",
+    "chris/chris_japanese2.jpg",
+    "chris/chris_newyork_sleeve.jpg",
+    "chris/chris_spiritedaway.jpg",
+    "chris/chris_statueofliberty.jpg",
+    "chris/chris_stitch.jpg",
+    "chris/chris_traditionaldagger.jpg",
+    "chris/chris_traditional_tiger.jpg",
+    "chris/chris_underwater.jpg",
+    "chris/chris_woodshed.jpg",
+    "chris/chris-america-2.jpg",
+    "chris/chris-texas-2.jpg",
+    "chris/sleeve-4.jpg",
+    "hector/hector_sun_eye_serpent_color.jpg",
+    "hector/hector_snake_floral_color.jpg",
+    "mason/mason_samurai_hannya_color.jpg",
+    "mason/mason_jackie_script_color.jpg",
+    "dexter/recent_dexter/dexter_octopus_coverup_after.jpg",
+    "dexter/dexter_butterfly_rework.jpeg",
+    "dexter/dexter_head.jpeg",
+    "dexter/Untitled_Artwork.jpeg",
+    "chris/chris_butterfly.jpg",
+    "chris/chris_butterfly2.jpg",
+    "chris/chris_butterfly3.jpg",
+    "chris/chris_butterfly4.jpg",
+    "chris/chris_butterfly5.jpg",
+    "chris/chris_superman.jpg",
+    "chris/chris-hellokitty-2.jpg",
+    "chris/chris-mushroom-2.jpg",
+    "chris/chris-pinup-2.jpg",
+    "chris/watercolor.jpg"
+   ]
+  },
+  "floral": {
+   "label": "Floral Designs",
+   "prefix": "FL",
+   "order": [
+    "tombraider/tombraider_floral_arm2.jpg",
+    "tombraider/tombraider_floral_arm3.jpg",
+    "dexter/bluebonnet.jpg",
+    "dexter/dexter_floral.jpg",
+    "dexter/dexter_floral_blackandgray.jpg",
+    "dexter/dexter_floral_blackandgray2.jpg",
+    "dexter/dexter_floral_bold.jpg",
+    "dexter/dexter_floral_bracelet.jpg",
+    "dexter/dexter_floral_butterfly.jpg",
+    "dexter/dexter_floral_guitar.jpg",
+    "dexter/dexter_floral_shoulder.jpg",
+    "dexter/dexter_floral_spine.jpg",
+    "dexter/dexter_floral_sunflower.jpg",
+    "dexter/dexter_floral_sunflower2.jpg",
+    "dexter/bulgarian_flag_rose.jpg",
+    "chris/chris_butterfly.jpg",
+    "chris/chris_butterfly5.jpg",
+    "chris/chris_rose.jpg",
+    "chris/chris_rose2.jpg",
+    "chris/chris_rose3.jpg",
+    "chris/chris_rose4.jpg",
+    "tombraider/tombraider_floral_arm.jpg",
+    "tombraider/tombraider_floral_arrow.jpg",
+    "tombraider/tombraider_floral_bird.jpg",
+    "tombraider/tombraider_floral_butterfly.jpg",
+    "tombraider/tombraider_floral_compass.jpg",
+    "tombraider/tombraider_floral_cow.jpg",
+    "tombraider/tombraider_floral_crystal.jpg",
+    "tombraider/tombraider_floral_face_knife.jpg",
+    "tombraider/tombraider_floral_forearm.jpg",
+    "tombraider/tombraider_floral_horsehoe.jpg",
+    "tombraider/tombraider_floral_mandala.jpg",
+    "tombraider/tombraider_floral_mandala2.jpg",
+    "tombraider/tombraider_floral_scenic.jpg",
+    "tombraider/tombraider_floral_shoulder.jpg",
+    "tombraider/tombraider_floral_sleeve.jpg",
+    "tombraider/tombraider_floral_sleeve2.jpg",
+    "tombraider/tombraider_floral_snake.jpg",
+    "tombraider/tombraider_floral_snake2.jpg",
+    "tombraider/tombraider_floral_taurus.jpg",
+    "tombraider/tombraider_floral_wolf.jpg",
+    "dexter/dexter_color_flower.jpg",
+    "dexter/dexter_color_hana.jpg",
+    "dexter/dexter_hana.jpg",
+    "dexter/dexter_hana2.jpg",
+    "dexter/family_tree.jpg",
+    "dexter/no_rain_no_flowers.jpg",
+    "dexter/shoulder_flower.jpg",
+    "dexter/sunflower.jpg",
+    "dexter/sunflower_lettering.jpg",
+    "chris/chris_flowersmoon.jpg",
+    "chris/chris_hand_lotus.jpg",
+    "chris/chris_lotus.jpg",
+    "chris/chris_rose3.jpg",
+    "chris/chris-rose-2.jpg",
+    "chris/chris-rose-lines-2.jpg",
+    "tombraider/tombraider_flower_compass.jpg",
+    "tombraider/tombraider_floral.jpg",
+    "tombraider/tombraider_floral_lineart.jpg",
+    "tombraider/laura_compilation-3.jpg",
+    "tombraider/tombraider_mandala.jpg",
+    "tombraider/tombraider_stone_spearhead_color.jpg",
+    "tombraider/tombraider_compilation_sleeve.jpg",
+    "tombraider/tombraider_coverup_floral.jpg",
+    "tombraider/tombraider_face.jpg",
+    "tombraider/tombraider_floral_crystal.jpg",
+    "tombraider/tombraider_floral_face_knife.jpg",
+    "tombraider/tombraider_knife.jpg",
+    "tombraider/tombraider_mandala_hip.jpg",
+    "tombraider/tombraider_memorial.jpg",
+    "tombraider/tombraider_mermaidscales.jpg",
+    "tombraider/tombraider_space.jpg",
+    "tombraider/tombraider_tree.jpg",
+    "tombraider/tombraider_fullcolor_arrowhead.jpg",
+    "tombraider/tombraider_fullcolor_floral.jpg",
+    "tombraider/tombraider_japanese_sleeve.jpg",
+    "tombraider/tombraider_flower_snake.jpg",
+    "hector/hector_vintage_woman_blackandgrey.jpg",
+    "hector/hector_snake_floral_color.jpg",
+    "dexter/dexter_color_flower2.jpg",
+    "dexter/dexter_tree_memorial.jpg",
+    "tombraider/tombraider_floral_skull.jpg",
+    "tombraider/tombraider_mandala_seahorse.jpg"
+   ]
+  },
+  "japanese": {
+   "label": "Japanese Designs",
+   "prefix": "JP",
+   "order": [
+    "dexter/dexter_color_frog.jpg",
+    "dexter/dexter_color_hana.jpg",
+    "dexter/dexter_dragon.jpg",
+    "dexter/hand_tat_samurai.jpg",
+    "tombraider/tombraider_animal_snake.jpg",
+    "chris/chris_snake.jpg",
+    "chris/chris_snake2.jpg",
+    "chris/chris_japanese.jpg",
+    "chris/chris_japanese2.jpg",
+    "tombraider/tombraider_japanese_sleeve.jpg",
+    "mason/mason_samurai_hannya_color.jpg"
+   ]
+  },
+  "memorial": {
+   "label": "Memorial Designs",
+   "prefix": "MM",
+   "order": [
+    "dexter/dexter_memorial_cross.jpg",
+    "dexter/dexter_tree_memorial.jpg",
+    "tombraider/tombraider_memorial.jpg",
+    "tombraider/tombraider_memorial_hourglass.jpg",
+    "chris/chris_anchor.jpg",
+    "dexter/dexter_lettering.jpg",
+    "dexter/dexter_lettering2.jpg",
+    "dexter/dexter_text_guitar.jpg",
+    "dexter/family_anchor.jpg",
+    "dexter/family_tree.jpg",
+    "dexter/lettering.jpg",
+    "dexter/no_rain_no_flowers.jpg",
+    "dexter/sunflower_lettering.jpg",
+    "tombraider/tombraider_tree.jpg"
+   ]
+  },
+  "realism": {
+   "label": "Realism Designs",
+   "prefix": "RE",
+   "order": [
+    "dexter/spider_sleeve.jpg",
+    "tombraider/tombraider_floral_cow.jpg",
+    "chris/chris_underwater.jpg",
+    "tombraider/tombraider_crystal_skull.jpg",
+    "tombraider/tombraider_skull.jpg",
+    "tombraider/tombraider_skull2.jpg",
+    "tombraider/tombraider_skull_blackandgrey.jpg",
+    "tombraider/tombraider_undead_face.jpg",
+    "hector/hector_trejo_realism.jpg",
+    "hector/hector_twoface_portrait_realism.jpg",
+    "mason/mason_weeping_woman_realism.jpg",
+    "mason/mason_mad_hatter_portrait.jpg",
+    "mason/mason_white_rabbit_script.jpg",
+    "mason/mason_trust_none_leg_sleeve.jpg",
+    "mason/mason_gas_mask_alexis.jpg",
+    "mason/mason_christ_portrait.jpg",
+    "mason/mason_american_flag.jpg",
+    "mason/mason_guilty_script_eye.jpg",
+    "mason/mason_slumerica_sleeve_a.jpg",
+    "mason/mason_grim_reaper_sleeve.jpg",
+    "mason/mason_horse_sleeve.jpg",
+    "mason/mason_cannabis_leaves.jpg",
+    "mason/mason_trust_none_leg_alt.jpg",
+    "mason/mason_slumerica_sleeve_b.jpg"
+   ]
+  },
+  "religious": {
+   "label": "Religious Designs",
+   "prefix": "RL",
+   "order": [
+    "dexter/dexter_memorial_cross.jpg",
+    "dexter/dexter_religious.jpg",
+    "dexter/religious.jpg",
+    "tombraider/tombraider_religious_lion.jpg",
+    "tombraider/tombraider_religious_text.jpg",
+    "chris/chris_religious.jpg",
+    "chris/chris_religious2.jpg",
+    "chris/chris_religious3.jpg",
+    "chris/chris_religious4.jpg",
+    "tombraider/tombraider_character_antipriest.jpg",
+    "hector/hector_sun_eye_serpent_color.jpg",
+    "mason/mason_christ_portrait.jpg",
+    "mason/mason_brush_script_cross.jpg",
+    "dexter/sloth_savior.jpg"
+   ]
+  }
+ },
+ "photos": [
+  {
+   "id": "dexter/recent_dexter/dexter_octopus_coverup_after.jpg",
+   "artist": "dexter",
+   "file": "dexter/recent_dexter/dexter_octopus_coverup_after.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "coverups"
+   ],
+   "before": "dexter/recent_dexter/dexter_octopus_coverup_before.jpg",
+   "refs": {
+    "animals": "AN-D25",
+    "color": "CO-D45"
+   }
+  },
+  {
+   "id": "dexter/bluebonnet.jpg",
+   "artist": "dexter",
+   "file": "dexter/bluebonnet.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D01"
+   }
+  },
+  {
+   "id": "dexter/boogie.jpg",
+   "artist": "dexter",
+   "file": "dexter/boogie.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D01"
+   }
+  },
+  {
+   "id": "dexter/bulgarian_flag_rose.jpg",
+   "artist": "dexter",
+   "file": "dexter/bulgarian_flag_rose.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-D37",
+    "floral": "FL-D13"
+   }
+  },
+  {
+   "id": "dexter/chuckie.jpg",
+   "artist": "dexter",
+   "file": "dexter/chuckie.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D02"
+   }
+  },
+  {
+   "id": "dexter/color_portrait.jpg",
+   "artist": "dexter",
+   "file": "dexter/color_portrait.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D38"
+   }
+  },
+  {
+   "id": "dexter/compass.jpg",
+   "artist": "dexter",
+   "file": "dexter/compass.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D39"
+   }
+  },
+  {
+   "id": "dexter/dexter_aircraft.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_aircraft.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D09"
+   }
+  },
+  {
+   "id": "dexter/dexter_animal_greatwhite.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_animal_greatwhite.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D01"
+   }
+  },
+  {
+   "id": "dexter/dexter_animal_hammerhead.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_animal_hammerhead.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_animal_spider.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_animal_spider.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_bulldog-3.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_bulldog-3.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D08",
+    "color": "CO-D01"
+   }
+  },
+  {
+   "id": "dexter/dexter_butterfly.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_butterfly.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D09",
+    "color": "CO-D10"
+   }
+  },
+  {
+   "id": "dexter/dexter_butterfly_rework.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_butterfly_rework.jpeg",
+   "tags": [
+    "animals",
+    "color",
+    "coverups"
+   ],
+   "refs": {
+    "animals": "AN-D26",
+    "color": "CO-D46"
+   }
+  },
+  {
+   "id": "dexter/dexter_character_fox.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_character_fox.jpg",
+   "tags": [
+    "animals",
+    "characters"
+   ],
+   "refs": {
+    "animals": "AN-D10",
+    "characters": "CH-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_character_mouse.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_character_mouse.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D06"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_anchor.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_anchor.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_clover.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_clover.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_devil.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_devil.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-D07",
+    "color": "CO-D04"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_dog.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_dog.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D04",
+    "color": "CO-D05"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_eye.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_eye.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D06"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_flower.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_flower.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-D07",
+    "floral": "FL-D14"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_flower2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_flower2.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-D11",
+    "floral": "FL-D23"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_frenchbulldog.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_frenchbulldog.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D05",
+    "color": "CO-D12"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_frog.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_frog.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "japanese"
+   ],
+   "refs": {
+    "animals": "AN-D11",
+    "color": "CO-D13",
+    "japanese": "JP-D01"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_hana.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_hana.jpg",
+   "tags": [
+    "color",
+    "floral",
+    "japanese"
+   ],
+   "refs": {
+    "color": "CO-D14",
+    "floral": "FL-D15",
+    "japanese": "JP-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_ornate_face.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_ornate_face.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D15"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_ornate_face2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_ornate_face2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D16"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_peace.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_peace.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D17"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_skull.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_skull.jpg",
+   "tags": [
+    "color",
+    "skulls"
+   ],
+   "refs": {
+    "color": "CO-D18"
+   }
+  },
+  {
+   "id": "dexter/dexter_color_starwars.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_color_starwars.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-D05",
+    "color": "CO-D19"
+   }
+  },
+  {
+   "id": "dexter/dexter_coverup.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_1B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_1B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_1A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_2.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_2.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_2B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_2B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_2A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_3.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_3.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_3B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_3B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_3A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_4.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_4.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_4B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_4B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_4A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_5.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_5.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_5B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_5B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_5A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_6.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_6.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_6B.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_6B.jpeg",
+   "tags": [
+    "coverups"
+   ],
+   "before": "dexter/dexter_coverup_6A.jpeg"
+  },
+  {
+   "id": "dexter/dexter_coverup_7.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_7.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_8.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_8.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_coverup_french_bulldog.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_french_bulldog.jpeg",
+   "tags": [
+    "animals",
+    "coverups"
+   ],
+   "refs": {
+    "animals": "AN-D27"
+   }
+  },
+  {
+   "id": "dexter/dexter_coverup_snake_skull.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_snake_skull.jpg",
+   "tags": [
+    "animals",
+    "coverups",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-D12"
+   }
+  },
+  {
+   "id": "dexter/dexter_coverup_treblecleff.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_coverup_treblecleff.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_dog.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_dog.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D13"
+   }
+  },
+  {
+   "id": "dexter/dexter_dragon.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_dragon.jpg",
+   "tags": [
+    "characters",
+    "japanese"
+   ],
+   "refs": {
+    "characters": "CH-D08",
+    "japanese": "JP-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_eye.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_eye.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D20"
+   }
+  },
+  {
+   "id": "dexter/dexter_face.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_face.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D21"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_blackandgray.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_blackandgray.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_blackandgray2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_blackandgray2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D04"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_bold.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_bold.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D05"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_bracelet.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_bracelet.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D06"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_butterfly.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_butterfly.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-D14",
+    "floral": "FL-D07"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_guitar.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_guitar.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D08"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_shoulder.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_shoulder.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D09"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_spine.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_spine.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D10"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_sunflower.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_sunflower.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D11"
+   }
+  },
+  {
+   "id": "dexter/dexter_floral_sunflower2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_floral_sunflower2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D12"
+   }
+  },
+  {
+   "id": "dexter/dexter_funny.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_funny.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D09"
+   }
+  },
+  {
+   "id": "dexter/dexter_funny2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_funny2.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D10"
+   }
+  },
+  {
+   "id": "dexter/dexter_funny3.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_funny3.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D11"
+   }
+  },
+  {
+   "id": "dexter/dexter_funny4.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_funny4.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D12"
+   }
+  },
+  {
+   "id": "dexter/dexter_funny5.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_funny5.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D13"
+   }
+  },
+  {
+   "id": "dexter/dexter_goku.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_goku.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-D21",
+    "color": "CO-D22"
+   }
+  },
+  {
+   "id": "dexter/dexter_grim_reaper.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_grim_reaper.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-D14"
+   }
+  },
+  {
+   "id": "dexter/dexter_halloween.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_halloween.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-D22"
+   }
+  },
+  {
+   "id": "dexter/dexter_halloween2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_halloween2.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-D15"
+   }
+  },
+  {
+   "id": "dexter/dexter_hana.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_hana.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D16"
+   }
+  },
+  {
+   "id": "dexter/dexter_hana2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_hana2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D17"
+   }
+  },
+  {
+   "id": "dexter/dexter_head.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_head.jpeg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D47"
+   }
+  },
+  {
+   "id": "dexter/dexter_heart.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_heart.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D23"
+   }
+  },
+  {
+   "id": "dexter/dexter_horror_chuckie.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_horror_chuckie.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-D16"
+   }
+  },
+  {
+   "id": "dexter/dexter_lettering.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_lettering.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-D03"
+   }
+  },
+  {
+   "id": "dexter/dexter_lettering2.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_lettering2.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-D04"
+   }
+  },
+  {
+   "id": "dexter/dexter_link_zelda.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_link_zelda.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-D17",
+    "color": "CO-D24"
+   }
+  },
+  {
+   "id": "dexter/dexter_memorial_cross.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_memorial_cross.jpg",
+   "tags": [
+    "memorial",
+    "religious"
+   ],
+   "refs": {
+    "memorial": "MM-D01",
+    "religious": "RL-D01"
+   }
+  },
+  {
+   "id": "dexter/dexter_mermaid_skeleton.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_mermaid_skeleton.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-D18"
+   }
+  },
+  {
+   "id": "dexter/dexter_moon_sun.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_moon_sun.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D25"
+   }
+  },
+  {
+   "id": "dexter/dexter_mountains.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_mountains.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D26"
+   }
+  },
+  {
+   "id": "dexter/dexter_newschool.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_newschool.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D27"
+   }
+  },
+  {
+   "id": "dexter/dexter_octopus.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_octopus.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D15",
+    "color": "CO-D28"
+   }
+  },
+  {
+   "id": "dexter/dexter_oriental_snapping_turtle.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_oriental_snapping_turtle.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D16"
+   }
+  },
+  {
+   "id": "dexter/dexter_palm.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_palm.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D29"
+   }
+  },
+  {
+   "id": "dexter/dexter_pepper_sparkplug.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_pepper_sparkplug.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D30"
+   }
+  },
+  {
+   "id": "dexter/dexter_pocket_watch.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_pocket_watch.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D31"
+   }
+  },
+  {
+   "id": "dexter/dexter_rabbitsfoot.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_rabbitsfoot.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D32"
+   }
+  },
+  {
+   "id": "dexter/dexter_religious.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_religious.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_rework.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_rework.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_rework2.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_rework2.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_rework3.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_rework3.jpeg",
+   "tags": [
+    "coverups"
+   ]
+  },
+  {
+   "id": "dexter/dexter_skeleton.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skeleton.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "dexter/dexter_skull_cherries.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skull_cherries.jpg",
+   "tags": [
+    "color",
+    "skulls"
+   ],
+   "refs": {
+    "color": "CO-D33"
+   }
+  },
+  {
+   "id": "dexter/dexter_skull_cowboys.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skull_cowboys.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "dexter/dexter_skull_stars.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skull_stars.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "dexter/dexter_skull_texas.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skull_texas.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "dexter/dexter_skull_vulture.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_skull_vulture.jpg",
+   "tags": [
+    "animals",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-D06"
+   }
+  },
+  {
+   "id": "dexter/dexter_sleeve_turbo.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_sleeve_turbo.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D34"
+   }
+  },
+  {
+   "id": "dexter/dexter_text_guitar.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_text_guitar.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-D05"
+   }
+  },
+  {
+   "id": "dexter/dexter_traditional_anchor.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_traditional_anchor.jpeg",
+   "tags": [
+    "traditional"
+   ]
+  },
+  {
+   "id": "dexter/dexter_traditional_funny.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_traditional_funny.jpeg",
+   "tags": [
+    "characters",
+    "traditional"
+   ],
+   "refs": {
+    "characters": "CH-D23"
+   }
+  },
+  {
+   "id": "dexter/dexter_traditional_hand_snake.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_traditional_hand_snake.jpeg",
+   "tags": [
+    "animals",
+    "traditional"
+   ],
+   "refs": {
+    "animals": "AN-D28"
+   }
+  },
+  {
+   "id": "dexter/dexter_traditional_heart.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_traditional_heart.jpeg",
+   "tags": [
+    "traditional"
+   ]
+  },
+  {
+   "id": "dexter/dexter_traditional_teeth.jpeg",
+   "artist": "dexter",
+   "file": "dexter/dexter_traditional_teeth.jpeg",
+   "tags": [
+    "traditional"
+   ]
+  },
+  {
+   "id": "dexter/dexter_trash_polka.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_trash_polka.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D35"
+   }
+  },
+  {
+   "id": "dexter/dexter_tree_memorial.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_tree_memorial.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-D24",
+    "memorial": "MM-D02"
+   }
+  },
+  {
+   "id": "dexter/dexter_turtle.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_turtle.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D17"
+   }
+  },
+  {
+   "id": "dexter/dexter_watercolor.jpg",
+   "artist": "dexter",
+   "file": "dexter/dexter_watercolor.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-D18",
+    "color": "CO-D36"
+   }
+  },
+  {
+   "id": "dexter/face.jpg",
+   "artist": "dexter",
+   "file": "dexter/face.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D40"
+   }
+  },
+  {
+   "id": "dexter/family_anchor.jpg",
+   "artist": "dexter",
+   "file": "dexter/family_anchor.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-D06"
+   }
+  },
+  {
+   "id": "dexter/family_tree.jpg",
+   "artist": "dexter",
+   "file": "dexter/family_tree.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-D18",
+    "memorial": "MM-D07"
+   }
+  },
+  {
+   "id": "dexter/hand_tat_samurai.jpg",
+   "artist": "dexter",
+   "file": "dexter/hand_tat_samurai.jpg",
+   "tags": [
+    "characters",
+    "japanese"
+   ],
+   "refs": {
+    "characters": "CH-D19",
+    "japanese": "JP-D04"
+   }
+  },
+  {
+   "id": "dexter/lettering.jpg",
+   "artist": "dexter",
+   "file": "dexter/lettering.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-D08"
+   }
+  },
+  {
+   "id": "dexter/nebula.jpg",
+   "artist": "dexter",
+   "file": "dexter/nebula.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D41"
+   }
+  },
+  {
+   "id": "dexter/no_rain_no_flowers.jpg",
+   "artist": "dexter",
+   "file": "dexter/no_rain_no_flowers.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-D19",
+    "memorial": "MM-D09"
+   }
+  },
+  {
+   "id": "dexter/polynesian_turtle.jpg",
+   "artist": "dexter",
+   "file": "dexter/polynesian_turtle.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D07"
+   }
+  },
+  {
+   "id": "dexter/religious.jpg",
+   "artist": "dexter",
+   "file": "dexter/religious.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-D03"
+   }
+  },
+  {
+   "id": "dexter/samurai_frog.jpg",
+   "artist": "dexter",
+   "file": "dexter/samurai_frog.jpg",
+   "tags": [
+    "animals",
+    "characters"
+   ],
+   "refs": {
+    "animals": "AN-D19",
+    "characters": "CH-D24"
+   }
+  },
+  {
+   "id": "dexter/serious_fox.jpg",
+   "artist": "dexter",
+   "file": "dexter/serious_fox.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D20"
+   }
+  },
+  {
+   "id": "dexter/shark.jpg",
+   "artist": "dexter",
+   "file": "dexter/shark.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D21"
+   }
+  },
+  {
+   "id": "dexter/shoulder_flower.jpg",
+   "artist": "dexter",
+   "file": "dexter/shoulder_flower.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D20"
+   }
+  },
+  {
+   "id": "dexter/skull_snake.jpg",
+   "artist": "dexter",
+   "file": "dexter/skull_snake.jpg",
+   "tags": [
+    "animals",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-D22"
+   }
+  },
+  {
+   "id": "dexter/sloth_savior.jpg",
+   "artist": "dexter",
+   "file": "dexter/sloth_savior.jpg",
+   "tags": [
+    "characters",
+    "religious"
+   ],
+   "refs": {
+    "characters": "CH-D20",
+    "religious": "RL-D04"
+   }
+  },
+  {
+   "id": "dexter/space-skull.jpg",
+   "artist": "dexter",
+   "file": "dexter/space-skull.jpg",
+   "tags": [
+    "color",
+    "skulls"
+   ],
+   "refs": {
+    "color": "CO-D42"
+   }
+  },
+  {
+   "id": "dexter/spider_sleeve.jpg",
+   "artist": "dexter",
+   "file": "dexter/spider_sleeve.jpg",
+   "tags": [
+    "animals",
+    "realism"
+   ],
+   "refs": {
+    "animals": "AN-D23",
+    "realism": "RE-D01"
+   }
+  },
+  {
+   "id": "dexter/sun_moon.jpg",
+   "artist": "dexter",
+   "file": "dexter/sun_moon.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D43"
+   }
+  },
+  {
+   "id": "dexter/sunflower.jpg",
+   "artist": "dexter",
+   "file": "dexter/sunflower.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-D21"
+   }
+  },
+  {
+   "id": "dexter/sunflower_lettering.jpg",
+   "artist": "dexter",
+   "file": "dexter/sunflower_lettering.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-D22",
+    "memorial": "MM-D10"
+   }
+  },
+  {
+   "id": "dexter/texas_luck.jpg",
+   "artist": "dexter",
+   "file": "dexter/texas_luck.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D44"
+   }
+  },
+  {
+   "id": "dexter/tiger_claw.jpg",
+   "artist": "dexter",
+   "file": "dexter/tiger_claw.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-D24"
+   }
+  },
+  {
+   "id": "dexter/Untitled_Artwork.jpeg",
+   "artist": "dexter",
+   "file": "dexter/Untitled_Artwork.jpeg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-D48"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_crystal_skull.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_crystal_skull.jpg",
+   "tags": [
+    "realism",
+    "skulls"
+   ],
+   "refs": {
+    "realism": "RE-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_flower_compass.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_flower_compass.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T23"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T24"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_lineart.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_lineart.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T25"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_fox_blackandgrey.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_fox_blackandgrey.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-T11"
+   }
+  },
+  {
+   "id": "tombraider/laura_compilation-3.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/laura_compilation-3.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T26"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_mandala.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_mandala.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T27"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_seahorse_lineart.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_seahorse_lineart.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-T12"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_skull_blackandgrey.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_skull_blackandgrey.jpg",
+   "tags": [
+    "realism",
+    "skulls"
+   ],
+   "refs": {
+    "realism": "RE-T05"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_stone_spearhead_color.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_stone_spearhead_color.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T28"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_animal_jellyfish.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_animal_jellyfish.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_animal_snake.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_animal_snake.jpg",
+   "tags": [
+    "animals",
+    "japanese"
+   ],
+   "refs": {
+    "animals": "AN-T03",
+    "japanese": "JP-T01"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_animal_wolf.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_animal_wolf.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-T04"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_character_antipriest.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_character_antipriest.jpg",
+   "tags": [
+    "characters",
+    "religious"
+   ],
+   "refs": {
+    "characters": "CH-T01",
+    "religious": "RL-T03"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_compilation_sleeve.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_compilation_sleeve.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T29"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_coverup_floral.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_coverup_floral.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T30"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_face.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_face.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T31"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_face_snake.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_face_snake.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-T13"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_arm.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_arm.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T03"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_arm2.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_arm2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T01"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_arm3.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_arm3.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_arrow.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_arrow.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T04"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_bird.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_bird.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T06",
+    "floral": "FL-T05"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_butterfly.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_butterfly.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T05",
+    "floral": "FL-T06"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_compass.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_compass.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T07"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_cow.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_cow.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "floral",
+    "realism"
+   ],
+   "refs": {
+    "animals": "AN-T07",
+    "color": "CO-T03",
+    "floral": "FL-T08",
+    "realism": "RE-T01"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_crystal.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_crystal.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T32"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_face_knife.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_face_knife.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T33"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_forearm.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_forearm.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-T04",
+    "floral": "FL-T11"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_horsehoe.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_horsehoe.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T12"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_mandala.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_mandala.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T13"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_mandala2.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_mandala2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T14"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_scenic.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_scenic.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T15"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_shoulder.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_shoulder.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T16"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_skull.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_skull.jpg",
+   "tags": [
+    "floral",
+    "skulls"
+   ],
+   "refs": {
+    "floral": "FL-T44"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_sleeve.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_sleeve.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T17"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_sleeve2.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_sleeve2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T18"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_snake.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_snake.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T08",
+    "floral": "FL-T19"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_snake2.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_snake2.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T14",
+    "floral": "FL-T20"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_taurus.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_taurus.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T15",
+    "floral": "FL-T21"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_floral_wolf.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_floral_wolf.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T09",
+    "floral": "FL-T22"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_fullcolor_arrowhead.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_fullcolor_arrowhead.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-T01",
+    "floral": "FL-T40"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_fullcolor_floral.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_fullcolor_floral.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-T02",
+    "floral": "FL-T41"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_head_norse.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_head_norse.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-T03"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_japanese_sleeve.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_japanese_sleeve.jpg",
+   "tags": [
+    "floral",
+    "japanese"
+   ],
+   "refs": {
+    "floral": "FL-T42",
+    "japanese": "JP-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_knife.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_knife.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T34"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_mandala_hip.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_mandala_hip.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T35"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_mandala_seahorse.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_mandala_seahorse.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T10",
+    "floral": "FL-T45"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_mayan.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_mayan.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-T04"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_memorial.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_memorial.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-T36",
+    "memorial": "MM-T01"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_memorial_hourglass.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_memorial_hourglass.jpg",
+   "tags": [
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_mermaidscales.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_mermaidscales.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T37"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_religious_lion.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_religious_lion.jpg",
+   "tags": [
+    "animals",
+    "religious"
+   ],
+   "refs": {
+    "animals": "AN-T01",
+    "religious": "RL-T01"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_religious_text.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_religious_text.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_skull.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_skull.jpg",
+   "tags": [
+    "realism",
+    "skulls"
+   ],
+   "refs": {
+    "realism": "RE-T03"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_skull2.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_skull2.jpg",
+   "tags": [
+    "realism",
+    "skulls"
+   ],
+   "refs": {
+    "realism": "RE-T04"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_space.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_space.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-T38"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_tree.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_tree.jpg",
+   "tags": [
+    "floral",
+    "memorial"
+   ],
+   "refs": {
+    "floral": "FL-T39",
+    "memorial": "MM-T03"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_warrior.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_warrior.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-T02"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_undead_face.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_undead_face.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-T05",
+    "realism": "RE-T06"
+   }
+  },
+  {
+   "id": "tombraider/tombraider_flower_snake.jpg",
+   "artist": "tombraider",
+   "file": "tombraider/tombraider_flower_snake.jpg",
+   "tags": [
+    "animals",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-T16",
+    "floral": "FL-T43"
+   }
+  },
+  {
+   "id": "chris/chis_owl.jpg",
+   "artist": "chris",
+   "file": "chris/chis_owl.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C10"
+   }
+  },
+  {
+   "id": "chris/chris_americanflag.jpg",
+   "artist": "chris",
+   "file": "chris/chris_americanflag.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C18"
+   }
+  },
+  {
+   "id": "chris/chris_anchor.jpg",
+   "artist": "chris",
+   "file": "chris/chris_anchor.jpg",
+   "tags": [
+    "linework",
+    "memorial"
+   ],
+   "refs": {
+    "memorial": "MM-C01"
+   }
+  },
+  {
+   "id": "chris/chris_arrowhead.jpg",
+   "artist": "chris",
+   "file": "chris/chris_arrowhead.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C19"
+   }
+  },
+  {
+   "id": "chris/chris_awards.jpg",
+   "artist": "chris",
+   "file": "chris/chris_awards.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C20"
+   }
+  },
+  {
+   "id": "chris/chris_awards2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_awards2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C21"
+   }
+  },
+  {
+   "id": "chris/chris_barber.jpg",
+   "artist": "chris",
+   "file": "chris/chris_barber.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_batman.jpg",
+   "artist": "chris",
+   "file": "chris/chris_batman.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C10",
+    "color": "CO-C02"
+   }
+  },
+  {
+   "id": "chris/chris_butterfly.jpg",
+   "artist": "chris",
+   "file": "chris/chris_butterfly.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-C01",
+    "color": "CO-C40",
+    "floral": "FL-C01"
+   }
+  },
+  {
+   "id": "chris/chris_butterfly2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_butterfly2.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-C02",
+    "color": "CO-C41"
+   }
+  },
+  {
+   "id": "chris/chris_butterfly3.jpg",
+   "artist": "chris",
+   "file": "chris/chris_butterfly3.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-C03",
+    "color": "CO-C42"
+   }
+  },
+  {
+   "id": "chris/chris_butterfly4.jpg",
+   "artist": "chris",
+   "file": "chris/chris_butterfly4.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-C04",
+    "color": "CO-C43"
+   }
+  },
+  {
+   "id": "chris/chris_butterfly5.jpg",
+   "artist": "chris",
+   "file": "chris/chris_butterfly5.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "animals": "AN-C05",
+    "color": "CO-C44",
+    "floral": "FL-C02"
+   }
+  },
+  {
+   "id": "chris/chris_cat.jpg",
+   "artist": "chris",
+   "file": "chris/chris_cat.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C11"
+   }
+  },
+  {
+   "id": "chris/chris_clock.jpg",
+   "artist": "chris",
+   "file": "chris/chris_clock.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_color.jpg",
+   "artist": "chris",
+   "file": "chris/chris_color.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C22"
+   }
+  },
+  {
+   "id": "chris/chris_deer.jpg",
+   "artist": "chris",
+   "file": "chris/chris_deer.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C12"
+   }
+  },
+  {
+   "id": "chris/chris_dove.jpg",
+   "artist": "chris",
+   "file": "chris/chris_dove.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C06"
+   }
+  },
+  {
+   "id": "chris/chris_elephant.jpg",
+   "artist": "chris",
+   "file": "chris/chris_elephant.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C13"
+   }
+  },
+  {
+   "id": "chris/chris_eye.jpg",
+   "artist": "chris",
+   "file": "chris/chris_eye.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C23"
+   }
+  },
+  {
+   "id": "chris/chris_eye2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_eye2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C24"
+   }
+  },
+  {
+   "id": "chris/chris_feather.jpg",
+   "artist": "chris",
+   "file": "chris/chris_feather.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_finger.jpg",
+   "artist": "chris",
+   "file": "chris/chris_finger.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_firenation.jpg",
+   "artist": "chris",
+   "file": "chris/chris_firenation.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C19",
+    "color": "CO-C01"
+   }
+  },
+  {
+   "id": "chris/chris_fishinghunting.jpg",
+   "artist": "chris",
+   "file": "chris/chris_fishinghunting.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C25"
+   }
+  },
+  {
+   "id": "chris/chris_flowersmoon.jpg",
+   "artist": "chris",
+   "file": "chris/chris_flowersmoon.jpg",
+   "tags": [
+    "floral",
+    "linework"
+   ],
+   "refs": {
+    "floral": "FL-C07"
+   }
+  },
+  {
+   "id": "chris/chris_frog_mushroom.jpg",
+   "artist": "chris",
+   "file": "chris/chris_frog_mushroom.jpg",
+   "tags": [
+    "animals",
+    "characters"
+   ],
+   "refs": {
+    "animals": "AN-C14",
+    "characters": "CH-C11"
+   }
+  },
+  {
+   "id": "chris/chris_gun.jpg",
+   "artist": "chris",
+   "file": "chris/chris_gun.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_hand.jpg",
+   "artist": "chris",
+   "file": "chris/chris_hand.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_hand_lotus.jpg",
+   "artist": "chris",
+   "file": "chris/chris_hand_lotus.jpg",
+   "tags": [
+    "floral",
+    "linework"
+   ],
+   "refs": {
+    "floral": "FL-C08"
+   }
+  },
+  {
+   "id": "chris/chris_heartbeat.jpg",
+   "artist": "chris",
+   "file": "chris/chris_heartbeat.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_hellokitty.jpg",
+   "artist": "chris",
+   "file": "chris/chris_hellokitty.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C01",
+    "color": "CO-C03"
+   }
+  },
+  {
+   "id": "chris/chris_icecream.jpg",
+   "artist": "chris",
+   "file": "chris/chris_icecream.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C26"
+   }
+  },
+  {
+   "id": "chris/chris_irishtexan.jpg",
+   "artist": "chris",
+   "file": "chris/chris_irishtexan.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C04"
+   }
+  },
+  {
+   "id": "chris/chris_japanese.jpg",
+   "artist": "chris",
+   "file": "chris/chris_japanese.jpg",
+   "tags": [
+    "color",
+    "japanese"
+   ],
+   "refs": {
+    "color": "CO-C27",
+    "japanese": "JP-C03"
+   }
+  },
+  {
+   "id": "chris/chris_japanese2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_japanese2.jpg",
+   "tags": [
+    "color",
+    "japanese"
+   ],
+   "refs": {
+    "color": "CO-C28",
+    "japanese": "JP-C04"
+   }
+  },
+  {
+   "id": "chris/chris_knuckles.jpg",
+   "artist": "chris",
+   "file": "chris/chris_knuckles.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-C02"
+   }
+  },
+  {
+   "id": "chris/chris_lettering.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lettering.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_lineart.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lineart.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_lineart2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lineart2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_lion.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lion.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C15"
+   }
+  },
+  {
+   "id": "chris/chris_lotus.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lotus.jpg",
+   "tags": [
+    "floral",
+    "linework"
+   ],
+   "refs": {
+    "floral": "FL-C09"
+   }
+  },
+  {
+   "id": "chris/chris_lucky7.jpg",
+   "artist": "chris",
+   "file": "chris/chris_lucky7.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C05"
+   }
+  },
+  {
+   "id": "chris/chris_moon.jpg",
+   "artist": "chris",
+   "file": "chris/chris_moon.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_moonphases.jpg",
+   "artist": "chris",
+   "file": "chris/chris_moonphases.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_mouthbullet.jpg",
+   "artist": "chris",
+   "file": "chris/chris_mouthbullet.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C06"
+   }
+  },
+  {
+   "id": "chris/chris_mushroom.jpg",
+   "artist": "chris",
+   "file": "chris/chris_mushroom.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C03",
+    "color": "CO-C07"
+   }
+  },
+  {
+   "id": "chris/chris_myneighbor.jpg",
+   "artist": "chris",
+   "file": "chris/chris_myneighbor.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C04",
+    "color": "CO-C08"
+   }
+  },
+  {
+   "id": "chris/chris_myneighbor2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_myneighbor2.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C05",
+    "color": "CO-C09"
+   }
+  },
+  {
+   "id": "chris/chris_newyork_sleeve.jpg",
+   "artist": "chris",
+   "file": "chris/chris_newyork_sleeve.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C29"
+   }
+  },
+  {
+   "id": "chris/chris_penguin.jpg",
+   "artist": "chris",
+   "file": "chris/chris_penguin.jpg",
+   "tags": [
+    "animals",
+    "characters"
+   ],
+   "refs": {
+    "animals": "AN-C07",
+    "characters": "CH-C06"
+   }
+  },
+  {
+   "id": "chris/chris_pikachu.jpg",
+   "artist": "chris",
+   "file": "chris/chris_pikachu.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C07",
+    "color": "CO-C10"
+   }
+  },
+  {
+   "id": "chris/chris_raccoon.jpg",
+   "artist": "chris",
+   "file": "chris/chris_raccoon.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C16"
+   }
+  },
+  {
+   "id": "chris/chris_religious.jpg",
+   "artist": "chris",
+   "file": "chris/chris_religious.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-C01"
+   }
+  },
+  {
+   "id": "chris/chris_religious2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_religious2.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-C02"
+   }
+  },
+  {
+   "id": "chris/chris_religious3.jpg",
+   "artist": "chris",
+   "file": "chris/chris_religious3.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-C03"
+   }
+  },
+  {
+   "id": "chris/chris_religious4.jpg",
+   "artist": "chris",
+   "file": "chris/chris_religious4.jpg",
+   "tags": [
+    "religious"
+   ],
+   "refs": {
+    "religious": "RL-C04"
+   }
+  },
+  {
+   "id": "chris/chris_rose.jpg",
+   "artist": "chris",
+   "file": "chris/chris_rose.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-C11",
+    "floral": "FL-C03"
+   }
+  },
+  {
+   "id": "chris/chris_rose2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_rose2.jpg",
+   "tags": [
+    "color",
+    "floral"
+   ],
+   "refs": {
+    "color": "CO-C12",
+    "floral": "FL-C04"
+   }
+  },
+  {
+   "id": "chris/chris_rose3.jpg",
+   "artist": "chris",
+   "file": "chris/chris_rose3.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-C10"
+   }
+  },
+  {
+   "id": "chris/chris_rose4.jpg",
+   "artist": "chris",
+   "file": "chris/chris_rose4.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-C06"
+   }
+  },
+  {
+   "id": "chris/chris_shark.jpg",
+   "artist": "chris",
+   "file": "chris/chris_shark.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C08"
+   }
+  },
+  {
+   "id": "chris/chris_skeletondrink.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skeletondrink.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-C20"
+   }
+  },
+  {
+   "id": "chris/chris_skull.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skull.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "chris/chris_skull_horn.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skull_horn.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "chris/chris_skull_indian.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skull_indian.jpg",
+   "tags": [
+    "characters",
+    "skulls"
+   ],
+   "refs": {
+    "characters": "CH-C21"
+   }
+  },
+  {
+   "id": "chris/chris_skullbutterfly.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skullbutterfly.jpg",
+   "tags": [
+    "animals",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-C17"
+   }
+  },
+  {
+   "id": "chris/chris_skullmoon.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skullmoon.jpg",
+   "tags": [
+    "linework",
+    "skulls"
+   ]
+  },
+  {
+   "id": "chris/chris_skullraven.jpg",
+   "artist": "chris",
+   "file": "chris/chris_skullraven.jpg",
+   "tags": [
+    "animals",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-C18"
+   }
+  },
+  {
+   "id": "chris/chris_smiley.jpg",
+   "artist": "chris",
+   "file": "chris/chris_smiley.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-C12"
+   }
+  },
+  {
+   "id": "chris/chris_snake.jpg",
+   "artist": "chris",
+   "file": "chris/chris_snake.jpg",
+   "tags": [
+    "animals",
+    "japanese"
+   ],
+   "refs": {
+    "animals": "AN-C19",
+    "japanese": "JP-C01"
+   }
+  },
+  {
+   "id": "chris/chris_snake2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_snake2.jpg",
+   "tags": [
+    "animals",
+    "japanese"
+   ],
+   "refs": {
+    "animals": "AN-C20",
+    "japanese": "JP-C02"
+   }
+  },
+  {
+   "id": "chris/chris_snorlax.jpg",
+   "artist": "chris",
+   "file": "chris/chris_snorlax.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C08",
+    "color": "CO-C13"
+   }
+  },
+  {
+   "id": "chris/chris_spiritedaway.jpg",
+   "artist": "chris",
+   "file": "chris/chris_spiritedaway.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C09",
+    "color": "CO-C30"
+   }
+  },
+  {
+   "id": "chris/chris_statueofliberty.jpg",
+   "artist": "chris",
+   "file": "chris/chris_statueofliberty.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C31"
+   }
+  },
+  {
+   "id": "chris/chris_stitch.jpg",
+   "artist": "chris",
+   "file": "chris/chris_stitch.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C13",
+    "color": "CO-C32"
+   }
+  },
+  {
+   "id": "chris/chris_sunandmoon.jpg",
+   "artist": "chris",
+   "file": "chris/chris_sunandmoon.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_sunandmoon-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_sunandmoon-2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_superman.jpg",
+   "artist": "chris",
+   "file": "chris/chris_superman.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C14",
+    "color": "CO-C45"
+   }
+  },
+  {
+   "id": "chris/chris_supernatural.jpg",
+   "artist": "chris",
+   "file": "chris/chris_supernatural.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C22",
+    "color": "CO-C14"
+   }
+  },
+  {
+   "id": "chris/chris_texas.jpg",
+   "artist": "chris",
+   "file": "chris/chris_texas.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C15"
+   }
+  },
+  {
+   "id": "chris/chris_texas2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_texas2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C16"
+   }
+  },
+  {
+   "id": "chris/chris_touch.jpg",
+   "artist": "chris",
+   "file": "chris/chris_touch.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_traditional_tiger.jpg",
+   "artist": "chris",
+   "file": "chris/chris_traditional_tiger.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-C21",
+    "color": "CO-C34"
+   }
+  },
+  {
+   "id": "chris/chris_traditionaldagger.jpg",
+   "artist": "chris",
+   "file": "chris/chris_traditionaldagger.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C33"
+   }
+  },
+  {
+   "id": "chris/chris_underwater.jpg",
+   "artist": "chris",
+   "file": "chris/chris_underwater.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "realism"
+   ],
+   "refs": {
+    "animals": "AN-C22",
+    "color": "CO-C35",
+    "realism": "RE-C01"
+   }
+  },
+  {
+   "id": "chris/chris_watercolorpuzzle.jpg",
+   "artist": "chris",
+   "file": "chris/chris_watercolorpuzzle.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C17"
+   }
+  },
+  {
+   "id": "chris/chris_windmill.jpg",
+   "artist": "chris",
+   "file": "chris/chris_windmill.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_wolfinsheephide.jpg",
+   "artist": "chris",
+   "file": "chris/chris_wolfinsheephide.jpg",
+   "tags": [
+    "animals"
+   ],
+   "refs": {
+    "animals": "AN-C23"
+   }
+  },
+  {
+   "id": "chris/chris_woodshed.jpg",
+   "artist": "chris",
+   "file": "chris/chris_woodshed.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C36"
+   }
+  },
+  {
+   "id": "chris/chris_yinyang.jpg",
+   "artist": "chris",
+   "file": "chris/chris_yinyang.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris_yinyang-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris_yinyang-2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris-america-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-america-2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C37"
+   }
+  },
+  {
+   "id": "chris/chris-butterfly-skull-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-butterfly-skull-2.jpg",
+   "tags": [
+    "animals",
+    "skulls"
+   ],
+   "refs": {
+    "animals": "AN-C24"
+   }
+  },
+  {
+   "id": "chris/chris-feather-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-feather-2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris-hellokitty-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-hellokitty-2.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C15",
+    "color": "CO-C46"
+   }
+  },
+  {
+   "id": "chris/chris-line-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-line-2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/chris-mushroom-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-mushroom-2.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C16",
+    "color": "CO-C47"
+   }
+  },
+  {
+   "id": "chris/chris-pinup-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-pinup-2.jpg",
+   "tags": [
+    "characters",
+    "color"
+   ],
+   "refs": {
+    "characters": "CH-C17",
+    "color": "CO-C48"
+   }
+  },
+  {
+   "id": "chris/chris-rose-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-rose-2.jpg",
+   "tags": [
+    "floral"
+   ],
+   "refs": {
+    "floral": "FL-C11"
+   }
+  },
+  {
+   "id": "chris/chris-rose-lines-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-rose-lines-2.jpg",
+   "tags": [
+    "floral",
+    "linework"
+   ],
+   "refs": {
+    "floral": "FL-C12"
+   }
+  },
+  {
+   "id": "chris/chris-skull-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-skull-2.jpg",
+   "tags": [
+    "skulls"
+   ]
+  },
+  {
+   "id": "chris/chris-supernatural-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-supernatural-2.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-C18"
+   }
+  },
+  {
+   "id": "chris/chris-texas-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-texas-2.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C38"
+   }
+  },
+  {
+   "id": "chris/chris-windmill-2.jpg",
+   "artist": "chris",
+   "file": "chris/chris-windmill-2.jpg",
+   "tags": [
+    "linework"
+   ]
+  },
+  {
+   "id": "chris/sleeve-4.jpg",
+   "artist": "chris",
+   "file": "chris/sleeve-4.jpg",
+   "tags": [
+    "color"
+   ],
+   "refs": {
+    "color": "CO-C39"
+   }
+  },
+  {
+   "id": "chris/watercolor.jpg",
+   "artist": "chris",
+   "file": "chris/watercolor.jpg",
+   "tags": [
+    "animals",
+    "color"
+   ],
+   "refs": {
+    "animals": "AN-C09",
+    "color": "CO-C49"
+   }
+  },
+  {
+   "id": "hector/hector_trejo_realism.jpg",
+   "artist": "hector",
+   "file": "hector/hector_trejo_realism.jpg",
+   "tags": [
+    "characters",
+    "realism"
+   ],
+   "refs": {
+    "characters": "CH-H01",
+    "realism": "RE-H01"
+   }
+  },
+  {
+   "id": "hector/hector_battleaxe_blackandgrey.jpg",
+   "artist": "hector",
+   "file": "hector/hector_battleaxe_blackandgrey.jpg",
+   "tags": [
+    "characters",
+    "linework",
+    "traditional"
+   ],
+   "refs": {
+    "characters": "CH-H02"
+   }
+  },
+  {
+   "id": "hector/hector_sun_eye_serpent_color.jpg",
+   "artist": "hector",
+   "file": "hector/hector_sun_eye_serpent_color.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "religious",
+    "traditional"
+   ],
+   "refs": {
+    "animals": "AN-H01",
+    "color": "CO-H01",
+    "religious": "RL-H01"
+   }
+  },
+  {
+   "id": "hector/hector_firefighter_pinup_blackandgrey.jpg",
+   "artist": "hector",
+   "file": "hector/hector_firefighter_pinup_blackandgrey.jpg",
+   "tags": [
+    "characters",
+    "traditional"
+   ],
+   "refs": {
+    "characters": "CH-H03"
+   }
+  },
+  {
+   "id": "hector/hector_vintage_woman_blackandgrey.jpg",
+   "artist": "hector",
+   "file": "hector/hector_vintage_woman_blackandgrey.jpg",
+   "tags": [
+    "characters",
+    "floral",
+    "traditional"
+   ],
+   "refs": {
+    "characters": "CH-H04",
+    "floral": "FL-H01"
+   }
+  },
+  {
+   "id": "hector/hector_lucky_skull_dice.jpg",
+   "artist": "hector",
+   "file": "hector/hector_lucky_skull_dice.jpg",
+   "tags": [
+    "linework",
+    "skulls",
+    "traditional"
+   ]
+  },
+  {
+   "id": "hector/hector_snake_floral_color.jpg",
+   "artist": "hector",
+   "file": "hector/hector_snake_floral_color.jpg",
+   "tags": [
+    "animals",
+    "color",
+    "floral",
+    "traditional"
+   ],
+   "refs": {
+    "animals": "AN-H02",
+    "color": "CO-H02",
+    "floral": "FL-H02"
+   }
+  },
+  {
+   "id": "hector/hector_twoface_portrait_realism.jpg",
+   "artist": "hector",
+   "file": "hector/hector_twoface_portrait_realism.jpg",
+   "tags": [
+    "characters",
+    "realism"
+   ],
+   "refs": {
+    "characters": "CH-H05",
+    "realism": "RE-H02"
+   }
+  },
+  {
+   "id": "mason/mason_weeping_woman_realism.jpg",
+   "artist": "mason",
+   "file": "mason/mason_weeping_woman_realism.jpg",
+   "tags": [
+    "characters",
+    "realism"
+   ],
+   "refs": {
+    "characters": "CH-MD01",
+    "realism": "RE-MD01"
+   }
+  },
+  {
+   "id": "mason/mason_back_script.jpg",
+   "artist": "mason",
+   "file": "mason/mason_back_script.jpg",
+   "tags": [
+    "script"
+   ]
+  },
+  {
+   "id": "mason/mason_mad_hatter_portrait.jpg",
+   "artist": "mason",
+   "file": "mason/mason_mad_hatter_portrait.jpg",
+   "tags": [
+    "characters",
+    "realism"
+   ],
+   "refs": {
+    "characters": "CH-MD02",
+    "realism": "RE-MD02"
+   }
+  },
+  {
+   "id": "mason/mason_christ_portrait.jpg",
+   "artist": "mason",
+   "file": "mason/mason_christ_portrait.jpg",
+   "tags": [
+    "realism",
+    "religious"
+   ],
+   "refs": {
+    "realism": "RE-MD06",
+    "religious": "RL-MD01"
+   }
+  },
+  {
+   "id": "mason/mason_samurai_hannya_color.jpg",
+   "artist": "mason",
+   "file": "mason/mason_samurai_hannya_color.jpg",
+   "tags": [
+    "characters",
+    "color",
+    "japanese"
+   ],
+   "refs": {
+    "characters": "CH-MD04",
+    "color": "CO-MD01",
+    "japanese": "JP-MD01"
+   }
+  },
+  {
+   "id": "mason/mason_head_script.jpg",
+   "artist": "mason",
+   "file": "mason/mason_head_script.jpg",
+   "tags": [
+    "script"
+   ]
+  },
+  {
+   "id": "mason/mason_white_rabbit_script.jpg",
+   "artist": "mason",
+   "file": "mason/mason_white_rabbit_script.jpg",
+   "tags": [
+    "animals",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "animals": "AN-MD01",
+    "realism": "RE-MD03"
+   }
+  },
+  {
+   "id": "mason/mason_trust_none_leg_sleeve.jpg",
+   "artist": "mason",
+   "file": "mason/mason_trust_none_leg_sleeve.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD03",
+    "realism": "RE-MD04"
+   }
+  },
+  {
+   "id": "mason/mason_brush_script_cross.jpg",
+   "artist": "mason",
+   "file": "mason/mason_brush_script_cross.jpg",
+   "tags": [
+    "religious",
+    "script"
+   ],
+   "refs": {
+    "religious": "RL-MD02"
+   }
+  },
+  {
+   "id": "mason/mason_gas_mask_alexis.jpg",
+   "artist": "mason",
+   "file": "mason/mason_gas_mask_alexis.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD05",
+    "realism": "RE-MD05"
+   }
+  },
+  {
+   "id": "mason/mason_guilty_script_eye.jpg",
+   "artist": "mason",
+   "file": "mason/mason_guilty_script_eye.jpg",
+   "tags": [
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "realism": "RE-MD08"
+   }
+  },
+  {
+   "id": "mason/mason_jackie_script_color.jpg",
+   "artist": "mason",
+   "file": "mason/mason_jackie_script_color.jpg",
+   "tags": [
+    "color",
+    "script"
+   ],
+   "refs": {
+    "color": "CO-MD02"
+   }
+  },
+  {
+   "id": "mason/mason_script_money_sleeve.jpg",
+   "artist": "mason",
+   "file": "mason/mason_script_money_sleeve.jpg",
+   "tags": [
+    "script"
+   ]
+  },
+  {
+   "id": "mason/mason_gbfw_script.jpg",
+   "artist": "mason",
+   "file": "mason/mason_gbfw_script.jpg",
+   "tags": [
+    "script"
+   ]
+  },
+  {
+   "id": "mason/mason_slumerica_sleeve_a.jpg",
+   "artist": "mason",
+   "file": "mason/mason_slumerica_sleeve_a.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD06",
+    "realism": "RE-MD09"
+   }
+  },
+  {
+   "id": "mason/mason_alice_script.jpg",
+   "artist": "mason",
+   "file": "mason/mason_alice_script.jpg",
+   "tags": [
+    "characters",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD09"
+   }
+  },
+  {
+   "id": "mason/mason_grim_reaper_sleeve.jpg",
+   "artist": "mason",
+   "file": "mason/mason_grim_reaper_sleeve.jpg",
+   "tags": [
+    "characters",
+    "realism"
+   ],
+   "refs": {
+    "characters": "CH-MD07",
+    "realism": "RE-MD10"
+   }
+  },
+  {
+   "id": "mason/mason_horse_sleeve.jpg",
+   "artist": "mason",
+   "file": "mason/mason_horse_sleeve.jpg",
+   "tags": [
+    "animals",
+    "realism"
+   ],
+   "refs": {
+    "animals": "AN-MD03",
+    "realism": "RE-MD11"
+   }
+  },
+  {
+   "id": "mason/mason_raccoon_trashcan.jpg",
+   "artist": "mason",
+   "file": "mason/mason_raccoon_trashcan.jpg",
+   "tags": [
+    "animals",
+    "characters"
+   ],
+   "refs": {
+    "animals": "AN-MD02",
+    "characters": "CH-MD10"
+   }
+  },
+  {
+   "id": "mason/mason_bomb_character.jpg",
+   "artist": "mason",
+   "file": "mason/mason_bomb_character.jpg",
+   "tags": [
+    "characters"
+   ],
+   "refs": {
+    "characters": "CH-MD08"
+   }
+  },
+  {
+   "id": "mason/mason_american_flag.jpg",
+   "artist": "mason",
+   "file": "mason/mason_american_flag.jpg",
+   "tags": [
+    "realism"
+   ],
+   "refs": {
+    "realism": "RE-MD07"
+   }
+  },
+  {
+   "id": "mason/mason_cannabis_leaves.jpg",
+   "artist": "mason",
+   "file": "mason/mason_cannabis_leaves.jpg",
+   "tags": [
+    "realism"
+   ],
+   "refs": {
+    "realism": "RE-MD12"
+   }
+  },
+  {
+   "id": "mason/mason_sword_script_neck.jpg",
+   "artist": "mason",
+   "file": "mason/mason_sword_script_neck.jpg",
+   "tags": [
+    "script"
+   ]
+  },
+  {
+   "id": "mason/mason_mace_chain.jpg",
+   "artist": "mason",
+   "file": "mason/mason_mace_chain.jpg",
+   "tags": []
+  },
+  {
+   "id": "mason/mason_trust_none_leg_alt.jpg",
+   "artist": "mason",
+   "file": "mason/mason_trust_none_leg_alt.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD11",
+    "realism": "RE-MD13"
+   }
+  },
+  {
+   "id": "mason/mason_slumerica_sleeve_b.jpg",
+   "artist": "mason",
+   "file": "mason/mason_slumerica_sleeve_b.jpg",
+   "tags": [
+    "characters",
+    "realism",
+    "script"
+   ],
+   "refs": {
+    "characters": "CH-MD12",
+    "realism": "RE-MD14"
+   }
+  }
+ ]
+}

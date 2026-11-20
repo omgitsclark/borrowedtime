@@ -18,6 +18,15 @@ cp chris.html chris && cp dexter.html dexter && cp tombraider.html tombraider &&
 
 **Note:** `index.html` has no extensionless twin — don't create one; the server serves `index.html` directly as the directory index.
 
+### Gallery Data (`data/gallery.json`)
+Every gallery photo is listed once, in `data/gallery.json`; the artist pages and studio galleries no longer hold photo lists. `js/gallery.js` reads it and builds the grids, filter buttons and lightbox (`BTGallery.artist('dexter')` on artist pages, `BTGallery.studio('color')` on studio galleries). The file holds:
+- `artists`: id (also the photo folder under `images/`), name, page, and reference-code letter(s) (`D`, `T`, `C`, `H`, `MD`).
+- `tags`: the style tags. An artist page shows a filter button for each tag that artist has used.
+- `photos`: one entry per photo, in each artist's page order: `file` (path under `images/`), `tags`, optional `before` (a before shot; the lightbox then shows a "Show Before" button), and `refs` (its reference code in each studio gallery it's in).
+- `studio`: the 8 studio galleries, each with its saved photo `order`. **Galleries are automatic**: a photo tagged `floral` belongs in the Floral gallery. A newly tagged photo goes at the end of that gallery's `order` and gets the next free reference code for its artist (e.g. `FL-T41`); existing codes never change, since customers may quote them.
+
+Created 2026-11-20 from the hand-written lists (phase 1 of the artist upload portal). That merge added a tag wherever a photo was already in that studio gallery, and added already-tagged photos to galleries they weren't listed in (41 photos), so nothing disappeared from any gallery. The upload portal will edit this file; until then, add photos by editing it by hand.
+
 ### Gallery Thumbnails
 Gallery grids and homepage artist cards load small square thumbnails from `images/thumbs/` (mirrors `images/<artist>/`); the lightbox still opens the full-size photo. After adding or changing any artist photos, run from the repo root:
 ```bash
@@ -74,8 +83,9 @@ All galleries include work from all artists with reference codes:
 - Lightbox image viewer with keyboard navigation (← → Esc)
 - Scroll-to-top button (appears after 300px scroll)
 - Mobile-responsive design
-- Category filtering on artist pages
-- Artist attribution in studio gallery lightboxes
+- Category filtering on artist pages (buttons built from the artist's tags)
+- Artist attribution and reference code in studio gallery lightboxes
+- Before/after toggle in the lightbox for photos with a `before` shot
 
 ## Design Decisions
 
