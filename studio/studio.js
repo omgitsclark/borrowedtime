@@ -1,5 +1,5 @@
-// Artist portal page: log in with a PIN (artists) or password (admin), and the admin's
-// artist management. Talks to the portal service at /studio/api/.
+// Artist portal page: log in with a PIN (artists) or password (admin), artists' photo
+// management, and the admin's artist management. Talks to the portal service at /studio/api/.
 (function () {
   const view = document.getElementById('view');
   const loading = document.getElementById('loading');
@@ -188,15 +188,301 @@
       }, 'Sign out on all devices'));
   }
 
-  // ----- Artist -----
+  // ----- Photos (an artist's own, or any artist's for the admin) -----
+
+  const MAX_SIDE = 2400; // photos are shrunk on the phone first: faster uploads on cell data
+
+  function thumbUrl(file) { return `/images/thumbs/${file}`; }
+  function photoUrl(file) { return `/images/${file}`; }
+
+  function thumbImg(file, alt) {
+    const img = h('img', { src: thumbUrl(file), alt, loading: 'lazy' });
+    img.onerror = () => { img.onerror = null; img.src = photoUrl(file); };
+    return img;
+  }
+
+  // Shrinks a photo and turns it into a JPEG (this also converts iPhone HEIC photos, which the
+  // server can't read). If the browser can't read it either, the original is sent as is.
+  async function prepare(file) {
+    const url = URL.createObjectURL(file);
+    try {
+      const img = new Image();
+      img.src = url;
+      await img.decode();
+      const scale = Math.min(1, MAX_SIDE / Math.max(img.naturalWidth, img.naturalHeight));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.naturalWidth * scale);
+      canvas.height = Math.round(img.naturalHeight * scale);
+      canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+      const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', 0.9));
+      return blob || file;
+    } catch {
+      return file;
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  }
+
+  async function sendPhoto(path, blob) {
+    let r;
+    try {
+      r = await fetch(`/studio/api/${path}`, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': blob.type || 'application/octet-stream' },
+        body: blob,
+      });
+    } catch {
+      throw Object.assign(new Error("Couldn't reach the portal. Check your connection and try again."), { status: 0 });
+    }
+    let data = {};
+    try { data = await r.json(); } catch { /* not JSON */ }
+    if (!r.ok) throw Object.assign(new Error(data.error || 'Something went wrong. Please try again.'), { status: r.status, data });
+    return data;
+  }
+
+  // Style buttons that toggle on and off. onchange gets the list of chosen style ids.
+  function styleChips(tags, chosen, onchange) {
+    const picked = new Set(chosen);
+    return h('div', { class: 'chips' }, tags.map(t => h('button', {
+      type: 'button',
+      class: 'chip',
+      'aria-pressed': String(picked.has(t.id)),
+      onclick: e => {
+        const on = !picked.has(t.id);
+        if (on) picked.add(t.id); else picked.delete(t.id);
+        e.currentTarget.setAttribute('aria-pressed', String(on));
+        onchange(tags.map(x => x.id).filter(id => picked.has(id)));
+      },
+    }, t.label)));
+  }
+
+  function studioNote(tags) {
+    const names = tags.filter(t => t.studio).map(t => t.label);
+    return h('p', { class: 'muted small' },
+      `${names.join(', ')} also put the photo in the shop's gallery for that style.`);
+  }
+
+  // asAdmin: the admin is managing this artist's photos, so links go back to the admin page.
+  async function photosView(artistId, asAdmin) {
+    const query = asAdmin ? `?artist=${encodeURIComponent(artistId)}` : '';
+    let data;
+    try {
+      data = await api('GET', `photos${query}`);
+    } catch (err) {
+      if (err.status === 401) return start();
+      return show(h('h1', null, 'Photos'), h('p', { class: 'message error' }, err.message),
+        h('button', { class: 'btn secondary', onclick: () => photosView(artistId, asAdmin) }, 'Try again'));
+    }
+    const ctx = {
+      asAdmin,
+      artistId,
+      data,
+      // Runs a change; the server answers with the artist's updated photo list.
+      async change(work) {
+        try {
+          ctx.data = await work();
+        } catch (err) {
+          if (err.status === 401) { start(); throw new Error('Please log in again.'); }
+          throw err;
+        }
+      },
+    };
+    gridView(ctx);
+  }
+
+  function gridView(ctx, notice) {
+    const { data } = ctx;
+    const msg = message();
+    if (notice) msg.set(notice, 'ok');
+    const n = data.photos.length;
+    const input = h('input', { type: 'file', accept: 'image/*', multiple: true, class: 'visually-hidden', id: 'add-photos' });
+    input.addEventListener('change', () => {
+      if (input.files.length) uploadView(ctx, [...input.files]);
+    });
+    show(
+      ctx.asAdmin
+        ? h('p', null, h('button', { class: 'link', onclick: adminView }, '← Admin'))
+        : null,
+      h('h1', null, ctx.asAdmin ? `${data.artist.name}'s photos` : `Hi, ${data.artist.name}`),
+      h('p', { class: 'muted' }, `${n} photo${n === 1 ? '' : 's'} on ${ctx.asAdmin ? 'their' : 'your'} page. `,
+        h('a', { href: `/${data.artist.page}`, target: '_blank', rel: 'noopener' }, 'See the page')),
+      h('div', { class: 'stack' },
+        h('label', { class: 'btn', for: 'add-photos', role: 'button', tabindex: '0',
+          onkeydown: e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); input.click(); } } },
+        'Add photos'), input),
+      msg,
+      n ? h('p', { class: 'muted small', style: 'margin-top: 20px' }, 'Tap a photo to change its styles, move it or delete it. The first photos show first on the page.') : null,
+      h('div', { class: 'photo-grid' }, data.photos.map((p, i) => h('button', {
+        class: 'photo-tile',
+        type: 'button',
+        'aria-label': `Photo ${i + 1}${p.tags.length ? `: ${p.tags.join(', ')}` : ''}`,
+        onclick: () => photoView(ctx, p.id),
+      }, thumbImg(p.file, ''), p.before ? h('span', { class: 'badge' }, 'Before/after') : null,
+      p.tags.length ? null : h('span', { class: 'badge warn' }, 'No styles')))),
+      ctx.asAdmin ? null : signOutButtons(),
+    );
+  }
+
+  function uploadView(ctx, files) {
+    const { data } = ctx;
+    let tags = [];
+    const msg = message();
+    const status = h('p', { class: 'upload-status', role: 'status', 'aria-live': 'polite' });
+    const previews = files.map(f => {
+      const url = URL.createObjectURL(f);
+      const img = h('img', { src: url, alt: '' });
+      img.onload = () => URL.revokeObjectURL(url);
+      img.onerror = () => { URL.revokeObjectURL(url); img.hidden = true; };
+      return h('div', { class: 'preview' }, img);
+    });
+    const go = h('button', { class: 'btn', type: 'button' }, `Upload ${files.length} photo${files.length === 1 ? '' : 's'}`);
+    const cancel = h('button', { class: 'btn secondary', type: 'button', onclick: () => gridView(ctx) }, 'Cancel');
+    go.addEventListener('click', async () => {
+      go.disabled = cancel.disabled = true;
+      const failed = [];
+      let done = 0;
+      // Each new photo goes first on the page, so sending the last one first keeps the picked order.
+      for (let i = files.length - 1; i >= 0; i--) {
+        const file = files[i];
+        status.textContent = `Uploading ${files.length - i} of ${files.length}…`;
+        previews[i].classList.add('busy');
+        try {
+          const blob = await prepare(file);
+          const query = new URLSearchParams({ tags: tags.join(',') });
+          if (ctx.asAdmin) query.set('artist', ctx.artistId);
+          await ctx.change(() => sendPhoto(`photos/upload?${query}`, blob));
+          done++;
+          previews[i].classList.replace('busy', 'done');
+        } catch (err) {
+          previews[i].classList.replace('busy', 'failed');
+          failed.push(`Photo ${i + 1}: ${err.message}`);
+          if (err.status === 401) return;
+        }
+      }
+      status.textContent = '';
+      if (!failed.length) return gridView(ctx, `${done} photo${done === 1 ? '' : 's'} added. ${done === 1 ? 'It\'s' : 'They\'re'} on the website now.`);
+      msg.set(`${done} of ${files.length} uploaded. ${failed.reverse().join(' ')}`);
+      cancel.disabled = false;
+      cancel.textContent = 'Back to photos';
+    });
+    show(
+      h('h1', null, `Add ${files.length} photo${files.length === 1 ? '' : 's'}`),
+      h('div', { class: 'preview-row' }, previews),
+      h('h2', null, 'Styles'),
+      h('p', { class: 'muted small' }, 'Pick the styles that fit. You can change them for each photo later.'),
+      styleChips(data.tags, tags, t => { tags = t; }),
+      studioNote(data.tags),
+      h('div', { class: 'stack' }, go, status, cancel),
+      msg,
+    );
+  }
+
+  function photoView(ctx, id) {
+    const photos = ctx.data.photos;
+    const index = photos.findIndex(p => p.id === id);
+    if (index < 0) return gridView(ctx);
+    const photo = photos[index];
+    const msg = message();
+    const back = () => gridView(ctx);
+
+    // Runs a change, then redraws this photo (or the grid if it's gone).
+    const act = async (work, after = () => photoView(ctx, id)) => {
+      msg.set('');
+      view.querySelectorAll('button').forEach(b => { b.disabled = true; });
+      try {
+        await ctx.change(work);
+        after();
+      } catch (err) {
+        view.querySelectorAll('button').forEach(b => { b.disabled = false; });
+        msg.set(err.message);
+      }
+    };
+
+    const move = to => {
+      const ids = photos.map(p => p.id).filter(x => x !== id);
+      ids.splice(Math.max(0, Math.min(to, ids.length)), 0, id);
+      act(() => api('POST', 'photos/order', { artist: ctx.artistId, ids }));
+    };
+
+    const saved = message();
+    let saving = Promise.resolve();
+    const chips = styleChips(ctx.data.tags, photo.tags, tags => {
+      // Saved as soon as a style is tapped, one change at a time.
+      saving = saving.then(async () => {
+        saved.set('Saving…', 'muted');
+        try {
+          await ctx.change(() => api('POST', 'photos/tags', { id, tags }));
+          saved.set('Saved', 'ok');
+          refs.replaceChildren(...refText());
+        } catch (err) {
+          saved.set(err.message);
+        }
+      });
+    });
+    const refText = () => {
+      const p = ctx.data.photos.find(x => x.id === id);
+      const entries = p ? Object.entries(p.refs) : [];
+      if (!entries.length) return ['Not in any of the shop\'s style galleries.'];
+      const label = t => (ctx.data.tags.find(x => x.id === t) || { label: t }).label;
+      return [`In the shop's galleries as ${entries.map(([t, ref]) => `${ref} (${label(t)})`).join(', ')}.`];
+    };
+    const refs = h('p', { class: 'muted small' }, ...refText());
+
+    const beforeInput = h('input', { type: 'file', accept: 'image/*', class: 'visually-hidden', id: 'before-photo' });
+    beforeInput.addEventListener('change', () => {
+      const file = beforeInput.files[0];
+      if (!file) return;
+      msg.set('Uploading the before photo…', 'muted');
+      act(async () => sendPhoto(`photos/before?id=${encodeURIComponent(id)}`, await prepare(file)));
+    });
+
+    const last = photos.length - 1;
+    show(
+      h('p', null, h('button', { class: 'link', onclick: back }, '← All photos')),
+      h('div', { class: 'photo-large' }, h('img', { src: photoUrl(photo.file), alt: `Photo ${index + 1}` })),
+      h('p', { class: 'muted small', style: 'text-align: center' }, `Photo ${index + 1} of ${photos.length} on the page`),
+
+      h('h2', null, 'Styles'),
+      chips, saved, refs,
+
+      h('h2', null, 'Place on the page'),
+      h('div', { class: 'actions' },
+        h('button', { class: 'btn small secondary', disabled: index === 0, onclick: () => move(0) }, 'Move to first'),
+        h('button', { class: 'btn small secondary', disabled: index === 0, onclick: () => move(index - 1) }, '↑ Earlier'),
+        h('button', { class: 'btn small secondary', disabled: index === last, onclick: () => move(index + 1) }, '↓ Later'),
+        h('button', { class: 'btn small secondary', disabled: index === last, onclick: () => move(last) }, 'Move to last')),
+
+      h('h2', null, 'Before photo'),
+      photo.before
+        ? h('div', { class: 'before-row' },
+          h('img', { src: photoUrl(photo.before), alt: 'Before' }),
+          h('div', { class: 'actions' },
+            h('label', { class: 'btn small secondary', for: 'before-photo', role: 'button', tabindex: '0' }, 'Replace'),
+            h('button', {
+              class: 'btn small danger',
+              onclick: () => { if (confirm('Remove the before photo?')) act(() => api('POST', 'photos/remove-before', { id })); },
+            }, 'Remove')))
+        : h('div', null,
+          h('p', { class: 'muted small' }, 'For cover-ups and reworks: visitors can switch between before and after.'),
+          h('label', { class: 'btn small secondary', for: 'before-photo', role: 'button', tabindex: '0' }, 'Add a before photo')),
+      beforeInput,
+
+      msg,
+      h('div', { class: 'stack', style: 'margin-top: 40px' },
+        h('button', {
+          class: 'btn danger',
+          onclick: () => {
+            if (!confirm('Delete this photo from the website?')) return;
+            act(() => api('POST', 'photos/delete', { id }), () => gridView(ctx, 'Photo deleted.'));
+          },
+        }, 'Delete photo'),
+        h('button', { class: 'btn secondary', onclick: back }, 'Back to all photos')),
+    );
+  }
 
   function artistView(me) {
-    show(
-      h('h1', null, `Hi, ${me.name}`),
-      h('p', { class: 'muted' }, 'You\'re logged in. Uploading and managing your photos is coming here next.'),
-      h('div', { class: 'stack' }, h('a', { class: 'btn secondary', href: '/' }, 'View the website')),
-      signOutButtons(),
-    );
+    return photosView(me.id, false);
   }
 
   // ----- Admin -----
@@ -248,6 +534,7 @@
       h('p', { class: 'facts' }, facts.flatMap((f, i) => (i ? [' · ', f] : [f]))),
       h('div', { class: 'actions' },
         h('button', { class: 'btn small', onclick: () => panel.replaceChildren(pinPanel(a, panel)) }, a.hasPin ? 'New PIN' : 'Set PIN'),
+        h('button', { class: 'btn small secondary', onclick: () => photosView(a.id, true) }, 'Photos'),
         a.lockedFor ? act('Unlock', 'unlock') : null,
         a.signedIn ? act('Sign out', 'sign-out', { confirm: `Sign ${a.name} out on every device?` }) : null,
         a.hasPin ? act('Remove login', 'remove-pin', { danger: true, confirm: `Remove ${a.name}'s PIN? They won't be able to log in until you set a new one.` }) : null,
@@ -273,12 +560,159 @@
     submitting(form, msg, async () => {
       const r = await api('POST', `admin/artists/${a.id}/pin`, choose.checked ? { pin: own.value } : {});
       const spaced = `${r.pin.slice(0, 3)} ${r.pin.slice(3)}`;
+      const card = h('div', { class: 'card-share' }, h('p', { class: 'muted small' }, 'Making a login card…'));
+      let cardUrl = null;
       panel.replaceChildren(h('div', { class: 'pin-reveal' },
         `Give this PIN to ${a.name}:`, h('strong', null, spaced),
         h('span', { class: 'muted' }, 'It won\'t be shown again. Any devices they were signed in on are signed out.'),
-        h('div', { style: 'margin-top: 12px' }, h('button', { class: 'btn small secondary', onclick: adminView }, 'Done'))));
+        card,
+        h('div', { style: 'margin-top: 12px' }, h('button', {
+          class: 'btn small secondary',
+          onclick: () => { if (cardUrl) URL.revokeObjectURL(cardUrl); adminView(); },
+        }, 'Done'))));
+      try {
+        const blob = await pinCard(a.name, r.pin);
+        const name = `borrowed-time-login-${a.id}.png`;
+        const file = new File([blob], name, { type: 'image/png' });
+        cardUrl = URL.createObjectURL(blob);
+        const canShare = navigator.canShare && navigator.canShare({ files: [file] });
+        card.replaceChildren(
+          h('img', { src: cardUrl, alt: `Login card for ${a.name} with their PIN and how to log in` }),
+          h('div', { class: 'actions', style: 'justify-content: center' },
+            canShare ? h('button', {
+              class: 'btn small',
+              onclick: () => navigator.share({ files: [file], title: 'Borrowed Time artist login' }).catch(() => {}),
+            }, 'Share card') : null,
+            h('a', { class: `btn small ${canShare ? 'secondary' : ''}`, href: cardUrl, download: name }, 'Save picture')),
+          h('p', { class: 'muted small' }, 'The card shows the PIN, so send it only to them.'));
+      } catch {
+        card.replaceChildren();
+      }
     });
     return form;
+  }
+
+  // A picture (1080 x 1350 PNG) with the artist's PIN and how to log in, to text to them.
+  async function pinCard(name, pin) {
+    const fonts = ['600 80px Fraunces', '700 80px Inter', '600 40px Inter', '400 40px Inter'];
+    await Promise.race([Promise.all(fonts.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 3000))]).catch(() => {});
+    const W = 1080, H = 1350, PAD = 120;
+    const canvas = document.createElement('canvas');
+    canvas.width = W;
+    canvas.height = H;
+    const x = canvas.getContext('2d');
+    const sans = (weight, size) => `${weight} ${size}px Inter, -apple-system, "Segoe UI", Roboto, Arial, sans-serif`;
+    const round = (rx, ry, rw, rh, r) => {
+      x.beginPath();
+      x.moveTo(rx + r, ry);
+      x.arcTo(rx + rw, ry, rx + rw, ry + rh, r);
+      x.arcTo(rx + rw, ry + rh, rx, ry + rh, r);
+      x.arcTo(rx, ry + rh, rx, ry, r);
+      x.arcTo(rx, ry, rx + rw, ry, r);
+      x.closePath();
+    };
+    const wrap = (text, maxWidth) => {
+      const lines = [];
+      let line = '';
+      for (const word of text.split(' ')) {
+        const next = line ? `${line} ${word}` : word;
+        if (line && x.measureText(next).width > maxWidth) { lines.push(line); line = word; } else line = next;
+      }
+      return lines.concat(line);
+    };
+    // Draws text with extra space between letters (canvas letter-spacing isn't everywhere yet).
+    const spaced = (text, cx, y, gap) => {
+      const widths = [...text].map(ch => x.measureText(ch).width);
+      let left = cx - (widths.reduce((s, w) => s + w, 0) + gap * (text.length - 1)) / 2;
+      x.textAlign = 'left';
+      [...text].forEach((ch, i) => { x.fillText(ch, left, y); left += widths[i] + gap; });
+      x.textAlign = 'center';
+    };
+
+    const bg = x.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, '#0a0a0a');
+    bg.addColorStop(0.4, '#1a1a1a');
+    bg.addColorStop(0.7, '#1e1e1e');
+    bg.addColorStop(1, '#0a0a0a');
+    x.fillStyle = bg;
+    x.fillRect(0, 0, W, H);
+    round(40, 40, W - 80, H - 80, 32);
+    x.strokeStyle = 'rgba(255, 255, 255, 0.14)';
+    x.lineWidth = 2;
+    x.stroke();
+
+    x.textAlign = 'center';
+    x.fillStyle = '#ffffff';
+    x.font = '600 80px Fraunces, Georgia, serif';
+    x.fillText('Borrowed Time', W / 2, 180);
+    x.fillStyle = '#b8b8b8';
+    x.font = sans(600, 28);
+    spaced('ARTIST PORTAL LOGIN', W / 2, 232, 6);
+    x.fillStyle = '#2C9AB7';
+    x.fillRect(W / 2 - 60, 268, 120, 4);
+
+    x.fillStyle = '#ffffff';
+    x.font = sans(600, 56);
+    x.fillText(name, W / 2, 370);
+    x.fillStyle = '#b8b8b8';
+    x.font = sans(400, 34);
+    x.fillText('Your PIN', W / 2, 425);
+
+    round(PAD, 460, W - PAD * 2, 200, 28);
+    x.fillStyle = 'rgba(44, 154, 183, 0.12)';
+    x.fill();
+    x.setLineDash([16, 12]);
+    x.strokeStyle = '#5CC3DE';
+    x.lineWidth = 4;
+    x.stroke();
+    x.setLineDash([]);
+    x.fillStyle = '#ffffff';
+    x.font = sans(700, 120);
+    spaced(`${pin.slice(0, 3)} ${pin.slice(3)}`, W / 2, 605, 22);
+
+    x.textAlign = 'left';
+    x.fillStyle = '#ffffff';
+    x.font = sans(600, 40);
+    x.fillText('How to log in', PAD, 760);
+    const site = `${location.host.replace(/^www\./, '')}/studio`;
+    const steps = [
+      [['Open this on your phone:', sans(400, 34), '#ffffff'], [site, sans(700, 34), '#5CC3DE']],
+      [[`Tap your name: ${name}`, sans(400, 34), '#ffffff']],
+      [['Type your PIN. Your phone stays logged in for 30 days.', sans(400, 34), '#ffffff']],
+    ];
+    let y = 840;
+    const textLeft = PAD + 80, textWidth = W - PAD - textLeft;
+    steps.forEach((parts, i) => {
+      x.beginPath();
+      x.arc(PAD + 28, y - 12, 28, 0, Math.PI * 2);
+      x.fillStyle = '#2C9AB7';
+      x.fill();
+      x.fillStyle = '#04181d';
+      x.font = sans(700, 30);
+      x.textAlign = 'center';
+      x.fillText(String(i + 1), PAD + 28, y - 1);
+      x.textAlign = 'left';
+      for (const [text, font, color] of parts) {
+        x.font = font;
+        x.fillStyle = color;
+        // Shrink a long web address to fit on one line.
+        let size = 34;
+        while (text === site && x.measureText(text).width > textWidth && size > 22) x.font = font.replace(/\d+px/, `${--size}px`);
+        for (const line of wrap(text, textWidth)) { x.fillText(line, textLeft, y); y += 48; }
+      }
+      y += 36;
+    });
+
+    x.textAlign = 'center';
+    x.fillStyle = '#b8b8b8';
+    x.font = sans(400, 28);
+    y = Math.max(y + 10, H - 150);
+    for (const line of wrap('Keep this PIN private. Forgot it? Ask the shop for a new one.', W - PAD * 2)) {
+      x.fillText(line, W / 2, y);
+      y += 40;
+    }
+
+    return new Promise((resolve, reject) => canvas.toBlob(b => (b ? resolve(b) : reject(new Error('no image'))), 'image/png'));
   }
 
   function passwordForm() {

@@ -28,18 +28,22 @@ Every gallery photo is listed once, in `data/gallery.json`; the artist pages and
 Created 2026-11-20 from the hand-written lists (phase 1 of the artist upload portal). That merge added a tag wherever a photo was already in that studio gallery, and added already-tagged photos to galleries they weren't listed in (41 photos), so nothing disappeared from any gallery. The upload portal will edit this file; until then, add photos by editing it by hand.
 
 ### Artist Portal
-Artists will log in with their name and a 6-digit PIN to upload and manage their own gallery photos. The portal is `server/portal.js`, a small Node service (no dependencies yet) run by systemd as `borrowedtime-portal` on 127.0.0.1:8800, as user `borrowedtime`. (Other sites' Node services on the same box already use 8787, 8788, 8790 and 8791: eat-live, photos, cnavidad-live; check `sudo ss -ltnp | grep node` before picking a port.) Apache passes `/studio/api/` to it (`server/apache-portal.conf`, included from the borrowedtime `<VirtualHost *:443>` in `/etc/httpd/conf/httpd-le-ssl.conf`).
+Artists log in with their name and a 6-digit PIN to upload and manage their own gallery photos. The portal is `server/portal.js`, a small Node service (one dependency: `sharp`, pinned to 0.34.x because the server runs Node 18; 0.35+ needs Node 20) run by systemd as `borrowedtime-portal` on 127.0.0.1:8800, as user `borrowedtime`. (Other sites' Node services on the same box already use 8787, 8788, 8790 and 8791: eat-live, photos, cnavidad-live; check `sudo ss -ltnp | grep node` before picking a port.) Apache passes `/studio/api/` to it (`server/apache-portal.conf`, included from the borrowedtime `<VirtualHost *:443>` in `/etc/httpd/conf/httpd-le-ssl.conf`).
 
 **Its data lives outside the git checkout**, in `/var/lib/borrowedtime/`, so `git pull` never touches it:
 - `gallery.json`: **the live gallery list**, served as `/data/gallery.json`. The service copied it from the repo's `data/gallery.json` on its first start; from then on the repo copy is only that starting point, and editing it changes nothing on the site.
 - `uploads/<artist>/` and `thumbs/<artist>/`: uploaded photos, served as `/images/uploads/...` and `/images/thumbs/uploads/...` (so a photo's `file` is `uploads/<artist>/<name>.jpg`). Photos already in the repo stay in `images/`.
-- `private/` (PIN hashes, lockouts) and `backups/`: never served.
+- `private/` (PIN hashes, lockouts): never served.
+- `backups/gallery-YYYY-MM-DD.json`: the first change each day saves the list as it was; the last 30 are kept. To undo a bad day: stop the portal, copy a backup over `gallery.json`, start it.
+- `deleted/`: a deleted upload (photo, thumbnail, before shot) is moved here, not erased, and removed after 30 days. Never served. Deleting a photo that came from the repo only takes it out of `gallery.json`; its file stays in `images/`.
 
 Check it: `systemctl status borrowedtime-portal`, `journalctl -u borrowedtime-portal -n 50`, `curl -s https://borrowedtimetattoomckinney.com/studio/api/health`.
 
 **Logging in** (`/studio/`, built by `studio/studio.js`): artists tap their name and type their 6-digit PIN; the admin (Clark) uses "Admin login" and a password of 12+ characters. The admin page sets or replaces each artist's PIN (random, or chosen; easy ones like 123456 or 121212 are refused), unlocks a locked-out artist, signs them out, or removes their login. A new PIN is shown once, and signs that artist out everywhere. Logins last 30 days on an artist's device and 12 hours for the admin; "Sign out on all devices" ends every login for that account.
 - **First-time setup / forgotten admin password:** until an admin password exists, the portal writes a one-time code to `/var/lib/borrowedtime/private/setup-code`; read it with `sudo cat` and enter it on `/studio/` with the new password. To reset a forgotten admin password: `sudo systemctl stop borrowedtime-portal`, remove the `"admin"` entry from `/var/lib/borrowedtime/private/accounts.json` (set it to `null`), `sudo systemctl start borrowedtime-portal`, then use the new setup code.
 - `private/accounts.json` holds only scrypt hashes of PINs and the admin password; `private/sessions.json` holds only SHA-256 hashes of login tokens (the token itself is an HttpOnly, Secure, SameSite=Strict cookie limited to `/studio`). Every change request must come from the portal page itself (Origin check) as JSON.
+- The admin page also has a **Photos** button per artist, to manage anyone's photos.
+- The admin's new-PIN panel makes a **login card**: a 1080x1350 PNG with the artist's name, PIN and login steps, drawn in the browser (nothing is stored), with Share (on phones) and Save picture buttons.
 - Adding or removing an artist from the site is still a code change (their page, nav link and homepage card live in the repo); the portal only manages logins for the artists in `gallery.json`.
 
 PIN guessing is limited by `server/lib/lockout.js`:
@@ -48,6 +52,11 @@ PIN guessing is limited by `server/lib/lockout.js`:
 - While locked, the PIN isn't checked at all. Lock state is saved to disk, so a restart doesn't clear it. The admin can unlock an artist.
 
 At that pace, guessing a 6-digit PIN would take centuries. Tests: `cd server && npm test`.
+
+**Photos** (`server/lib/gallery.js`, `server/lib/images.js`): artists tap "Add photos", pick from their camera roll, choose styles, and upload; the photos are live at once.
+- The page shrinks each photo to 2400 px and turns it into a JPEG before sending (this also converts iPhone HEIC, which `sharp` can't read). The service then makes the 2000 px full-size copy and a 720 px square thumbnail, upright, with GPS and camera metadata removed. Uploads are processed one at a time; 30 MB is the limit.
+- A new upload goes **first** on the artist's page and **last** in each studio gallery it's tagged for, with the next reference code (`RE-H04`). Codes are never reused: `studio.<style>.lastRef` remembers the last number handed out per artist. Removing a style takes the photo out of that gallery and drops its code.
+- In each photo's screen: toggle styles (saved at once), move it earlier/later/first/last, add or replace a before photo (the lightbox's before/after toggle), delete it.
 
 ### Gallery Thumbnails
 Gallery grids and homepage artist cards load small square thumbnails from `images/thumbs/` (mirrors `images/<artist>/`); the lightbox still opens the full-size photo. After adding or changing any artist photos, run from the repo root:
@@ -64,7 +73,7 @@ The Lightsail server (Amazon Linux 2023, Apache) serves the git checkout at `/va
 ```
 */2 * * * * root /usr/bin/flock -n /run/borrowedtime-pull.lock /bin/bash /var/www/html/borrowedtime/server/auto-pull.sh >> /var/log/borrowedtime-pull.log 2>&1
 ```
-So pushing to `main` is the whole deploy; it's live within ~2 minutes. `server/auto-pull.sh` pulls as ec2-user (who owns the checkout) and restarts the artist portal (`borrowedtime-portal`) only when `server/` changed, running `npm ci` first if its dependencies changed, so page-only pushes never interrupt an upload. Errors land in `/var/log/borrowedtime-pull.log`. To deploy by hand anyway: `sudo -u ec2-user git -C /var/www/html/borrowedtime pull`.
+So pushing to `main` is the whole deploy; it's live within ~2 minutes. `server/auto-pull.sh` pulls as ec2-user (who owns the checkout) and restarts the artist portal (`borrowedtime-portal`) only when `server/` changed, running `npm ci` first if `server/package-lock.json` changed, so page-only pushes never interrupt an upload. It remembers what it last did in two stamp files (`server/node_modules/.lock-stamp` and `/run/borrowedtime-portal.rev`), so a step that fails (npm can't reach the registry, say) is retried on the next run. `npm` must be installed on the server (`npm -v`; on Amazon Linux it's the `nodejs-npm` package). Errors land in `/var/log/borrowedtime-pull.log`. To deploy by hand anyway: `sudo -u ec2-user git -C /var/www/html/borrowedtime pull`.
 
 Not automatic: changes to `server/apache-portal.conf` need `sudo apachectl configtest && sudo systemctl reload httpd`, and changes to `server/borrowedtime-portal.service` need it copied to `/etc/systemd/system/` plus `sudo systemctl daemon-reload && sudo systemctl restart borrowedtime-portal`.
 

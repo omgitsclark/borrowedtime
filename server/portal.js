@@ -15,6 +15,8 @@ const http = require('http');
 const path = require('path');
 const { Lockout } = require('./lib/lockout');
 const { Accounts, Sessions, pinProblem, randomPin, passwordProblem } = require('./lib/auth');
+const { Gallery, GalleryError, artistPhotos, findPhoto, cleanTags, setTags, addPhoto, reorder, removePhoto } = require('./lib/gallery');
+const { savePhoto, ImageError } = require('./lib/images');
 
 const PORT = Number(process.env.PORT) || 8800;
 const HOST = process.env.HOST || '127.0.0.1';
@@ -26,9 +28,12 @@ const PRIVATE = path.join(DATA_DIR, 'private');
 const SETUP_CODE = path.join(PRIVATE, 'setup-code');
 const COOKIE = 'bt_session';
 const WRONG_DELAY = 400; // ms; slows down scripted guessing a little more
+const MAX_UPLOAD = 30 * 1024 * 1024; // matches LimitRequestBody in apache-portal.conf
+const DELETED = path.join(DATA_DIR, 'deleted');
+const KEEP_DELETED_DAYS = 30;
 
 function setup() {
-  for (const dir of ['uploads', 'thumbs', 'backups']) fs.mkdirSync(path.join(DATA_DIR, dir), { recursive: true });
+  for (const dir of ['uploads', 'thumbs', 'backups', 'deleted']) fs.mkdirSync(path.join(DATA_DIR, dir), { recursive: true });
   fs.mkdirSync(PRIVATE, { recursive: true, mode: 0o700 });
   fs.chmodSync(PRIVATE, 0o700);
   // First start: the site's copy of the gallery list becomes the live one. After that the
@@ -41,8 +46,32 @@ function setup() {
   }
 }
 
-function readGallery() {
-  return JSON.parse(fs.readFileSync(GALLERY, 'utf8'));
+// A deleted upload is moved to deleted/ (never served) for 30 days in case it was a mistake.
+function retire(file) {
+  if (!/^uploads\/[a-z0-9-]+\/[\w.-]+\.jpg$/.test(file || '')) return; // photos in the repo stay put
+  const rest = file.slice('uploads/'.length);
+  const stamp = new Date().toISOString().slice(0, 10);
+  fs.mkdirSync(DELETED, { recursive: true });
+  for (const [from, prefix] of [[path.join(DATA_DIR, file), ''], [path.join(DATA_DIR, 'thumbs', rest), 'thumb-']]) {
+    try {
+      fs.renameSync(from, path.join(DELETED, `${stamp}-${prefix}${rest.replace('/', '-')}`));
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+  }
+}
+
+function pruneDeleted() {
+  const cutoff = Date.now() - KEEP_DELETED_DAYS * 24 * 3600 * 1000;
+  for (const f of fs.readdirSync(DELETED)) {
+    const file = path.join(DELETED, f);
+    if (fs.statSync(file).mtimeMs < cutoff) fs.rmSync(file, { force: true });
+  }
+}
+
+function newUploadName(artistId, suffix = '') {
+  const day = new Date().toISOString().slice(0, 10);
+  return `uploads/${artistId}/${day}-${crypto.randomBytes(5).toString('hex')}${suffix}.jpg`;
 }
 
 // Until the admin password is set, a one-time code in private/setup-code (readable only on the
@@ -74,7 +103,7 @@ class HttpError extends Error {
   }
 }
 
-function readBody(req, limit = 10 * 1024) {
+function readRaw(req, limit) {
   return new Promise((resolve, reject) => {
     let size = 0;
     const chunks = [];
@@ -84,21 +113,25 @@ function readBody(req, limit = 10 * 1024) {
         // Answer once the rest has arrived (and is thrown away), so the browser gets the message.
         req.removeAllListeners('data');
         req.resume();
-        req.once('end', () => reject(new HttpError(413, 'Too much data.')));
+        req.once('end', () => reject(new HttpError(413, limit > 1e6 ? 'That photo is too big (30 MB at most).' : 'Too much data.')));
       } else {
         chunks.push(c);
       }
     });
     req.on('end', () => {
-      if (size > limit) return;
-      try {
-        resolve(chunks.length ? JSON.parse(Buffer.concat(chunks).toString('utf8')) : {});
-      } catch {
-        reject(new HttpError(400, 'Bad request.'));
-      }
+      if (size <= limit) resolve(Buffer.concat(chunks));
     });
     req.on('error', reject);
   });
+}
+
+async function readBody(req, limit = 10 * 1024) {
+  const buf = await readRaw(req, limit);
+  try {
+    return buf.length ? JSON.parse(buf.toString('utf8')) : {};
+  } catch {
+    throw new HttpError(400, 'Bad request.');
+  }
 }
 
 function cookies(req) {
@@ -122,13 +155,16 @@ function clientIp(req) {
   return fwd.length ? fwd[fwd.length - 1] : req.socket.remoteAddress;
 }
 
-// Changes must come from the portal page itself, never from another site.
-function checkSameSite(req) {
+// Changes must come from the portal page itself, never from another site. A plain HTML form
+// on another site can only send form content types, so those are refused too.
+function checkSameSite(req, upload = false) {
   const host = (req.headers['x-forwarded-host'] || req.headers.host || '').split(',')[0].trim();
   let origin = null;
   try { origin = new URL(req.headers.origin).host; } catch { /* missing or malformed */ }
   if (!origin || origin !== host) throw new HttpError(403, 'Not allowed.');
-  if (!(req.headers['content-type'] || '').startsWith('application/json')) throw new HttpError(415, 'Not allowed.');
+  const type = (req.headers['content-type'] || '').toLowerCase();
+  const ok = upload ? /^(image\/|application\/octet-stream)/.test(type) : type.startsWith('application/json');
+  if (!ok) throw new HttpError(415, 'Not allowed.');
 }
 
 function waitText(ms) {
@@ -150,7 +186,10 @@ function createApp() {
   const lockout = new Lockout({ file: path.join(PRIVATE, 'lockout.json') });
   const accounts = new Accounts(PRIVATE);
   const sessions = new Sessions(PRIVATE);
+  const gallery = new Gallery(GALLERY, path.join(DATA_DIR, 'backups'));
+  const readGallery = () => gallery.read();
   ensureSetupCode(accounts);
+  pruneDeleted();
 
   function me(req) {
     const account = sessions.account(cookies(req)[COOKIE]);
@@ -172,6 +211,33 @@ function createApp() {
     const artist = readGallery().artists.find(a => a.id === id);
     if (!artist) throw new HttpError(404, 'No such artist.');
     return artist;
+  }
+
+  // Whose photos a request is about: an artist manages their own; the admin can manage anyone's.
+  function actingArtist(req, artistId) {
+    const who = me(req);
+    if (!who) throw new HttpError(401, 'Please log in again.');
+    const id = who.role === 'artist' ? who.id : String(artistId || '');
+    if (who.role === 'artist' && artistId && artistId !== who.id) throw new HttpError(403, 'You can only change your own photos.');
+    return findArtist(id);
+  }
+
+  function ownPhoto(req, id) {
+    const who = me(req);
+    if (!who) throw new HttpError(401, 'Please log in again.');
+    const photo = findPhoto(readGallery(), String(id || ''));
+    if (who.role === 'artist' && photo.artist !== who.id) throw new HttpError(403, 'You can only change your own photos.');
+    return photo;
+  }
+
+  function photoList(artistId) {
+    const g = readGallery();
+    const artist = g.artists.find(a => a.id === artistId);
+    return {
+      artist: { id: artist.id, name: artist.name, page: artist.page },
+      tags: g.tags.map(t => ({ id: t.id, label: t.label, studio: Boolean(g.studio[t.id]) })),
+      photos: artistPhotos(g, artistId).map(p => ({ id: p.id, file: p.file, tags: p.tags, before: p.before || null, refs: p.refs || {} })),
+    };
   }
 
   function logIn(res, account, body) {
@@ -275,6 +341,88 @@ function createApp() {
     },
   };
 
+  // Photo uploads: the request body is the image itself.
+  const uploadRoutes = {
+    // A new photo for the artist's gallery. ?artist= (admin only) and ?tags=floral,color
+    'POST /studio/api/photos/upload': async (req, url, buf) => {
+      const artist = actingArtist(req, url.searchParams.get('artist'));
+      const tags = (url.searchParams.get('tags') || '').split(',').filter(Boolean);
+      const file = newUploadName(artist.id);
+      const rest = file.slice('uploads/'.length);
+      cleanTags(readGallery(), tags); // a bad style fails now, not after the photo is processed
+      await savePhoto(buf, path.join(DATA_DIR, file), path.join(DATA_DIR, 'thumbs', rest));
+      try {
+        gallery.change(g => addPhoto(g, { artist: artist.id, file, tags }));
+      } catch (err) {
+        retire(file);
+        throw err;
+      }
+      console.log(`portal: ${artist.id} uploaded ${file}`);
+      return photoList(artist.id);
+    },
+
+    // The "before" shot for a photo (a cover-up's old tattoo). ?id=<photo id>
+    'POST /studio/api/photos/before': async (req, url, buf) => {
+      const photo = ownPhoto(req, url.searchParams.get('id'));
+      const file = newUploadName(photo.artist, '-before');
+      await savePhoto(buf, path.join(DATA_DIR, file));
+      let old;
+      try {
+        gallery.change(g => {
+          const p = findPhoto(g, photo.id);
+          old = p.before;
+          p.before = file;
+        });
+      } catch (err) {
+        retire(file);
+        throw err;
+      }
+      retire(old);
+      console.log(`portal: ${photo.artist} added a before photo to ${photo.id}`);
+      return photoList(photo.artist);
+    },
+  };
+
+  Object.assign(routes, {
+    // ?artist= is only for the admin; an artist always gets their own.
+    'GET /studio/api/photos': (req, res, body, url) => photoList(actingArtist(req, url.searchParams.get('artist')).id),
+
+    'POST /studio/api/photos/tags': (req, res, body) => {
+      const photo = ownPhoto(req, body.id);
+      gallery.change(g => setTags(g, photo.id, body.tags));
+      return photoList(photo.artist);
+    },
+
+    // ids: all of the artist's photo ids, in the new order
+    'POST /studio/api/photos/order': (req, res, body) => {
+      const artist = actingArtist(req, body.artist);
+      gallery.change(g => reorder(g, artist.id, body.ids));
+      return photoList(artist.id);
+    },
+
+    'POST /studio/api/photos/remove-before': (req, res, body) => {
+      const photo = ownPhoto(req, body.id);
+      let old;
+      gallery.change(g => {
+        const p = findPhoto(g, photo.id);
+        old = p.before;
+        delete p.before;
+      });
+      retire(old);
+      return photoList(photo.artist);
+    },
+
+    'POST /studio/api/photos/delete': (req, res, body) => {
+      const photo = ownPhoto(req, body.id);
+      const removed = gallery.change(g => removePhoto(g, photo.id));
+      retire(removed.file);
+      retire(removed.before);
+      pruneDeleted();
+      console.log(`portal: ${photo.artist}'s photo ${photo.id} was deleted`);
+      return photoList(photo.artist);
+    },
+  });
+
   // Per-artist admin actions: POST /studio/api/admin/artists/<id>/<action>
   const artistActions = {
     // Set a PIN (the admin's choice, or a random one). Signs the artist out everywhere.
@@ -307,6 +455,13 @@ function createApp() {
   async function handle(req, res) {
     const url = new URL(req.url, 'http://portal');
     const key = `${req.method} ${url.pathname}`;
+    if (uploadRoutes[key]) {
+      checkSameSite(req, true);
+      if (!me(req)) throw new HttpError(401, 'Please log in again.'); // before accepting 30 MB
+      const buf = await readRaw(req, MAX_UPLOAD);
+      if (!buf.length) throw new HttpError(400, 'No photo was sent.');
+      return send(res, 200, await uploadRoutes[key](req, url, buf));
+    }
     const action = url.pathname.match(/^\/studio\/api\/admin\/artists\/([a-z0-9-]+)\/([a-z-]+)$/);
     const route = routes[key] || (req.method === 'POST' && action && artistActions[action[2]]
       ? async (rq, rs, body) => { requireAdmin(rq); return artistActions[action[2]](findArtist(action[1]), body); }
@@ -318,7 +473,7 @@ function createApp() {
       body = await readBody(req);
       if (!body || typeof body !== 'object' || Array.isArray(body)) throw new HttpError(400, 'Bad request.');
     }
-    const result = await route(req, res, body);
+    const result = await route(req, res, body, url);
     if (!res.headersSent) send(res, 200, result);
   }
 
@@ -328,6 +483,8 @@ function createApp() {
     } catch (err) {
       if (err instanceof HttpError) {
         if (!res.headersSent) send(res, err.status, { error: err.message, ...err.extra });
+      } else if (err instanceof GalleryError || err instanceof ImageError) {
+        if (!res.headersSent) send(res, 400, { error: err.message });
       } else {
         console.error(`portal: ${req.method} ${req.url} failed: ${err.stack}`);
         if (!res.headersSent) send(res, 500, { error: 'Something went wrong. Please try again.' });
