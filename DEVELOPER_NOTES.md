@@ -27,6 +27,14 @@ Every gallery photo is listed once, in `data/gallery.json`; the artist pages and
 
 Created 2026-11-20 from the hand-written lists (phase 1 of the artist upload portal). That merge added a tag wherever a photo was already in that studio gallery, and added already-tagged photos to galleries they weren't listed in (41 photos), so nothing disappeared from any gallery. The upload portal will edit this file; until then, add photos by editing it by hand.
 
+### Artist Portal (in progress)
+Artists will log in with their name and a 6-digit PIN to upload and manage their own gallery photos (`server/`, a small Node service; not deployed yet). PIN guessing is limited by `server/lib/lockout.js`:
+- 5 wrong PINs lock that artist's login for 15 minutes; each further lockout doubles (30 min, 1 h, ... up to 24 h); a lockout-free day starts the doubling over.
+- 10 wrong PINs from one IP within 15 minutes, across any artists, block that IP for an hour.
+- While locked, the PIN isn't checked at all. Lock state is saved to disk, so a restart doesn't clear it. The admin can unlock an artist.
+
+At that pace, guessing a 6-digit PIN would take centuries. Tests: `cd server && npm test`.
+
 ### Gallery Thumbnails
 Gallery grids and homepage artist cards load small square thumbnails from `images/thumbs/` (mirrors `images/<artist>/`); the lightbox still opens the full-size photo. After adding or changing any artist photos, run from the repo root:
 ```bash

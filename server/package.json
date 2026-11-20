@@ -1,0 +1,11 @@
+{
+  "name": "borrowedtime-portal",
+  "private": true,
+  "description": "Artist portal: PIN login and photo uploads for borrowedtimetattoomckinney.com",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
