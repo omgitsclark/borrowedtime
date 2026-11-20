@@ -14,7 +14,7 @@ const http = require('http');
 const path = require('path');
 const { Lockout } = require('./lib/lockout');
 
-const PORT = Number(process.env.PORT) || 8788;
+const PORT = Number(process.env.PORT) || 8800;
 const HOST = process.env.HOST || '127.0.0.1';
 const DATA_DIR = process.env.PORTAL_DATA_DIR || '/var/lib/borrowedtime';
 const SITE_DIR = process.env.PORTAL_SITE_DIR || path.join(__dirname, '..');

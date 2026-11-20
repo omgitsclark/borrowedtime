@@ -8,7 +8,7 @@ After=network.target
 [Service]
 User=borrowedtime
 Group=borrowedtime
-Environment=PORT=8788
+Environment=PORT=8800
 Environment=PORTAL_DATA_DIR=/var/lib/borrowedtime
 Environment=PORTAL_SITE_DIR=/var/www/html/borrowedtime
 ExecStart=/usr/bin/node /var/www/html/borrowedtime/server/portal.js
