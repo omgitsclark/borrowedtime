@@ -91,6 +91,21 @@ The script must set `PATH=/usr/sbin:/usr/bin:/sbin:/bin` on line 2: cron's defau
 
 This is why big images matter: serve thumbnails and `images/web/` copies, never multi-MB originals on page load.
 
+### Web Guard (per-IP rate limit)
+`ops/web-guard.py`, installed as `/usr/local/bin/web-guard` and run every minute as root by `/etc/cron.d/web-guard`. It reads new lines of `/var/log/httpd/access_log` (shared by **every** site on the box, so it protects them all) and blocks an IP from ports 80/443 (never SSH) when it makes **more than 600 requests in 5 minutes** or downloads **more than 300 MB in an hour**. For scale, a person scrolling a whole gallery makes ~130 requests and ~10 MB. The first block lasts an hour; another within a day lasts 24 hours. Blocks live in the nftables table `inet webguard` (sets `block4`/`block6`, with timeouts) and lift by themselves; after a reboot the next run recreates the table and puts back blocks that hadn't run out. Never blocked: localhost, private ranges, Cloudflare's ranges (if a site goes behind Cloudflare, all its visitors arrive from those), and anything in `/etc/web-guard/allow` (one IP or range per line, `#` comments). State is `/var/lib/web-guard/state.json`.
+- Busiest IPs and what's blocked now: `sudo web-guard report`
+- Who got blocked and why: `sudo journalctl -t web-guard` (or `/var/log/web-guard.log`)
+- Lift a block: `sudo web-guard unblock 1.2.3.4`
+- Turn it off: `sudo rm /etc/cron.d/web-guard && sudo nft delete table inet webguard`
+
+Install (needs `nftables`, which Amazon Linux 2023 doesn't ship by default):
+```
+sudo dnf install -y nftables
+sudo install -m 755 /var/www/html/borrowedtime/ops/web-guard.py /usr/local/bin/web-guard
+echo '* * * * * root /usr/bin/flock -n /run/web-guard.lock /usr/local/bin/web-guard >> /var/log/web-guard.log 2>&1' | sudo tee /etc/cron.d/web-guard
+```
+It runs from the copy in `/usr/local/bin`, not the checkout, so a push never changes a root cron job by itself: after changing `ops/web-guard.py`, run the `install` line again. Limits are the constants at the top of the script.
+
 ### CSS Cache Busting
 The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for the current N). Whenever `singlePageTemplate.css` changes, bump the `?v=` number in every HTML file's `<link>` tag (all files listed above, plus `index.html`). Without this, returning visitors' browsers can keep serving a stale cached copy of the CSS after a deploy, since the file has no other cache-busting mechanism.
 
