@@ -16,221 +16,181 @@
 <meta name="twitter:title" content="Dexter | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Dexter - Award-winning tattoo artist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=12" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#0d0d0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/artist.css?v=1" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="main-nav">
-  <div class="nav-container">
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Borrowed <span>Time</span></a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="tombraider.html" class="nav-link">Tomb Raider</a>
-      <a href="chris.html" class="nav-link">Chris</a>
-      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
-      <a href="masondorow.html" class="nav-link">Mason Dorow</a>
-      <a href="https://www.instagram.com/tattoosbydexter/" class="nav-link" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Dexter</a>
+      <details class="artists">
+        <summary>Artists</summary>
+        <div class="artists-menu">
+          <a href="dexter.html" aria-current="page">Dexter</a>
+          <a href="tombraider.html">Tomb Raider</a>
+          <a href="chris.html">Chris</a>
+          <a href="hectorortega.html">Hector Ortega</a>
+          <a href="masondorow.html">Mason Dorow</a>
+        </div>
+      </details>
+      <a class="hide-sm" href="#portfolio">Work</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="hide-sm" href="https://www.instagram.com/tattoosbydexter/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book<span class="hide-sm"> Dexter</span></a>
     </div>
   </div>
 </nav>
 
-<!-- Artist Header -->
-<section class="artist-header">
-  <div class="content-container">
-    <h1 class="artist-name">Dexter</h1>
-    <p class="artist-title">Award-Winning Artist</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Award-winning artist · Borrowed Time</div>
+      <h1>Dexter <em>tattoos.</em></h1>
+      <p class="lede">Full-color back pieces, small memorial work, and cover-ups that win awards. No style is out of reach.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="all">135</b><span>pieces in the portfolio</span></div>
+        <div class="stat"><b>11</b><span>convention awards</span></div>
+        <div class="stat"><b data-count="tag:coverups">22</b><span>cover-ups shown</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book a session →</a>
+        <a class="btn btn-ghost" href="#portfolio">See the work</a>
+      </div>
+    </div>
+    <div class="fan">
+      <figure><img src="images/thumbs/dexter/dexter_color_frog.jpg" alt="Color tattoo by Dexter"><figcaption>Color</figcaption></figure>
+      <figure><img src="images/thumbs/dexter/dexter_color_ornate_face.jpg" alt="Characters tattoo by Dexter"><figcaption>Characters</figcaption></figure>
+      <figure><img src="images/thumbs/dexter/dexter_color_hana.jpg" alt="Color tattoo by Dexter"><figcaption>Color</figcaption></figure>
+    </div>
+  </div>
+</header>
+
+<section class="signature" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Signature work</div><h2>Start with the best.</h2></div>
+      <div class="strip-nav"><button type="button" id="stripPrev" aria-label="Scroll back">←</button><button type="button" id="stripNext" aria-label="Scroll forward">→</button></div>
+    </div>
+    <div class="strip" id="strip">
+      <div class="card wide">
+        <div class="ph">
+          <div class="ba" role="img" aria-label="Before and after of the octopus and sea turtle cover-up. Drag to compare.">
+            <img src="images/web/dexter_octopus_before.jpg" alt="">
+            <img class="after" src="images/web/dexter_octopus_after.jpg" alt="">
+            <div class="handle"></div>
+            <span class="lab l">Before</span><span class="lab r">After</span>
+          </div>
+        </div>
+        <div class="meta"><h3>Octopus &amp; sea turtle cover-up</h3><small>Drag to compare</small></div>
+      </div>
+      <div class="card" data-slot="1">
+        <span class="tag">Video</span>
+        <div class="ph"><video data-autoplay muted loop playsinline preload="none" poster="images/dexter/recent_dexter/dexter_octopus_coverup_poster.jpg" aria-label="Video walkaround of the finished octopus and sea turtle cover-up"><source src="images/dexter/recent_dexter/dexter_octopus_coverup.mp4" type="video/mp4"></video></div>
+        <div class="meta"><h3>The finished sleeve</h3><small>Cover-up</small></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Artist Bio Section -->
-<section class="artist-bio-section">
-  <div class="content-container">
-    <div class="bio-grid">
-      <div class="bio-image">
-        <img src="images/web/dexter_awards_portrait.jpg" alt="Dexter" loading="lazy">
-      </div>
-      <div class="bio-content">
-        <h2>About Dexter</h2>
-        <p>After years of tattooing in the DFW area, Dexter set up his own shop creating his ideal environment of surrounding himself with high quality work and artistry. No style is out of reach for Dexter so whether you're looking for a full color back piece or a small technical memorial piece, reach out and he's got you covered. Don't get stuck anywhere else.</p>
+<section class="styles">
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Browse by style</div><h2>What are you after?</h2></div></div>
+    <div class="style-grid" id="styleGrid"></div>
+  </div>
+</section>
 
-        <h3>Awards & Recognition</h3>
-        <ul class="awards-list">
-          <li><strong>Paris Body Art Expo</strong> - First Place - Best Coverup - Paris, TX</li>
-          <li><strong>Texoma Body Art Expo</strong> - Second Place - Best Back - Denison, TX</li>
-          <li><strong>InkMasters</strong> - First Place - Chest/Back - Killeen, TX</li>
-          <li><strong>InkMasters</strong> - First Place - Coverup - Cleburne, TX</li>
-          <li><strong>InkMasters</strong> - Second Place - Traditional - Cleburne, TX</li>
-          <li><strong>InkMasters</strong> - Third Place - Unusual - Cleburne, TX</li>
-          <li><strong>InkMasters</strong> - Third Place - Lettering - Killeen, TX</li>
-          <li><strong>InkMasters</strong> - Third Place - Cover Up - Sulphur Springs, TX</li>
-          <li><strong>InkMasters</strong> - Third Place - Chest/Back</li>
-          <li><strong>InkMasters</strong> - Third Place - Small Color</li>
-          <li><strong>InkMasters</strong> - Third Place - Cover Up</li>
+<section class="wall" id="portfolio">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">The portfolio</div><h2>Every piece, on the wall.</h2></div>
+      <p>See something you like? Mention the code under the photo when you book.</p>
+    </div>
+    <div class="chips" id="chips" aria-label="Filter by style"></div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Show more</button><small id="moreNote"></small></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="photo"><img src="images/web/dexter_awards_portrait.jpg" alt="Dexter's award wall at Borrowed Time" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">About Dexter</div>
+      <blockquote>After years tattooing around DFW, Dexter built his own shop: the place he always wanted to work, surrounded by serious artists and serious work.</blockquote>
+      <div class="tiles">
+        <div class="gold"><b>4</b><span>First place</span></div>
+        <div class="silver"><b>2</b><span>Second place</span></div>
+        <div class="bronze"><b>5</b><span>Third place</span></div>
+      </div>
+      <p class="more-bio">Whether you're after a full-color back piece or a small, technical memorial piece, reach out and he's got you covered.</p>
+      <details>
+        <summary>See all 11 awards ↓</summary>
+        <ul>
+          <li>1st · Best Coverup · Paris Body Art Expo</li>
+          <li>1st · Chest/Back · InkMasters Killeen</li>
+          <li>1st · Coverup · InkMasters Cleburne</li>
+          <li>2nd · Best Back · Texoma Body Art Expo</li>
+          <li>2nd · Traditional · InkMasters Cleburne</li>
+          <li>3rd · Unusual · InkMasters Cleburne</li>
+          <li>3rd · Lettering · InkMasters Killeen</li>
+          <li>3rd · Cover Up · InkMasters Sulphur Springs</li>
+          <li>3rd · Chest/Back · InkMasters</li>
+          <li>3rd · Small Color · InkMasters</li>
+          <li>3rd · Cover Up · InkMasters</li>
         </ul>
-      </div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- Recent Work -->
-<section class="recent-work-section">
-  <div class="content-container">
-    <h2 class="section-title">Recent Work</h2>
-    <div class="recent-heading">
-      <span class="recent-tag">Cover-Up</span>
-      <h3>Octopus &amp; Sea Turtle Half Sleeve</h3>
-      <p>A faded black &amp; grey piece reworked into a full-color ocean half sleeve.</p>
+<section class="book">
+  <div class="wrap">
+    <div class="eyebrow">Book with Dexter</div>
+    <h2>Got an idea? Let's put it on you.</h2>
+    <p>Bring photos, references, or a code from the portfolio above.</p>
+    <div class="steps">
+      <div class="step"><i>01</i><h3>Send your idea</h3><p>Fill out the consultation form with the placement, size and any reference photos.</p></div>
+      <div class="step"><i>02</i><h3>Talk it through</h3><p>Dexter gets back to you with ideas and what the piece will take.</p></div>
+      <div class="step"><i>03</i><h3>Pick your date</h3><p>Book your session online and come in.</p></div>
     </div>
-    <div class="recent-grid">
-      <button type="button" class="recent-panel" data-recent="before" aria-label="View the before photo larger">
-        <span class="recent-badge">Before</span>
-        <img src="images/dexter/recent_dexter/dexter_octopus_coverup_before.jpg" alt="Faded black and grey octopus and sea turtle tattoo before the cover-up" loading="lazy">
-      </button>
-      <div class="recent-arrow" aria-hidden="true">→</div>
-      <button type="button" class="recent-panel is-after" data-recent="after" aria-label="View the after photo larger">
-        <span class="recent-badge">After</span>
-        <img src="images/dexter/recent_dexter/dexter_octopus_coverup_after.jpg" alt="Full-color octopus, sea turtle, and shark half sleeve cover-up by Dexter" loading="lazy">
-      </button>
-      <div class="recent-panel is-video">
-        <span class="recent-badge">Video</span>
-        <video id="recentVideo" muted loop playsinline preload="none" poster="images/dexter/recent_dexter/dexter_octopus_coverup_poster.jpg" aria-label="Video walkaround of the finished octopus and sea turtle cover-up">
-          <source src="images/dexter/recent_dexter/dexter_octopus_coverup.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book appointment</a>
+      <a class="btn btn-ghost" href="https://forms.gle/ETKzRRWHGfzLgKKZA" target="_blank" rel="noopener">Get a consultation</a>
     </div>
   </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="artist-gallery-section">
-  <div class="content-container">
-    <h2 class="section-title">Portfolio</h2>
+<footer class="footer">
+  <nav aria-label="Other artists">
+    <a href="index.html">Home</a>
+    <a href="tombraider.html">Tomb Raider</a>
+    <a href="chris.html">Chris</a>
+    <a href="hectorortega.html">Hector Ortega</a>
+    <a href="masondorow.html">Mason Dorow</a>
+  </nav>
+  <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery · McKinney, TX · Website by <strong>cloudhopr</strong></p>
+</footer>
 
-    <!-- Category Filter -->
-    <div class="category-filter" id="category-filter"></div>
+<div class="bar"><span>Book with Dexter</span><a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book →</a></div>
 
-    <div class="gallery-grid" id="gallery-container">
-      <!-- Gallery will be populated by JavaScript -->
-    </div>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close" id="lightbox-close">&times;</span>
-  <span class="lightbox-nav lightbox-prev" id="lightbox-prev"></span>
-  <div class="lightbox-content">
-    <img class="lightbox-image" id="lightbox-image" src="" alt="">
-    <button class="before-after-toggle" id="beforeAfterToggle" style="display: none;">Show Before</button>
-  </div>
-  <span class="lightbox-nav lightbox-next" id="lightbox-next"></span>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="x" id="lbClose" aria-label="Close">×</button>
+  <button type="button" class="nv p" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button type="button" class="nv n" id="lbNext" aria-label="Next photo">›</button>
+  <div class="cap" id="lbCap"></div>
 </div>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="content-container">
-    <h2>Ready to Get Inked?</h2>
-    <p>Book an appointment with Dexter today</p>
-    <div class="cta-buttons-center">
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="cta-button" target="_blank" rel="noopener">Book Appointment</a>
-      <a href="https://forms.gle/ETKzRRWHGfzLgKKZA" class="cta-button secondary" target="_blank" rel="noopener">Get Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- Sticky Mobile Booking Bar -->
-<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Dexter →</a>
-
-<!-- Scroll to Top Button -->
-<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery | McKinney, TX</p>
-    <p>Website by <strong>cloudhopr</strong></p>
-  </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-<script src="js/gallery.js?v=1"></script>
+<script src="js/artist.js?v=1"></script>
 <script>
-// Mobile menu toggle
-const menuToggle = document.querySelector('.mobile-menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
-
-// Glass nav on scroll
-const mainNav = document.querySelector('.main-nav');
-const handleNavScroll = () => {
-  mainNav.classList.toggle('scrolled', window.scrollY > 40);
-};
-handleNavScroll();
-window.addEventListener('scroll', handleNavScroll);
-
-BTGallery.artist('dexter');
-
-// Recent work: before/after panels open the lightbox on that piece
-document.querySelectorAll('[data-recent]').forEach(panel => {
-  panel.addEventListener('click', () => {
-    BTGallery.open('dexter/recent_dexter/dexter_octopus_coverup_after.jpg', panel.dataset.recent === 'before');
-  });
-});
-
-// Recent work video: only plays (and downloads) while on screen
-const recentVideo = document.getElementById('recentVideo');
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  recentVideo.controls = true;
-} else if ('IntersectionObserver' in window) {
-  new IntersectionObserver(([entry]) => {
-    if (entry.isIntersecting) {
-      recentVideo.play().catch(() => {});
-    } else {
-      recentVideo.pause();
-    }
-  }, { threshold: 0.25 }).observe(recentVideo);
-} else {
-  recentVideo.play().catch(() => {});
-}
-
-// Scroll to top functionality
-const scrollToTopBtn = document.getElementById('scrollToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
-  }
-});
-
-scrollToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+document.getElementById('year').textContent = new Date().getFullYear();
+BTArtist({ artist: 'dexter', featured: ['dexter/dexter_color_ornate_face.jpg', 'dexter/dexter_color_frenchbulldog.jpg', 'dexter/bulgarian_flag_rose.jpg', 'dexter/dexter_color_starwars.jpg', 'dexter/dexter_color_skull.jpg', 'dexter/dexter_color_flower2.jpg', 'dexter/color_portrait.jpg'] });
 </script>
-
 </body>
 </html>

@@ -16,160 +16,148 @@
 <meta name="twitter:title" content="Mason Dorow | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Mason Dorow - black and gray, custom script, and cover-up tattoo artist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=12" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#0d0d0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/artist.css?v=1" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="main-nav">
-  <div class="nav-container">
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Borrowed <span>Time</span></a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="dexter.html" class="nav-link">Dexter</a>
-      <a href="tombraider.html" class="nav-link">Tomb Raider</a>
-      <a href="chris.html" class="nav-link">Chris</a>
-      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
-      <!-- TODO: add Mason's Instagram link here once we have it -->
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Mason</a>
+      <details class="artists">
+        <summary>Artists</summary>
+        <div class="artists-menu">
+          <a href="dexter.html">Dexter</a>
+          <a href="tombraider.html">Tomb Raider</a>
+          <a href="chris.html">Chris</a>
+          <a href="hectorortega.html">Hector Ortega</a>
+          <a href="masondorow.html" aria-current="page">Mason Dorow</a>
+        </div>
+      </details>
+      <a class="hide-sm" href="#portfolio">Work</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book<span class="hide-sm"> Mason</span></a>
     </div>
   </div>
 </nav>
 
-<!-- Artist Header -->
-<section class="artist-header">
-  <div class="content-container">
-    <h1 class="artist-name">Mason Dorow</h1>
-    <p class="artist-title">Black &amp; Gray, Script &amp; Cover-Up Specialist</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Black &amp; gray, script &amp; cover-up specialist · Borrowed Time</div>
+      <h1>Mason <em>Dorow</em></h1>
+      <p class="lede">High-contrast black &amp; gray, custom script and cover-ups, in a relaxed session with great conversation and plenty of laughs.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="all">26</b><span>pieces in the portfolio</span></div>
+        <div class="stat"><b>~6</b><span>years tattooing</span></div>
+        <div class="stat"><b data-count="tag:script">15</b><span>custom script pieces</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book a session →</a>
+        <a class="btn btn-ghost" href="#portfolio">See the work</a>
+      </div>
+    </div>
+    <div class="fan">
+      <figure><img src="images/thumbs/mason/mason_guilty_script_eye.jpg" alt="Script tattoo by Mason Dorow"><figcaption>Script</figcaption></figure>
+      <figure><img src="images/thumbs/mason/mason_samurai_hannya_color.jpg" alt="Color tattoo by Mason Dorow"><figcaption>Color</figcaption></figure>
+      <figure><img src="images/thumbs/mason/mason_christ_portrait.jpg" alt="Realism tattoo by Mason Dorow"><figcaption>Realism</figcaption></figure>
+    </div>
   </div>
-</section>
+</header>
 
-<!-- Artist Bio Section -->
-<section class="artist-bio-section">
-  <div class="content-container">
-    <div class="bio-grid">
-      <div class="bio-image">
-        <img src="images/mason/mason_portrait.jpg" alt="Mason Dorow" loading="lazy">
-      </div>
-      <div class="bio-content">
-        <h2>About Mason Dorow</h2>
-        <p>With nearly six years of professional experience, Mason specializes in black and gray, high-contrast work, custom script, and cover-ups. Tattooing is more than a career for Mason—it’s his passion and his craft. He brings precision, creativity, and quality to every piece, along with a personality that makes every session memorable. Expect great conversation, plenty of laughs, and a relaxed atmosphere where you can feel comfortable being yourself. Whether you’re looking for a bold statement piece or something simple and meaningful, Mason is ready to bring your vision to life.</p>
-
-        <h3>Specializes In</h3>
-        <ul class="awards-list">
-          <li><strong>Black &amp; Gray</strong> - High-contrast work with serious depth</li>
-          <li><strong>Custom Script</strong> - Lettering tailored to your piece</li>
-          <li><strong>Cover-Ups</strong> - Giving existing tattoos a fresh start</li>
-        </ul>
-      </div>
+<section class="signature" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Signature work</div><h2>Start with the best.</h2></div>
+      <div class="strip-nav"><button type="button" id="stripPrev" aria-label="Scroll back">←</button><button type="button" id="stripNext" aria-label="Scroll forward">→</button></div>
+    </div>
+    <div class="strip" id="strip">
     </div>
   </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="artist-gallery-section">
-  <div class="content-container">
-    <h2 class="section-title">Portfolio</h2>
+<section class="styles">
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Browse by style</div><h2>What are you after?</h2></div></div>
+    <div class="style-grid" id="styleGrid"></div>
+  </div>
+</section>
 
-    <!-- Category Filter -->
-    <div class="category-filter" id="category-filter"></div>
+<section class="wall" id="portfolio">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">The portfolio</div><h2>Every piece, on the wall.</h2></div>
+      <p>See something you like? Mention the code under the photo when you book.</p>
+    </div>
+    <div class="chips" id="chips" aria-label="Filter by style"></div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Show more</button><small id="moreNote"></small></div>
+  </div>
+</section>
 
-    <div class="gallery-grid" id="gallery-container">
-      <!-- Gallery will be populated by JavaScript -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="photo"><img src="images/web/mason_portrait.jpg" alt="Mason Dorow at work" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">About Mason</div>
+      <blockquote>With nearly six years of professional experience, tattooing is more than a career for Mason: it's his passion and his craft.</blockquote>
+      <div class="tiles specialties">
+        <div><b>Black &amp; gray</b><span>High-contrast work with serious depth</span></div>
+        <div><b>Custom script</b><span>Lettering tailored to your piece</span></div>
+        <div><b>Cover-ups</b><span>Giving existing tattoos a fresh start</span></div>
+      </div>
+      <p class="more-bio">Expect precision, creativity and quality, plus great conversation and a relaxed atmosphere where you can feel comfortable being yourself. Whether you want a bold statement piece or something simple and meaningful, Mason is ready to bring your vision to life.</p>
     </div>
   </div>
 </section>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close" id="lightbox-close">&times;</span>
-  <span class="lightbox-nav lightbox-prev" id="lightbox-prev"></span>
-  <div class="lightbox-content">
-    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+<section class="book">
+  <div class="wrap">
+    <div class="eyebrow">Book with Mason</div>
+    <h2>Got an idea? Let's put it on you.</h2>
+    <p>Bring photos, references, or a code from the portfolio above.</p>
+    <div class="steps">
+      <div class="step"><i>01</i><h3>Send your idea</h3><p>Fill out the consultation form with the placement, size and any reference photos.</p></div>
+      <div class="step"><i>02</i><h3>Talk it through</h3><p>Mason gets back to you with ideas and what the piece will take.</p></div>
+      <div class="step"><i>03</i><h3>Pick your date</h3><p>Book your session online and come in.</p></div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book appointment</a>
+      <a class="btn btn-ghost" href="https://forms.gle/ETKzRRWHGfzLgKKZA" target="_blank" rel="noopener">Get a consultation</a>
+    </div>
   </div>
-  <span class="lightbox-nav lightbox-next" id="lightbox-next"></span>
+</section>
+
+<footer class="footer">
+  <nav aria-label="Other artists">
+    <a href="index.html">Home</a>
+    <a href="dexter.html">Dexter</a>
+    <a href="tombraider.html">Tomb Raider</a>
+    <a href="chris.html">Chris</a>
+    <a href="hectorortega.html">Hector Ortega</a>
+  </nav>
+  <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery · McKinney, TX · Website by <strong>cloudhopr</strong></p>
+</footer>
+
+<div class="bar"><span>Book with Mason</span><a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book →</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="x" id="lbClose" aria-label="Close">×</button>
+  <button type="button" class="nv p" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button type="button" class="nv n" id="lbNext" aria-label="Next photo">›</button>
+  <div class="cap" id="lbCap"></div>
 </div>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="content-container">
-    <h2>Ready to Get Inked?</h2>
-    <p>Book an appointment with Mason today</p>
-    <div class="cta-buttons-center">
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="cta-button" target="_blank" rel="noopener">Book Appointment</a>
-      <a href="https://forms.gle/ETKzRRWHGfzLgKKZA" class="cta-button secondary" target="_blank" rel="noopener">Get Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- Sticky Mobile Booking Bar -->
-<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Mason →</a>
-
-<!-- Scroll to Top Button -->
-<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery | McKinney, TX</p>
-    <p>Website by <strong>cloudhopr</strong></p>
-  </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-<script src="js/gallery.js?v=1"></script>
+<script src="js/artist.js?v=1"></script>
 <script>
-// Mobile menu toggle
-const menuToggle = document.querySelector('.mobile-menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
-
-// Glass nav on scroll
-const mainNav = document.querySelector('.main-nav');
-const handleNavScroll = () => {
-  mainNav.classList.toggle('scrolled', window.scrollY > 40);
-};
-handleNavScroll();
-window.addEventListener('scroll', handleNavScroll);
-
-BTGallery.artist('mason');
-
-// Scroll to top functionality
-const scrollToTopBtn = document.getElementById('scrollToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
-  }
-});
-
-scrollToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+document.getElementById('year').textContent = new Date().getFullYear();
+BTArtist({ artist: 'mason', featured: ['mason/mason_mad_hatter_portrait.jpg', 'mason/mason_back_script.jpg', 'mason/mason_gas_mask_alexis.jpg', 'mason/mason_weeping_woman_realism.jpg', 'mason/mason_raccoon_trashcan.jpg', 'mason/mason_brush_script_cross.jpg', 'mason/mason_grim_reaper_sleeve.jpg', 'mason/mason_slumerica_sleeve_a.jpg'] });
 </script>
-
 </body>
 </html>

@@ -66,7 +66,7 @@ python tools/make_thumbnails.py
 It only processes new/changed photos (needs Pillow). If a thumbnail is ever missing, the page falls back to the full-size image automatically, so nothing breaks; it's just heavier until the script is run.
 
 ### Web-Sized Copies of Big Photos
-Large photos shown outside the galleries (the homepage lobby banner, Dexter's bio portrait) are served from `images/web/`: resized copies (2000px banner, 1200px portrait, ~200–400 KB) of the camera originals, which stay where they are (`images/store/`, `images/dexter/`). The thumbnail script skips `web/` and `store/`. When adding or replacing a big non-gallery photo, save a resized copy into `images/web/` and link that, never the multi-MB original.
+Large photos shown outside the galleries (the homepage lobby banner, the artist pages' bio photos, Dexter's before/after slider) are served from `images/web/`: resized copies (2000px banner, 1200px portrait, ~200–400 KB) of the camera originals, which stay where they are (`images/store/`, `images/dexter/`). The thumbnail script skips `web/` and `store/`. When adding or replacing a big non-gallery photo, save a resized copy into `images/web/` and link that, never the multi-MB original.
 
 ### Deploying
 The Lightsail server (Amazon Linux 2023, Apache) serves the git checkout at `/var/www/html/borrowedtime` directly and pulls it on its own: `/etc/cron.d/borrowedtime-pull` is one line,
@@ -112,6 +112,12 @@ The stylesheet is linked as `css/singlePageTemplate.css?v=N` (check any page for
 ## Website Structure
 
 ### Artist Pages
+The five artist pages (`dexter.html`, `chris.html`, `tombraider.html`, `hectorortega.html`, `masondorow.html`) share one layout: `css/artist.css` and `js/artist.js` (they no longer load `singlePageTemplate.css`). Each page is static HTML for the hero, bio, awards/specialties and booking, and ends with a call like:
+```js
+BTArtist({ artist: 'dexter', featured: ['dexter/hana.jpg', ...] })
+```
+`artist.js` reads `data/gallery.json` and builds the "Start with the best" strip (the `featured` photos first, topped up with the newest), the style cards, and the portfolio wall with filter chips and "Show more". Uploads, deletes and retags in the portal show up with no page edits. To change an artist's highlighted photos, edit their `featured` list. Static cards inside `#strip` (reviews, the before/after slider, the video) stay put; `data-slot="N"` moves one to position N. Numbers marked `data-count="all"` or `data-count="tag:<id>"` are filled in from the live data. With fewer than 16 photos, the strip and style cards hide themselves (Hector right now). When `artist.css` or `artist.js` changes, bump its `?v=` in all five pages.
+
 - **Dexter** - Award-winning artist
 - **Tomb Raider** - Floral specialist
 - **Chris** - Detail perfectionist

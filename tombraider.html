@@ -16,172 +16,159 @@
 <meta name="twitter:title" content="Tomb Raider | Borrowed Time Fine Art Gallery">
 <meta name="twitter:description" content="Tomb Raider - Floral tattoo specialist at Borrowed Time Fine Art Gallery">
 <meta name="twitter:image" content="https://www.borrowedtimetattoomckinney.com/images/borrowed_time_logo.jpg">
-<link href="css/singlePageTemplate.css?v=12" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#0d0d0f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="css/artist.css?v=1" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="main-nav">
-  <div class="nav-container">
-    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="index.html">Borrowed <span>Time</span></a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="dexter.html" class="nav-link">Dexter</a>
-      <a href="chris.html" class="nav-link">Chris</a>
-      <a href="hectorortega.html" class="nav-link">Hector Ortega</a>
-      <a href="masondorow.html" class="nav-link">Mason Dorow</a>
-      <a href="https://www.instagram.com/tattoos_by_tomb_raider/" class="nav-link" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="nav-link nav-cta" target="_blank" rel="noopener">Book Tomb Raider</a>
+      <details class="artists">
+        <summary>Artists</summary>
+        <div class="artists-menu">
+          <a href="dexter.html">Dexter</a>
+          <a href="tombraider.html" aria-current="page">Tomb Raider</a>
+          <a href="chris.html">Chris</a>
+          <a href="hectorortega.html">Hector Ortega</a>
+          <a href="masondorow.html">Mason Dorow</a>
+        </div>
+      </details>
+      <a class="hide-sm" href="#portfolio">Work</a>
+      <a class="hide-sm" href="#about">About</a>
+      <a class="hide-sm" href="https://www.instagram.com/tattoos_by_tomb_raider/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book<span class="hide-sm"> Tomb Raider</span></a>
     </div>
   </div>
 </nav>
 
-<!-- Artist Header -->
-<section class="artist-header">
-  <div class="content-container">
-    <h1 class="artist-name">Tomb Raider</h1>
-    <p class="artist-title">Floral Specialist</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Floral specialist · Borrowed Time</div>
+      <h1>Tomb <em>Raider</em></h1>
+      <p class="lede">Floral work so detailed you'll want to reach out and touch it: crisp lines, a dead-steady hand and masterful shading.</p>
+      <div class="stats">
+        <div class="stat"><b data-count="all">61</b><span>pieces in the portfolio</span></div>
+        <div class="stat"><b>4+</b><span>years tattooing</span></div>
+        <div class="stat"><b data-count="tag:floral">43</b><span>floral pieces</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book a session →</a>
+        <a class="btn btn-ghost" href="#portfolio">See the work</a>
+      </div>
+    </div>
+    <div class="fan">
+      <figure><img src="images/thumbs/tombraider/tombraider_animal_wolf.jpg" alt="Animals tattoo by Tomb Raider"><figcaption>Animals</figcaption></figure>
+      <figure><img src="images/thumbs/tombraider/tombraider_floral_cow.jpg" alt="Floral tattoo by Tomb Raider"><figcaption>Floral</figcaption></figure>
+      <figure><img src="images/thumbs/tombraider/tombraider_floral_bird.jpg" alt="Floral tattoo by Tomb Raider"><figcaption>Floral</figcaption></figure>
+    </div>
   </div>
-</section>
+</header>
 
-<!-- Artist Bio Section -->
-<section class="artist-bio-section">
-  <div class="content-container">
-    <div class="bio-grid">
-      <div class="bio-image">
-        <img src="images/tombraider/tombraider_profile.JPG" alt="Tomb Raider" loading="lazy">
-      </div>
-      <div class="bio-content">
-        <h2>About Tomb Raider</h2>
-        <p>With over 4 years of experience, Tomb Raider has become well known for her floral tattoos. This is due to her impeccable attention to detail, dead steady hand, and perfect technique. Combining crisp lines and masterful shading, Tomb Raider is sure to provide designs that will make you feel like you can almost reach out and grab or even feel on the skin.</p>
-
-        <h3>Specializes In</h3>
-        <ul class="awards-list">
-          <li><strong>Floral Designs</strong> - Intricate and lifelike botanical artwork</li>
-          <li><strong>Fine Line Work</strong> - Crisp, clean linework with precision</li>
-          <li><strong>Shading Mastery</strong> - Expert dimensional shading techniques</li>
-        </ul>
-      </div>
+<section class="signature" id="work">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Signature work</div><h2>Start with the best.</h2></div>
+      <div class="strip-nav"><button type="button" id="stripPrev" aria-label="Scroll back">←</button><button type="button" id="stripNext" aria-label="Scroll forward">→</button></div>
+    </div>
+    <div class="strip" id="strip">
+      <figure class="card review wide">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote>“Tomb Raider was such a delight. She was incredible from start to finish — the storytelling, the energy, the attention to detail. The whole session felt like hanging out with a friend who just happens to be extremely talented.”</blockquote>
+        <figcaption>Hollie S · Google review</figcaption>
+      </figure>
+      <figure class="card review" data-slot="5">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote>“I was nervous about getting a tattoo on the sole of my foot and she was so friendly it helped calm my nerves. The tattoo was literally painless and her line work is fantastic, tight and crisp. Best tattoo experience so far!”</blockquote>
+        <figcaption>Ashley Johnson · Google review</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- Gallery Section -->
-<section class="artist-gallery-section">
-  <div class="content-container">
-    <h2 class="section-title">Portfolio</h2>
+<section class="styles">
+  <div class="wrap">
+    <div class="head"><div><div class="eyebrow">Browse by style</div><h2>What are you after?</h2></div></div>
+    <div class="style-grid" id="styleGrid"></div>
+  </div>
+</section>
 
-    <!-- Category Filter -->
-    <div class="category-filter" id="category-filter"></div>
+<section class="wall" id="portfolio">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">The portfolio</div><h2>Every piece, on the wall.</h2></div>
+      <p>See something you like? Mention the code under the photo when you book.</p>
+    </div>
+    <div class="chips" id="chips" aria-label="Filter by style"></div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><button type="button" class="btn" id="moreBtn" hidden>Show more</button><small id="moreNote"></small></div>
+  </div>
+</section>
 
-    <div class="gallery-grid" id="gallery-container">
-      <!-- Gallery will be populated by JavaScript -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="photo"><img src="images/web/tombraider_profile.jpg" alt="Tomb Raider" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">About Tomb Raider</div>
+      <blockquote>With over four years of experience, Tomb Raider is known for her floral work: impeccable detail, a dead-steady hand and perfect technique.</blockquote>
+      <div class="tiles specialties">
+        <div><b>Floral designs</b><span>Intricate, lifelike botanical artwork</span></div>
+        <div><b>Fine line work</b><span>Crisp, clean linework with precision</span></div>
+        <div><b>Shading</b><span>Expert dimensional shading</span></div>
+      </div>
+      <p class="more-bio">Combining crisp lines and masterful shading, she makes designs you feel you could almost reach out and grab.</p>
     </div>
   </div>
 </section>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close" id="lightbox-close">&times;</span>
-  <span class="lightbox-nav lightbox-prev" id="lightbox-prev"></span>
-  <div class="lightbox-content">
-    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+<section class="book">
+  <div class="wrap">
+    <div class="eyebrow">Book with Tomb Raider</div>
+    <h2>Got an idea? Let's put it on you.</h2>
+    <p>Bring photos, references, or a code from the portfolio above.</p>
+    <div class="steps">
+      <div class="step"><i>01</i><h3>Send your idea</h3><p>Fill out the consultation form with the placement, size and any reference photos.</p></div>
+      <div class="step"><i>02</i><h3>Talk it through</h3><p>Tomb Raider gets back to you with ideas and what the piece will take.</p></div>
+      <div class="step"><i>03</i><h3>Pick your date</h3><p>Book your session online and come in.</p></div>
+    </div>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book appointment</a>
+      <a class="btn btn-ghost" href="https://forms.gle/ETKzRRWHGfzLgKKZA" target="_blank" rel="noopener">Get a consultation</a>
+    </div>
   </div>
-  <span class="lightbox-nav lightbox-next" id="lightbox-next"></span>
+</section>
+
+<footer class="footer">
+  <nav aria-label="Other artists">
+    <a href="index.html">Home</a>
+    <a href="dexter.html">Dexter</a>
+    <a href="chris.html">Chris</a>
+    <a href="hectorortega.html">Hector Ortega</a>
+    <a href="masondorow.html">Mason Dorow</a>
+  </nav>
+  <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery · McKinney, TX · Website by <strong>cloudhopr</strong></p>
+</footer>
+
+<div class="bar"><span>Book with Tomb Raider</span><a class="btn btn-primary" href="https://borrowedtimetattoo.simplybook.it/v2" target="_blank" rel="noopener">Book →</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="x" id="lbClose" aria-label="Close">×</button>
+  <button type="button" class="nv p" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img id="lbImg" alt="">
+  <button type="button" class="nv n" id="lbNext" aria-label="Next photo">›</button>
+  <div class="cap" id="lbCap"></div>
 </div>
 
-<!-- CTA Section -->
-<section class="cta-section">
-  <div class="content-container">
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-quote">"Tomb Raider was such a delight. She was incredible from start to finish — the storytelling, the energy, the attention to detail. The whole session felt like hanging out with a friend who just happens to be extremely talented. If you're thinking about booking with her, do it."</p>
-        <p class="review-name">— Hollie S, Google review</p>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-quote">"Tomb Raider was wonderful! I was nervous about getting a tattoo on the sole of my foot and she was so friendly it helped calm my nerves. She is so talented, the tattoo was literally painless and her line work is fantastic, tight and crisp. Best tattoo experience so far!"</p>
-        <p class="review-name">— Ashley Johnson, Google review</p>
-      </div>
-    </div>
-    <h2>Ready to Get Inked?</h2>
-    <p>Book an appointment with Tomb Raider today</p>
-    <div class="cta-buttons-center">
-      <a href="https://borrowedtimetattoo.simplybook.it/v2" class="cta-button" target="_blank" rel="noopener">Book Appointment</a>
-      <a href="https://forms.gle/ETKzRRWHGfzLgKKZA" class="cta-button secondary" target="_blank" rel="noopener">Get Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- Sticky Mobile Booking Bar -->
-<a href="https://borrowedtimetattoo.simplybook.it/v2" class="mobile-book-bar" target="_blank" rel="noopener">Book Tomb Raider →</a>
-
-<!-- Scroll to Top Button -->
-<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; <span id="year">2026</span> Borrowed Time Fine Art Gallery | McKinney, TX</p>
-    <p>Website by <strong>cloudhopr</strong></p>
-  </div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-<script src="js/gallery.js?v=1"></script>
+<script src="js/artist.js?v=1"></script>
 <script>
-// Mobile menu toggle
-const menuToggle = document.querySelector('.mobile-menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
-
-// Close menu when clicking a link
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
-
-// Glass nav on scroll
-const mainNav = document.querySelector('.main-nav');
-const handleNavScroll = () => {
-  mainNav.classList.toggle('scrolled', window.scrollY > 40);
-};
-handleNavScroll();
-window.addEventListener('scroll', handleNavScroll);
-
-BTGallery.artist('tombraider');
-
-// Scroll to top functionality
-const scrollToTopBtn = document.getElementById('scrollToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add('visible');
-  } else {
-    scrollToTopBtn.classList.remove('visible');
-  }
-});
-
-scrollToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+document.getElementById('year').textContent = new Date().getFullYear();
+BTArtist({ artist: 'tombraider', featured: ['tombraider/tombraider_flower_compass.jpg', 'tombraider/tombraider_fullcolor_floral.jpg', 'tombraider/tombraider_mandala.jpg', 'tombraider/tombraider_floral_skull.jpg', 'tombraider/tombraider_flower_snake.jpg', 'tombraider/tombraider_fullcolor_arrowhead.jpg', 'tombraider/tombraider_floral_mandala2.jpg', 'tombraider/tombraider_tree.jpg'] });
 </script>
-
 </body>
 </html>
